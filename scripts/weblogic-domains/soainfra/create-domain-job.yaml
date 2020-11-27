@@ -1,0 +1,101 @@
+# Copyright (c) 2018, 2020, Oracle Corporation and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: soainfra-create-soa-infra-domain-job
+  namespace: soans
+spec:
+  template:
+    metadata:
+      labels:
+        weblogic.domainUID: soainfra
+        weblogic.domainName: soainfra
+        app: soainfra-create-soa-infra-domain-job
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: create-soa-infra-domain-job
+          image: container-registry.oracle.com/middleware/soasuite:12.2.1.4
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7001
+          volumeMounts:
+          - mountPath: /u01/weblogic
+            name: create-soa-infra-domain-job-cm-volume
+          - mountPath: /u01/oracle/user_projects
+            name: soa-infra-domain-storage-volume
+          - mountPath: /weblogic-operator/secrets
+            name: soa-infra-credentials-volume
+          - mountPath: /weblogic-operator/rcu-secrets
+            name: rcu-credentials-volume
+          command: ["/bin/sh"]
+          args: ["/u01/weblogic/create-domain-job.sh"]
+          env:
+            - name: DOMAIN_UID
+              value: "soainfra"
+            - name: ADMIN_SERVER_NAME_SVC
+              value: "adminserver"
+            - name: T3_CHANNEL_PORT
+              value: "30012"
+            - name: T3_PUBLIC_ADDRESS
+              value: "10.0.0.9"
+            - name: MANAGED_SERVER_NAME_BASE_SVC
+              value: "soa-server"
+            - name: CREATE_DOMAIN_SCRIPT_DIR
+              value: "/u01/weblogic"
+            - name: DOMAIN_ROOT_DIR
+              value: "/u01/oracle/user_projects"
+            - name: DOMAIN_HOME_DIR
+              value: "/u01/oracle/user_projects/domains/soainfra"
+            - name: DOMAIN_LOGS_DIR
+              value: "/u01/oracle/user_projects/logs/soainfra"
+            - name: CUSTOM_DOMAIN_NAME
+              value: "soainfra"
+            - name: CUSTOM_ADMIN_LISTEN_PORT
+              value: "7001"
+            - name: CUSTOM_ADMIN_NAME
+              value: "AdminServer"
+            - name: CUSTOM_ADMIN_HOST
+              value: "%CUSTOM_ADMIN_HOST%"
+            - name: CUSTOM_MANAGEDSERVER_PORT
+              value: "8001"
+            - name: CUSTOM_MANAGED_BASE_NAME
+              value: "soa_server"
+            - name: CUSTOM_MANAGED_SERVER_COUNT
+              value: "5"
+            - name: CUSTOM_CLUSTER_NAME
+              value: "soa_cluster"
+            - name: CUSTOM_RCUPREFIX
+              value: "SOA1"
+            - name: CUSTOM_PRODUCTION_MODE
+              value: "true"
+            - name: CUSTOM_CONNECTION_STRING
+              value: "database.soans.svc.cluster.local:1521/PDB1.subnet11251534.vcn11251534.oraclevcn.com"
+            - name: EXPOSE_T3_CHANNEL_PREFIX
+              value: "false"
+            - name: DOMAIN_TYPE
+              value: "soaosb"
+            - name: SSL_ENABLED
+              value: "false"
+            - name: ADMIN_SERVER_SSL_PORT
+              value: "7002"
+            - name: MANAGED_SERVER_SSL_PORT
+              value: "8002"
+            - name: PERSISTENCE_STORE
+              value: "jdbc "
+      volumes:
+        - name: create-soa-infra-domain-job-cm-volume
+          configMap:
+            name: soainfra-create-soa-infra-domain-job-cm
+        - name: soa-infra-domain-storage-volume
+          persistentVolumeClaim:
+            claimName: soainfra-domain-pvc
+        - name: soa-infra-credentials-volume
+          secret:
+            secretName: soainfra-domain-credentials
+        - name: rcu-credentials-volume
+          secret:
+            secretName: soainfra-rcu-credentials
+      #imagePullSecrets:
+      #- name: 

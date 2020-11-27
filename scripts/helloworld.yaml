@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld
+  labels:
+    app: helloworld
+spec:
+  ports:
+  - nodePort: 31111
+    port: 8080
+    targetPort: 8080
+    name: http
+  selector:
+    app: helloworld
+  type: NodePort
+  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld
+  labels:
+    app: helloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld
+  template:
+    metadata:
+      labels:
+        app: helloworld
+        version: v1
+    spec:
+      containers:
+      - name: helloworld
+        image: bjlim80/bjlim_oracle:hello-app
+        ports:
+        - containerPort: 8080
+          name: server

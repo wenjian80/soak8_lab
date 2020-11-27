@@ -1,0 +1,73 @@
+cd /home/opc
+git clone https://github.com/coreos/kube-prometheus.git
+
+chmod -R 777 /home/opc/kube-prometheus
+
+#Change to folder `kube-prometheus` and execute the following commands to create the namespace and CRDs, and then wait for their availability before creating the remaining resources.
+cd kube-prometheus
+kubectl create -f manifests/setup
+until kubectl get servicemonitors --all-namespaces ; do date; sleep 1; echo ""; done
+kubectl create -f manifests/
+
+#Kube-Prometheus requires all nodes to be labelled with `kubernetes.io/os=linux`. If a node is not labelled with this, then you need to label it using the following command:
+kubectl label nodes --all kubernetes.io/os=linux
+
+#To provide external access for Grafana/Prometheus/Alertmanager, you need to execute the following commands:
+# 32100 is the external port for Grafana
+# 32101 is the external port for Prometheus
+# 32102 is the external port for Alertmanager
+#http://158.101.19.71:32101/graph
+#http://158.101.19.71:32100/login admin/admin
+
+kubectl patch svc grafana -n monitoring --type=json -p '[{"op": "replace", "path": "/spec/type", "value": "NodePort" },{"op": "replace", "path": "/spec/ports/0/nodePort", "value": 32100 }]'
+kubectl patch svc prometheus-k8s -n monitoring --type=json -p '[{"op": "replace", "path": "/spec/type", "value": "NodePort" },{"op": "replace", "path": "/spec/ports/0/nodePort", "value": 32101 }]'
+kubectl patch svc alertmanager-main -n monitoring --type=json -p '[{"op": "replace", "path": "/spec/type", "value": "NodePort" },{"op": "replace", "path": "/spec/ports/0/nodePort", "value": 32102 }]'
+
+#Generate the wls exporter war file
+cd /home/opc/soak8_lab/scripts
+wget https://github.com/oracle/weblogic-monitoring-exporter/releases/download/v1.2.0/get1.2.0.sh
+chmod 777 get1.2.0.sh
+
+cd /home/opc/soak8_lab/scripts
+mkdir /home/opc/soak8_lab/scripts/exporteradmin
+./get1.2.0.sh config.yaml
+cp wls-exporter.war /home/opc/soak8_lab/scripts/exporteradmin
+
+cd /home/opc/soak8_lab/scripts
+mkdir /home/opc/soak8_lab/scripts/exporterosb
+./get1.2.0.sh config-osb.yaml
+cp wls-exporter.war /home/opc/soak8_lab/scripts/exporterosb
+
+cd /home/opc/soak8_lab/scripts
+mkdir /home/opc/soak8_lab/scripts/exportersoa
+./get1.2.0.sh config-soa.yaml
+cp wls-exporter.war /home/opc/soak8_lab/scripts/exportersoa
+
+chmod 777 *
+
+#Make directory in admin port so we can deploy
+#Alyternatively we can deploy via console and upload the file
+kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter
+kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/admin
+kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/osb
+kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/soa
+kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter
+
+kubectl cp /home/opc/soak8_lab/scripts/exporteradmin/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/admin
+echo "Check if admin file copy"
+kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/admin
+
+kubectl cp /home/opc/soak8_lab/scripts/exporterosb/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/osb
+echo "Check if osb file copy"
+kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/osb
+
+echo "Check if soa file copy"
+kubectl cp /home/opc/soak8_lab/scripts/exportersoa/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/soa
+kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/soa
+
+echo "Please proceed to download and deploy the war file"
+echo "You will have to go exporteradmin take the war and deploy to admin server"
+echo "You will have to go exporterosb take the war and deploy to osb server"
+echo "You will have to go exportersoa take the war and deploy to soa server"
+echo "http://158.101.19.71:30305/console/login/LoginForm.jsp"
+

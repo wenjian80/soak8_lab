@@ -1,0 +1,60 @@
+# Copyright (c) 2018, 2020, Oracle Corporation and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: soainfra-delete-soa-infra-domain-job-cm
+  namespace: soans
+  labels:
+    weblogic.domainUID: soainfra
+    weblogic.domainName: soainfra
+data:
+  delete-domain-job.sh: |-
+      #!/bin/bash
+      #
+      # delete domainHome folder
+      rm -rf ${DOMAIN_HOME_DIR}
+
+      echo "Delete Completed"
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: soainfra-delete-soa-infra-domain-job
+  namespace: soans
+spec:
+  template:
+    metadata:
+      labels:
+        weblogic.domainUID: soainfra
+        weblogic.domainName: soainfra
+        app: soainfra-delete-soa-infra-domain-job
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: delete-soa-infra-domain-job
+          image: container-registry.oracle.com/middleware/soasuite:12.2.1.4
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7001
+          volumeMounts:
+          - mountPath: /u01/weblogic
+            name: delete-soa-infra-domain-job-cm-volume
+          - mountPath: /u01/oracle/user_projects
+            name: soa-infra-domain-storage-volume
+          command: ["/bin/sh"]
+          args: ["/u01/weblogic/delete-domain-job.sh"]
+          env:
+            - name: DOMAIN_HOME_DIR
+              value: /u01/oracle/user_projects/domains/soainfra
+            - name: DOMAIN_LOGS_DIR
+              value: /u01/oracle/user_projects/logs/soainfra
+      volumes:
+        - name: delete-soa-infra-domain-job-cm-volume
+          configMap:
+            name: soainfra-delete-soa-infra-domain-job-cm
+        - name: soa-infra-domain-storage-volume
+          persistentVolumeClaim:
+            claimName: soainfra-domain-pvc
+      #imagePullSecrets:
+      #- name: 
