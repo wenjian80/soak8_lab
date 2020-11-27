@@ -65,6 +65,12 @@ echo "Check if soa file copy"
 kubectl cp /home/opc/soak8_lab/scripts/exportersoa/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/soa
 kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/soa
 
+#deploy wls exporter 
+kubectl cp /home/opc/soak8_lab/scripts/manageApplication.py soans/soainfra-adminserver:/u01/
+kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/manageApplication.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001 -n wls-exporter-admin -f "/u01/exporter/admin/wls-exporter.war" -t AdminServer
+kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/manageApplication.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001 -n wls-exporter-osb -f "/u01/exporter/osb/wls-exporter.war" -t osb_cluster
+kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/manageApplication.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001 -n wls-exporter-soa -f "/u01/exporter/soa/wls-exporter.war" -t soa_cluster
+
 echo "Please proceed to download and deploy the war file"
 echo "You will have to go exporteradmin take the war and deploy to admin server"
 echo "You will have to go exporterosb take the war and deploy to osb server"
