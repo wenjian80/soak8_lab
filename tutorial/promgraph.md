@@ -2,9 +2,9 @@
 
 For this Hands on Lab we are going to improve the existing SOA deployment on Kubernetes that was created. The improvement part comes by adding WebLogic Monitoring Exporter into the WebLogic Domain.
 
-The script at step 17 and step 18 has condense all the below steps.
-[17_Prom_Gra.sh] (scripts/17_Prom_Gra.sh)
-[18_Prom_Setting.sh] (scripts/18_Prom_Setting.sh)
+The script at step 17 and step 18 has condense all the below steps. 
+1. [17_Prom_Gra.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/17_Prom_Gra.sh)
+2. [18_Prom_Setting.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/18_Prom_Setting.sh)
 
 ## Update SOA deployment with WebLogic Monitoring Exporter ##
 
