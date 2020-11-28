@@ -210,7 +210,9 @@ Below Sample that you shoould have in your notepad.
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/putty_timeout.JPG)
 
-3. Login to the server
+3. Save the session for use later.
+
+4. Login to the server
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/putty_login.JPG)
 
@@ -224,7 +226,13 @@ Below Sample that you shoould have in your notepad.
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/winscpkeepalive.JPG)
 
-## 4.3 Notepad++ Perferences
+## 4.4 Putty tunnel
+1. Create a putty tunnel for later use in the lab.
+2. Save the session 
+
+![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/tunnel.JPG)
+
+## 4.4 Notepad++ Perferences
 
 1. Set your notepad++ for yaml file perferences.
 2. Set yaml files tab to 2 spaces under Setting->Perferences->Langauages
@@ -233,5 +241,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzYyOTQyM119
+eyJoaXN0b3J5IjpbLTEzNDI2Nzg0MDRdfQ==
 -->
