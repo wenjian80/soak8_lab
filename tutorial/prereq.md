@@ -1,5 +1,9 @@
 
 
+# Purpose
+**1. The purpose of these instruction is to necessary prereq for the lab excersies, 
+2. You have to follow all the naming convention such as database name, password listed in the instruction below.**
+
 # 0. Things to remember
 1. Open a note pad and jot down the below adn save as labinfo.txt
 
@@ -241,5 +245,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDI2Nzg0MDRdfQ==
+eyJoaXN0b3J5IjpbMTcyMzYyNzY2MiwtMTM0MjY3ODQwNF19
 -->
