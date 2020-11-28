@@ -345,7 +345,9 @@ http://[workernodeip]:32100/login
 3. [FMW Soa Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-domains/fmw-infra/)
 4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
 5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+7. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTI3MTI3ODFdfQ==
+eyJoaXN0b3J5IjpbMTUzMzUwODU4NF19
 -->
