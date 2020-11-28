@@ -28,11 +28,13 @@
 TODO to explain steps
 
 1. Excercise are running as root for lab purpose. Login to as opc, sudo su.
-2. Clone this git project.
-3. Create a folder call soak8_lab in both master and worker node in path /home/opc/
-4. Winscp and copy the scripts folder into /home/opc/soak8_lab/scripts
-5. sudo su 
-6. chmod -R 777 /home/opc/soak8_lab
+2. Download this git project as zip on your local machine.
+3. Login to your master and worker node
+4. Create a folder call soak8_lab in both master and worker node in path /home/opc/
+5. Winscp and copy the scripts folder into /home/opc/soak8_lab/scripts
+6. sudo su 
+7. chmod -R 777 /home/opc/soak8_lab
+8. All these scripts are referencing and the path in /home/opc/soak8_lab and /home/opc/soak8_lab/scripts , so pls follow the naming.
 
 
 ## Step 0: 0_InitialMachine_Config.sh
@@ -355,5 +357,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE1Nzc5ODNdfQ==
+eyJoaXN0b3J5IjpbLTEwMjc1OTcwNDcsLTE0NDE1Nzc5ODNdfQ
+==
 -->
