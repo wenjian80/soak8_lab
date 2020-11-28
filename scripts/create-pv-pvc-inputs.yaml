@@ -22,7 +22,7 @@ weblogicDomainStorageType: NFS
 
 # The server name or ip address of the NFS server to use for the persistent storage.
 # The following line must be uncomment and customized if weblogicDomainStorateType is NFS:
-weblogicDomainStorageNFSServer: 10.0.0.6
+weblogicDomainStorageNFSServer: IPCHANGE
 
 # Physical path of the persistent storage.
 # When weblogicDomainStorageType is set to HOST_PATH, this value should be set the to path to the
