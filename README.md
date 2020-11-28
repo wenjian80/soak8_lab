@@ -19,7 +19,7 @@
 10. [Traefik chart 1.87.7/ App 1.7.26](https://github.com/helm/charts/blob/master/stable/traefik/Chart.yaml) 
 
 # 3. Lab steps
-TODO to explain steps
+TODO to explain what the script is doing in each steps and provide reference to why doing it.
 
 1. Excercise are running as root for lab purpose. Login to as opc, sudo su.
 2. Clone this git project.
