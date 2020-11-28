@@ -168,6 +168,10 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/vcn6.JPG)
 
+8. Your rules should look something like below.
+
+![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/vcn7.JPG)
+
 ## 3.7 Check all information
 
 1. you should have all these in place in your notepad by now. Below is a example of information you should already have jot down in labinfo.txt
@@ -187,7 +191,7 @@ Below Sample that you shoould have in your notepad.
 
 > Database private ip: 10.0.0.23
 
-> Database subnet: pdb1.subnet11251534.vcn11251534.oraclevcn.com
+> Database subnet: subnet11251534.vcn11251534.oraclevcn.com
 
 > NFS ip: 10.0.0.4
 
@@ -229,5 +233,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMzNDE3MDM1XX0=
+eyJoaXN0b3J5IjpbMTYyMzYyOTQyM119
 -->
