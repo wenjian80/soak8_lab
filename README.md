@@ -274,25 +274,78 @@ kubectl get pv,pvc -n soans
 ## Step 14: 14_Soa_DomainJob.sh
 **[Run on master node ONLY]**
 
+1. **This script run on on master node ONLY.**
+2. **You need to make change to the below before running the script**
+3.  This script will create a job inside k8 to create the necessary files in the shared storage. it make use of create-domain.sh  to generate the yaml files in weblogic-domains folder under /home/opc/soak8_lab/scripts/weblogic-domains
+
+## **Change the database vcn name**
+1. Open up [create-domain-inputs.yaml)](https://github.com/wenjian80/soak8_labs/blob/main/scripts/create-domain-inputs.yaml), you need to replace the vcn domain naming with the naming you have jot down in your labinfo.txt.
+2. pdb1 is the pdb database creation that we have provision the database.
+3. You need to change the subnet dns naming that you have jotdown in your labinfo.txt
+```
+# The database URL
+rcuDatabaseURL: database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE
+```
+4. You can use the below command to change or open up and edit it
+
+```
+sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
+```
+
 ## Step 15: 15_Soa_DomainConfig.sh
 **[Run on master node ONLY]**
 
+1. **This script run on on master node ONLY.**
+2.  Once you run the script it will start up the servers.
+```
+echo "After the command, issue kubectl get po -n soans -w and wait for server to be started"
+
+echo "You can check the logs for admin server pod kubectl logs soainfra-adminserver -n soans --follow"
+```
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
 
-
+1. **This script run on on master node ONLY.**
+2. Once you finish the script the traefik will as a webserver/LB to access the weblogic.
+3. You can access the weblogic console via the below
+```
+http://[workernodeip]:30305/console/
+```
 ## Step 17: 17_Prom_Gra.sh
 **[Run on master node ONLY]**
+
+1. **This script run on on master node ONLY.**
+2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
+
 
 ## Step 18: 18_Prom_Setting.sh
 **[Run on master node ONLY]**
 
+1. **This script run on on master node ONLY.**
+2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
+3. Once the script are execute you can access prom and grapha via the below url.
+```
+Prometheus
+http://[workernodeip]:32101/graph
 
-# Reference Links
+Grafana (admin/admin as default username and password)
+http://[workernodeip]:32100/login 
+```
 
-TODO
+## **Import dashboard**
+1. Import [weblogic_dashboard](https://github.com/wenjian80/soak8_labs/blob/main/scripts/weblogic_dashboard.json) into Grafana 
+2. Login to Grafana click on Managed->Import and choose the json to import.
 
+![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
+
+# Oracle Reference Links
+
+1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+2. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+3. [FMW Soa Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-domains/fmw-infra/)
+4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NDc5NDkzN119
+eyJoaXN0b3J5IjpbLTE2NTI3MTI3ODFdfQ==
 -->
