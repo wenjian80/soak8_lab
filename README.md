@@ -355,5 +355,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE1Nzc5ODMsMTUzMzUwODU4NF19
+eyJoaXN0b3J5IjpbLTE0NDE1Nzc5ODNdfQ==
 -->
