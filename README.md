@@ -27,7 +27,7 @@
 # 3. Lab steps
 TODO to explain steps
 
-1. Excercise are running as root for lab purpose. Login to as opc, sudo su.
+1. Exercise are running as root for lab purpose. Login to as opc, sudo su.
 2. Download this git project as zip on your local machine.
 3. Login to your master and worker node
 4. Create a folder call soak8_lab in both master and worker node in path /home/opc/
@@ -357,6 +357,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjc1OTcwNDcsLTE0NDE1Nzc5ODNdfQ
-==
+eyJoaXN0b3J5IjpbMTg5NjU1ODcwNiwtMTQ0MTU3Nzk4M119
 -->
