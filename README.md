@@ -177,7 +177,13 @@ kubectl get all -A
 
 ```
      -addresses:
-             -ip: 10.0.0.4[CHANGEIT]
+             -ip: IPCHANGE
+```
+5. You can run the below to change the ip or open up to edit it.
+
+```
+sed -i 's/IPCHANGE/[YOURIP]/g' database.yaml
+Eg  sed -i 's/IPCHANGE/10.0.0.1/g' database.yaml
 ```
 ### **Chnage username and password**
 1. Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/10_Rcu.sh), you need to replace $1 and $2 with your oracle account username and password
@@ -186,12 +192,24 @@ kubectl get all -A
 ```
 --docker-username=$1[CHANGEIT] --docker-password=$2[CHANGEIT]
 ```
-### **Change the database vcn name**
+4. You can use the below command to change or open up and edit it
+
+```
+sed -i 's/UIDCHANGE/a.a@a.com/g' 10_Rcu.sh
+sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
+```
+
+## **Change the database vcn name**
 1. Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/10_Rcu.sh), you need to replace the vcn domain naming with the naming you have jot down in your labinfo.txt.
 2. pdb1 is the pdb database creation that we have provision the database.
 3. You need to change the subnet dns naming that you have jotdown in your labinfo.txt
 ```
 PDB1.**subnet11251534.vcn11251534.oraclevcn.com[CHANGEIT]**
+```
+4. You can use the below command to change or open up and edit it
+
+```
+sed -i 's/VCNCHANGE/aaa.aaa.com.com/g'10_Rcu.sh
 ```
 ### **Script output**
 The output of the script will be as such. It will take around 3-5min.
@@ -220,7 +238,12 @@ The output of the script will be as such. It will take around 3-5min.
     #Eg sudo mount 10.0.0.5:/soashared /soashared
     sudo mount [INPUT_ID]:/soashared /soashared
 ```
+3. You can run the below to change the ip or open up to edit it.
 
+```
+sed -i 's/IPCHANGE/[YOURIP]/g' 12_Mount_File.sh
+Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
+```
 ## Step 13: 13_Soa_pv.sh
 **[Run on master node ONLY]**
 
@@ -234,7 +257,12 @@ The output of the script will be as such. It will take around 3-5min.
 ```
 weblogicDomainStorageNFSServer: [CHANGEIT]
 ```
+2. You can run the below to change the ip or open up to edit it.
 
+```
+sed -i 's/IPCHANGE/[YOURIP]/g' create-pv-pvc-inputs.yaml
+Eg  sed -i 's/IPCHANGE/10.0.0.1/g' create-pv-pvc-inputs.yaml
+```
 ### **Check output**
 1. Afrter running the script run the below command to check 
 ```
@@ -266,5 +294,5 @@ TODO
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMTc4OTAwXX0=
+eyJoaXN0b3J5IjpbMTQ1NDc5NDkzN119
 -->
