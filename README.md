@@ -346,8 +346,14 @@ http://[workernodeip]:32100/login
 4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
 5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
 6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-7. 
+7. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
 
+Slack support
+
+-   oracle-weblogic.slack.com
+-   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMzUwODU4NF19
+eyJoaXN0b3J5IjpbLTE0NDE1Nzc5ODMsMTUzMzUwODU4NF19
 -->
