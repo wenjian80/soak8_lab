@@ -186,7 +186,7 @@ createDomainFilesDir: wlst
 rcuSchemaPrefix: SOA1
 
 # The database URL
-rcuDatabaseURL: database.soans.svc.cluster.local:1521/PDB1.subnet11251534.vcn11251534.oraclevcn.com
+rcuDatabaseURL: database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE
 
 # The kubernetes secret containing the database credentials
 rcuCredentialsSecret: soainfra-rcu-credentials
