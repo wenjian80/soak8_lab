@@ -102,7 +102,7 @@ cd /home/opc/soa_k8lab/scripts
 ```
 #Steps
 
-#login **worker*
+#login worker
 cd /home/opc/soa_k8lab/scripts
 ./3_KubeNode_Firewall_Config.sh
 ```
@@ -131,9 +131,13 @@ kubectl get no
 
 
 ```
+#Steps
+
+#login master
 cd /home/opc/soa_k8lab/scripts
 ./4_KubeMaster_Kubernetes_Config.sh
-echo "pls copy the last output"
+
+#Copy the join command
 ```
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
@@ -160,7 +164,11 @@ kubectl get po
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 ```
+#Steps
+
+#Login worker
 #Open the 5_KubeNode_Kubernetes_Config.sh and add the join command
+
 cd /home/opc/soa_k8lab/scripts
 ./5_KubeNode_Kubernetes_Config.sh
 ```
@@ -175,6 +183,15 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
+ ```
+#Steps
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./5_KubeNode_Kubernetes_Config.sh
+```
+
 ## Step 7: 7_Kube_proxy.sh
 **[Run on master node ONLY]**
 
@@ -446,5 +463,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzOTY2Mzk0MywyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMTM5NDg5ODQ3MSwyMTQzMzk4NzU5XX0=
 -->
