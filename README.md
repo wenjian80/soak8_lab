@@ -253,13 +253,13 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 3. **You need to make change to the below before running the script**
 
 ### **Change the NFS ip**
-1. Open up [12_Mount_File.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/12_Mount_File.sh) and replace the [INPUT_ID].
+1. Open up [12_Mount_File.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/12_Mount_File.sh) and replace the IPCHANGE.
 2. Open up your labinfo,txt, input the nfs ip into here.
 
 ```
     #PUT FILE SYSTEM IP HERE
     #Eg sudo mount 10.0.0.5:/soashared /soashared
-    sudo mount [INPUT_ID]:/soashared /soashared
+	sudo mount IPCHANGE:/soashared /soashared
 ```
 3. You can run the below to change the ip or open up to edit it.
 
@@ -280,7 +280,9 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. Open up [create-pv-pvc-inputs.yaml](https://github.com/wenjian80/soak8_labs/blob/main/scripts/create-pv-pvc-inputs.yaml) and look for weblogicDomainStorageNFSServer to change the ip. You need to open up your labinfo.txt and replace the ip for your nfs ip.
 
 ```
-weblogicDomainStorageNFSServer: [CHANGEIT]
+# The server name or ip address of the NFS server to use for the persistent storage.
+# The following line must be uncomment and customized if weblogicDomainStorateType is NFS:
+weblogicDomainStorageNFSServer: IPCHANGE
 ```
 2. You can run the below to change the ip or open up to edit it.
 
@@ -386,6 +388,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNzM5Njk5NywyMDk1OTA0ODYzLDE4OT
-Y1NTg3MDZdfQ==
+eyJoaXN0b3J5IjpbMTg1NzAyMzkwLDIwOTU5MDQ4NjMsMTg5Nj
+U1ODcwNl19
 -->
