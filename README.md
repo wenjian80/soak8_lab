@@ -357,7 +357,7 @@ http://[workernodeip]:32100/login
 
 1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
 2. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-3. [FMW Soa Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-domains/fmw-infra/)
+3. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
 4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
 5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
 6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
@@ -370,5 +370,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODM4ODQ4MTksMTg5NjU1ODcwNl19
+eyJoaXN0b3J5IjpbLTE1NjExMDg4MSwxODk2NTU4NzA2XX0=
 -->
