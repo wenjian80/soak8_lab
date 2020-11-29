@@ -51,6 +51,13 @@
 2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
 
 ```
+#Steps to follow
+
+#login master
+cd /home/opc/soa_k8lab/scripts
+./0_InitialMachine_Config.sh
+
+#login worker
 cd /home/opc/soa_k8lab/scripts
 ./0_InitialMachine_Config.sh
 ```
@@ -64,7 +71,7 @@ cd /home/opc/soa_k8lab/scripts
 2. We are using docker  version 19.03.1.ol in this lab.
 
 ```
-#Steps
+#Steps to follow
 
 #login master
 cd /home/opc/soa_k8lab/scripts
@@ -84,7 +91,7 @@ cd /home/opc/soa_k8lab/scripts
 3. We are disabling the firewall on linux for lab purpose.
 
 ```
-#Steps
+#Steps to follow
 
 #login master
 cd /home/opc/soa_k8lab/scripts
@@ -100,7 +107,7 @@ cd /home/opc/soa_k8lab/scripts
 2. Same as step 2. We are setting the pre-req for k8.
 
 ```
-#Steps
+#Steps to follow
 
 #login worker
 cd /home/opc/soa_k8lab/scripts
@@ -131,13 +138,13 @@ kubectl get no
 
 
 ```
-#Steps
+#Steps to follow
 
 #login master
 cd /home/opc/soa_k8lab/scripts
 ./4_KubeMaster_Kubernetes_Config.sh
 
-#Copy the join command
+#Copy the join command to use in step 5
 ```
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
@@ -164,7 +171,7 @@ kubectl get po
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 ```
-#Steps
+#Steps to follow
 
 #Login worker
 #Open the 5_KubeNode_Kubernetes_Config.sh and add the join command
@@ -500,5 +507,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MDc1NDcyNCwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMjA2NDY3ODI3MSwyMTQzMzk4NzU5XX0=
 -->
