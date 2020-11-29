@@ -50,6 +50,7 @@
 1. This script need to run on both master and worker node.
 2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
 
+**Steps to follow**
 ```
 #Steps to follow
 
@@ -70,6 +71,7 @@ cd /home/opc/soa_k8lab/scripts
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
 
+**Steps to follow**
 ```
 #Steps to follow
 
@@ -90,6 +92,7 @@ cd /home/opc/soa_k8lab/scripts
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
 
+**Steps to follow**
 ```
 #Steps to follow
 
@@ -106,6 +109,7 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on worker node ONLY.**
 2. Same as step 2. We are setting the pre-req for k8.
 
+**Steps to follow**
 ```
 #Steps to follow
 
@@ -136,7 +140,7 @@ kubectl get no
 ```
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
-
+**Steps to follow**
 ```
 #Steps to follow
 
@@ -175,6 +179,7 @@ kubectl get po
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
+**Steps to follow**
 ```
 #Steps to follow
 
@@ -292,8 +297,10 @@ kubectl get all -A
 cd /home/opc/soa_k8lab/scripts
 ./9_Operator.sh
 
-#watch the pod create and 
-
+#see all resource and pod
+kubectl get po -n soans
+kubectl get po -n opns
+kubectl get all -A
 ```
 
 ## Step 10: 10_Rcu.sh
@@ -514,5 +521,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNDY5MjU5MCwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMjAxOTA2MzQ3OSwyMTQzMzk4NzU5XX0=
 -->
