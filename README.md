@@ -582,8 +582,11 @@ sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
 cd /home/opc/soa_k8lab/scripts
 ./15_Soa_DomainConfig.sh
 
+#watch the pod, ctrl c to stop
 kubectl get po -n soans -w
 
+#tail the logs for admin server to see if is started
+kubectl logs soainfra-adminserver -n soans --follow
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -598,6 +601,17 @@ echo "You can check the logs for admin server pod kubectl logs soainfra-adminser
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
 
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+cd /home/opc/soa_k8lab/scripts
+./16_Traefik_LB.sh
+
+```
+
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
 1. **This script run on on master node ONLY.**
@@ -611,6 +625,17 @@ http://[workernodeip]:30305/console/
 ## Step 17: 17_Prom_Gra.sh
 **[Run on master node ONLY]**
 
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+cd /home/opc/soa_k8lab/scripts
+./17_Prom_Gra.sh
+
+```
+
 1. **This script run on on master node ONLY.**
 2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
 3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed.
@@ -622,6 +647,17 @@ http://[workerip]:30305/console/login/LoginForm.jsp
 
 ## Step 18: 18_Prom_Setting.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+cd /home/opc/soa_k8lab/scripts
+./18_Prom_Setting.sh
+
+```
 
 1. **This script run on on master node ONLY.**
 2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
@@ -658,5 +694,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDEzODU1OCwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbLTE2MDQwMDQ2ODAsMjE0MzM5ODc1OV19
 -->
