@@ -246,5 +246,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODIyODE5NiwtMTM0MjY3ODQwNF19
+eyJoaXN0b3J5IjpbMTAyODIyODE5Nl19
 -->
