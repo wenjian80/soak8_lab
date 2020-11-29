@@ -209,7 +209,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.1/g' database.yaml
 2. Open up your labinfo.txt, find what is your Oracle account username/password and replace it. This is the account to login to container-registry.oracle.com. You must accept the agreement otherwise it will have error.
 3. You need to change the username and password
 ```
---docker-username=$1[CHANGEIT] --docker-password=$2[CHANGEIT]
+--docker-username=UIDCHANGE --docker-password=PWDCHANGE
 ```
 4. You can use the below command to change or open up and edit it
 
@@ -223,7 +223,7 @@ sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
 2. pdb1 is the pdb database creation that we have provision the database.
 3. You need to change the subnet dns naming that you have jotdown in your labinfo.txt
 ```
-PDB1.**subnet11251534.vcn11251534.oraclevcn.com[CHANGEIT]**
+PDB1.VCNCHANGE
 ```
 4. You can use the below command to change or open up and edit it
 
@@ -386,5 +386,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NTkwNDg2MywxODk2NTU4NzA2XX0=
+eyJoaXN0b3J5IjpbLTIyNzM5Njk5NywyMDk1OTA0ODYzLDE4OT
+Y1NTg3MDZdfQ==
 -->
