@@ -1,6 +1,8 @@
 # Disclaimer
 
-Please refer to 
+1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
+2. The scripts provided are just a reference.
+
 # Purpose
 1. The purpose of this lab excerise is to minc the same environment setup on premise.
 2. We are using an external database as the soa repository.
@@ -14,6 +16,9 @@ Please refer to
 
 2. You should already have your labinfo.txt fill up on hand. We will be referencing those info in these exercise.
 
+3. Open up the script to look at the various command before executing. 
+
+4. Do follow the steps carefully and lo
 # 2. Version Tested
 1.  [Oracle Linux 7.9 OCI Iaas Image](https://docs.cloud.oracle.com/en-us/iaas/images/)
 2. [Docker version 19.03.1.ol](https://docs.docker.com/engine/release-notes/)
@@ -393,5 +398,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NzM4Njc5MCwxMTczNTgxMDMyXX0=
+eyJoaXN0b3J5IjpbOTk3MTU4Njk3LDExNzM1ODEwMzJdfQ==
 -->
