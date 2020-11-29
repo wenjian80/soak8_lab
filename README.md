@@ -117,6 +117,8 @@ kubectl get po
 ## Step 6: 6_Check_Kubedns.sh
 **[Run on master node ONLY]**
 
+Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/) for more details
+
 1. **This script run on on master node ONLY.**
 2. This steps is to check if k8 networking is setup properly and the nodes can communicate via cluster ip and k8 networking.
 3. You should see the below if all the k8 networking is running fine.
@@ -125,6 +127,8 @@ kubectl get po
  
 ## Step 7: 7_Kube_proxy.sh
 **[Run on master node ONLY]**
+
+Refer to [K8 Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) for more details
 
 1. **This script run on on master node ONLY.**
 2. K8 dashboard is not deploy by default.
@@ -366,5 +370,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MTM3OTEyMSwxODk2NTU4NzA2XX0=
+eyJoaXN0b3J5IjpbLTE0ODM4ODQ4MTksMTg5NjU1ODcwNl19
 -->
