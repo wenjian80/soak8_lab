@@ -92,7 +92,7 @@ cd /home/opc/soa_k8lab/scripts
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
 
-**Steps to follow**
+### Steps to follow
 ```
 #Steps to follow
 
@@ -109,7 +109,7 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on worker node ONLY.**
 2. Same as step 2. We are setting the pre-req for k8.
 
-**Steps to follow**
+### Steps to follow
 ```
 #Steps to follow
 
@@ -139,6 +139,7 @@ cd /home/opc/soa_k8lab/scripts
 kubectl get no
 ```
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
+
 
 **Steps to follow**
 ```
@@ -179,6 +180,7 @@ kubectl get po
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
+
 **Steps to follow**
 ```
 #Steps to follow
@@ -203,6 +205,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
+ **Steps to follow**
  ```
 #Steps to follow
 
@@ -232,6 +235,7 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
+**Steps to follow**
  ```
 #Steps to follow
 
@@ -252,6 +256,7 @@ kubectl proxy
 2. This script is to install Git and Helm 3.
 3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
 
+**Steps to follow**
  ```
 #Steps to follow
 
@@ -289,6 +294,7 @@ Get all resource all namespace
 kubectl get all -A
 ```
 
+**Steps to follow**
  ```
 #Steps to follow
 
@@ -521,5 +527,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxOTA2MzQ3OSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMTM5NjYwMjU3OSwyMTQzMzk4NzU5XX0=
 -->
