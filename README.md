@@ -38,7 +38,7 @@
 #Steps to follow
 #Read below for exact instruction
 
-#Go to https://github.com/wenjian80/soak8_lab and download as zip to local machine
+#Go to https://github.com/wenjian80/soak8_lab and download as zip to local machine so you can take a llok att he scripts.
 
 #login master
 yum install git
@@ -480,7 +480,7 @@ cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
-#Change the ip before running the script 
+#Change the ip in 12_Mount_File.sh before running the script 
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
@@ -517,7 +517,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
 #Read below for exact instruction
 
 #Login master
-#Change the ip before running the script 
+#Change the ip in create-pv-pvc-inputs.yaml before running the script 
 
 cd /home/opc/soa_k8lab/scripts
 ./13_Soa_pv.sh
@@ -564,7 +564,7 @@ kubectl get pv,pvc -n soans
 
 #Login master
 
-#Change the database vcn before running the script
+#Change the database vcn in create-domain-inputs.yaml before running the script
 
 cd /home/opc/soa_k8lab/scripts
 ./14_Soa_DomainJob.sh
@@ -717,6 +717,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTU0NDQyMjQsLTE2MDQwMDQ2ODBdfQ
-==
+eyJoaXN0b3J5IjpbMjEwOTMzMDExMywtMTYwNDAwNDY4MF19
 -->
