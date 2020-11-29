@@ -54,4 +54,4 @@ echo "Step 5"
 
 #UNCOMMENT AND CHANGE
 #kubeadm join 10.241.115.219:6443 --token fir4cq.oumv9ihetyt8csh5 --discovery-token-ca-cert-hash sha256:8234ebc9213809d43e85977fccad748094368428fff5be1aac2c914aae5f1e30 --ignore-preflight-errors=Swap
-kubeadm join 10.0.0.9:6443 --token evksam.s0ucudqvgjwc7gia --discovery-token-ca-cert-hash sha256:1628521d351fa4981c230e066b77a11c118d29f558ab867323f3d0ad1aeab6bb
+#kubeadm join 10.0.0.9:6443 --token evksam.s0ucudqvgjwc7gia --discovery-token-ca-cert-hash sha256:1628521d351fa4981c230e066b77a11c118d29f558ab867323f3d0ad1aeab6bb
