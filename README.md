@@ -541,6 +541,8 @@ kubectl get pv,pvc -n soans
 
 #Login master
 
+#Change the database vcn before running the script
+
 cd /home/opc/soa_k8lab/scripts
 ./14_Soa_DomainJob.sh
 
@@ -570,6 +572,19 @@ sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
 
 ## Step 15: 15_Soa_DomainConfig.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+cd /home/opc/soa_k8lab/scripts
+./15_Soa_DomainConfig.sh
+
+kubectl get po -n soans -w
+
+```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -643,5 +658,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE2MzQwOTEsMjE0MzM5ODc1OV19
+eyJoaXN0b3J5IjpbLTMyNDEzODU1OCwyMTQzMzk4NzU5XX0=
 -->
