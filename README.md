@@ -141,7 +141,7 @@ kubectl get no
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 
-**Steps to follow**
+### Steps to follow
 ```
 #Steps to follow
 
@@ -181,7 +181,7 @@ kubectl get po
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 
-**Steps to follow**
+### Steps to follow
 ```
 #Steps to follow
 
@@ -205,7 +205,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
- **Steps to follow**
+### Steps to follow
  ```
 #Steps to follow
 
@@ -235,7 +235,7 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
-**Steps to follow**
+### Steps to follow
  ```
 #Steps to follow
 
@@ -256,7 +256,7 @@ kubectl proxy
 2. This script is to install Git and Helm 3.
 3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
 
-**Steps to follow**
+### Steps to follow
  ```
 #Steps to follow
 
@@ -294,7 +294,7 @@ Get all resource all namespace
 kubectl get all -A
 ```
 
-**Steps to follow**
+### Steps to follow
  ```
 #Steps to follow
 
@@ -349,6 +349,24 @@ sed -i 's/UIDCHANGE/a.a@a.com/g' 10_Rcu.sh
 sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
 ```
 
+### Steps to follow
+ ```
+#Steps to follow
+
+#Login master
+
+#change your database ip in database.yaml
+
+#change your database ip in database.yaml
+
+cd /home/opc/soa_k8lab/scripts
+./10_Rcu.sh
+
+#see all resource and pod
+kubectl get po -n soans
+kubectl get po -n opns
+kubectl get all -A
+```
 ## **Change the database vcn name**
 1. Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/10_Rcu.sh), you need to replace the vcn domain naming with the naming you have jot down in your labinfo.txt.
 2. pdb1 is the pdb database creation that we have provision the database.
@@ -527,5 +545,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjYwMjU3OSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbLTY3OTIxNDM3MSwyMTQzMzk4NzU5XX0=
 -->
