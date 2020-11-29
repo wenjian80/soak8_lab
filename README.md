@@ -89,6 +89,11 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on worker node ONLY.**
 2. Same as step 2. We are setting the pre-req for k8.
 
+```
+cd /home/opc/soa_k8lab/scripts
+./3_KubeNode_Firewall_Config.sh
+```
+
 ## Step 4: 4_KubeMaster_Kubernetes_Config.sh
 **[Run on master node ONLY]**
 
@@ -110,6 +115,13 @@ cd /home/opc/soa_k8lab/scripts
 kubectl get no
 ```
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
+
+
+```
+cd /home/opc/soa_k8lab/scripts
+./4_KubeMaster_Kubernetes_Config.sh
+echo "pls copy the last output"
+```
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
 **[Run on worker node ONLY]**
@@ -134,6 +146,11 @@ kubectl get po
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
+```
+#Open the file and
+cd /home/opc/soa_k8lab/scripts
+./5_KubeNode_Kubernetes_Config.sh
+```
 ## Step 6: 6_Check_Kubedns.sh
 **[Run on master node ONLY]**
 
@@ -416,5 +433,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNzc0MDMyOSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbLTE0ODU4MTI1MDksMjE0MzM5ODc1OV19
 -->
