@@ -10,6 +10,7 @@
 #kubectl create -f  /home/opc/soak8_lab/scripts/soainfra-domain-pvc.yaml
 
 
+rm -Rf /home/opc/soak8_lab/scripts/pv-pvcs
 
 #PLEASE CHANGE THE IP in create-pv-pvc-inputs.yaml
 cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-weblogic-domain-pv-pvc

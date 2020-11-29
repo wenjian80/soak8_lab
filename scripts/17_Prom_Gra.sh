@@ -28,6 +28,11 @@ cd /home/opc/soak8_lab/scripts
 wget https://github.com/oracle/weblogic-monitoring-exporter/releases/download/v1.2.0/get1.2.0.sh
 chmod 777 get1.2.0.sh
 
+
+rm -Rf /home/opc/soak8_lab/scripts/exporteradmin
+rm -Rf /home/opc/soak8_lab/scripts/exporterosb
+rm -Rf /home/opc/soak8_lab/scripts/exportersoa
+
 cd /home/opc/soak8_lab/scripts
 mkdir /home/opc/soak8_lab/scripts/exporteradmin
 ./get1.2.0.sh config.yaml
