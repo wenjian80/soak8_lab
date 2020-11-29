@@ -43,12 +43,14 @@
 #login master
 yum install git
 cd /home/opc
-https://github.com/wenjian80/soak8_lab
-
+git clone https://github.com/wenjian80/soak8_lab
+chmod -R 777 /home/opc/soak8_lab
 
 #login worker
-cd /home/opc/soa_k8lab/scripts
-./0_InitialMachine_Config.sh
+yum install git
+cd /home/opc
+git clone https://github.com/wenjian80/soak8_lab
+chmod -R 777 /home/opc/soak8_lab
 ```
 
 1. Exercise are running as root for lab purpose. Login to as opc, sudo su.
@@ -472,7 +474,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 #Read below for exact instruction
 
 #Login master
-#Change the ip before running the script 
+#Change the ip in 12_Mount_File.sh before running the script 
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
@@ -715,5 +717,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NjA2NzQ3OCwtMTYwNDAwNDY4MF19
+eyJoaXN0b3J5IjpbLTE1NTU0NDQyMjQsLTE2MDQwMDQ2ODBdfQ
+==
 -->
