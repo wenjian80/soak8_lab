@@ -349,24 +349,6 @@ sed -i 's/UIDCHANGE/a.a@a.com/g' 10_Rcu.sh
 sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
 ```
 
-### Steps to follow
- ```
-#Steps to follow
-
-#Login master
-
-#change your database ip in database.yaml
-
-#change your database ip in database.yaml
-
-cd /home/opc/soa_k8lab/scripts
-./10_Rcu.sh
-
-#see all resource and pod
-kubectl get po -n soans
-kubectl get po -n opns
-kubectl get all -A
-```
 ## **Change the database vcn name**
 1. Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/10_Rcu.sh), you need to replace the vcn domain naming with the naming you have jot down in your labinfo.txt.
 2. pdb1 is the pdb database creation that we have provision the database.
@@ -383,6 +365,28 @@ sed -i 's/VCNCHANGE/aaa.aaa.com.com/g'10_Rcu.sh
 The output of the script will be as such. It will take around 3-5min.
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/rcu_complete.JPG)
+
+
+### Steps to follow
+ ```
+#Steps to follow
+
+#Login master
+
+#change your database ip in database.yaml
+
+#change your username and password in 10_Rcu.sh
+
+#change your database vcn in 10_Rcu.sh
+ 
+cd /home/opc/soa_k8lab/scripts
+./10_Rcu.sh
+
+#see all resource and pod
+kubectl get po -n soans
+kubectl get po -n opns
+kubectl get all -A
+```
 
 ## Step 11: 11_Soa_secret.sh
 **[Run on master node ONLY]**
@@ -545,5 +549,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3OTIxNDM3MSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbLTUyNTUzNDczNiwyMTQzMzk4NzU5XX0=
 -->
