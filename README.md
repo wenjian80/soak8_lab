@@ -281,13 +281,10 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 ## Step 8: 8_Git_helm.sh
 **[Run on master node ONLY]**
 
-1. **This script run on on master node ONLY.**
-2. This script is to install Git and Helm 3.
-3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
-
 ### Steps to follow
  ```
 #Steps to follow
+#Read below for exact instruction
 
 #Login master
 
@@ -296,8 +293,31 @@ cd /home/opc/soa_k8lab/scripts
 
 ```
 
+1. **This script run on on master node ONLY.**
+2. This script is to install Git and Helm 3.
+3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
+
+
+
+
 ## Step 9: 9_Operator.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./9_Operator.sh
+
+#see all resource and pod
+kubectl get po -n soans
+kubectl get po -n opns
+kubectl get all -A
+```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -323,23 +343,28 @@ Get all resource all namespace
 kubectl get all -A
 ```
 
-### Steps to follow
- ```
-#Steps to follow
-
-#Login master
-
-cd /home/opc/soa_k8lab/scripts
-./9_Operator.sh
-
-#see all resource and pod
-kubectl get po -n soans
-kubectl get po -n opns
-kubectl get all -A
-```
 
 ## Step 10: 10_Rcu.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+
+#change your database ip in database.yaml
+
+#change your username and password in 10_Rcu.sh
+
+#change your database vcn in 10_Rcu.sh
+ 
+cd /home/opc/soa_k8lab/scripts
+./10_Rcu.sh
+
+```
+
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -396,9 +421,15 @@ The output of the script will be as such. It will take around 3-5min.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/rcu_complete.JPG)
 
 
+
+
+## Step 11: 11_Soa_secret.sh
+**[Run on master node ONLY]**
+
 ### Steps to follow
  ```
 #Steps to follow
+#Read below for exact instruction
 
 #Login master
 
@@ -412,9 +443,6 @@ cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
 ```
-
-## Step 11: 11_Soa_secret.sh
-**[Run on master node ONLY]**
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -574,5 +602,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNjQ5NDM0MCwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbLTM4ODU2ODgwOSwyMTQzMzk4NzU5XX0=
 -->
