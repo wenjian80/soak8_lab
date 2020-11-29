@@ -40,18 +40,23 @@ TODO to explain steps
 ## Step 0: 0_InitialMachine_Config.sh
 **[Run on master and worker node]**
 
+
 1. This script need to run on both master and worker node.
 2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
 
 ## Step 1: 1_Docker_Config.sh
 **[Run on master and worker node]**
 
+ Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
+ 
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
 
 ## Step 2: 2_KubeMaster_Firewall_Config.sh
 **[Run on master node ONLY]**
 
+ Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
+ 
 1. **This script run on on master node ONLY.**
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
@@ -59,17 +64,19 @@ TODO to explain steps
 ## Step 3: 3_KubeNode_Firewall_Config.sh
 **[Run on worker node ONLY]**
 
+ Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
+ 
 1. **This script run on on worker node ONLY.**
 2. Same as step 2. We are setting the pre-req for k8.
 
 ## Step 4: 4_KubeMaster_Kubernetes_Config.sh
 **[Run on master node ONLY]**
 
+ Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
+ 
  1. **This script run on on master node ONLY.** Once the prereq has been set. 
-
  2. We are running the steps to set up this node as the master
-    node. 
-    
+    node.     
  3. At the end of this script it will provide you a command for
     worker node to join the cluster and communicate to this master node.
 
@@ -87,6 +94,8 @@ kubectl get no
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
 **[Run on worker node ONLY]**
 
+ Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
+ 
  1. **This script run on on worker node ONLY.**
     **. Open and edit the script on the below line and change it to the previous output in step 4.**
 
@@ -357,5 +366,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NjU1ODcwNl19
+eyJoaXN0b3J5IjpbMTE2MTM3OTEyMSwxODk2NTU4NzA2XX0=
 -->
