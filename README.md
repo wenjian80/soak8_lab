@@ -189,7 +189,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 #Login master
 
 cd /home/opc/soa_k8lab/scripts
-./5_KubeNode_Kubernetes_Config.sh
+./6_Check_Kubedns.sh
 ```
 
 ## Step 7: 7_Kube_proxy.sh
@@ -212,12 +212,36 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
+ ```
+#Steps
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./7_Kube_proxy.sh
+
+#After which run kubectl proxy
+kubectl proxy
+
+#Open broswer to http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+```
+
 ## Step 8: 8_Git_helm.sh
 **[Run on master node ONLY]**
 
 1. **This script run on on master node ONLY.**
 2. This script is to install Git and Helm 3.
 3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
+
+ ```
+#Steps
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./8_Git_helm.sh
+
+```
 
 ## Step 9: 9_Operator.sh
 **[Run on master node ONLY]**
@@ -245,6 +269,19 @@ Get all resource all namespace
 ```
 kubectl get all -A
 ```
+
+ ```
+#Steps
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./9_Operator.sh
+
+
+
+```
+
 ## Step 10: 10_Rcu.sh
 **[Run on master node ONLY]**
 
@@ -463,5 +500,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NDg5ODQ3MSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMTM4MDc1NDcyNCwyMTQzMzk4NzU5XX0=
 -->
