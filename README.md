@@ -270,6 +270,8 @@ Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
 ## Step 13: 13_Soa_pv.sh
 **[Run on master node ONLY]**
 
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
+
 1. **This script run on on master node ONLY.**
 2. **You need to make change to the below before running the script**
 3. The script is using create-pv-pvc.sh to generate the yaml to create the pv and pvc.
@@ -297,6 +299,8 @@ kubectl get pv,pvc -n soans
 ## Step 14: 14_Soa_DomainJob.sh
 **[Run on master node ONLY]**
 
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
+
 1. **This script run on on master node ONLY.**
 2. **You need to make change to the below before running the script**
 3.  This script will create a job inside k8 to create the necessary files in the shared storage. it make use of create-domain.sh  to generate the yaml files in weblogic-domains folder under /home/opc/soak8_lab/scripts/weblogic-domains
@@ -318,6 +322,8 @@ sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
 ## Step 15: 15_Soa_DomainConfig.sh
 **[Run on master node ONLY]**
 
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
+
 1. **This script run on on master node ONLY.**
 2.  Once you run the script it will start up the servers.
 ```
@@ -327,6 +333,8 @@ echo "You can check the logs for admin server pod kubectl logs soainfra-adminser
 ```
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
+
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
 1. **This script run on on master node ONLY.**
 2. Once you finish the script the traefik will as a webserver/LB to access the weblogic.
@@ -378,5 +386,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTcyOTYzODUsMTg5NjU1ODcwNl19
+eyJoaXN0b3J5IjpbMjA5NTkwNDg2MywxODk2NTU4NzA2XX0=
 -->
