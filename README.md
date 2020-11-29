@@ -432,15 +432,8 @@ The output of the script will be as such. It will take around 3-5min.
 #Read below for exact instruction
 
 #Login master
-
-#change your database ip in database.yaml
-
-#change your username and password in 10_Rcu.sh
-
-#change your database vcn in 10_Rcu.sh
- 
 cd /home/opc/soa_k8lab/scripts
-./10_Rcu.sh
+./11_Soa_secret.sh
 
 ```
 
@@ -451,6 +444,25 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 ## Step 12: 12_Mount_File.sh
 **[Run on master and worker node]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+#Change the ip before running the script 
+
+cd /home/opc/soa_k8lab/scripts
+./12_Mount_File.sh
+
+#Login worker
+#Change the ip before running the script 
+
+cd /home/opc/soa_k8lab/scripts
+./12_Mount_File.sh
+
+```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -475,6 +487,20 @@ Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
 ```
 ## Step 13: 13_Soa_pv.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+#Change the ip before running the script 
+
+cd /home/opc/soa_k8lab/scripts
+./12_Mount_File.sh
+
+
+```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -602,5 +628,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4ODU2ODgwOSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbNTc5MjgwMDY4LDIxNDMzOTg3NTldfQ==
 -->
