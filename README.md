@@ -115,22 +115,41 @@ cd /home/opc/soa_k8lab/scripts
 ## Step 3: 3_KubeNode_Firewall_Config.sh
 **[Run on worker node ONLY]**
 
- Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
- 
-1. **This script run on on worker node ONLY.**
-2. Same as step 2. We are setting the pre-req for k8.
-
 ### Steps to follow
 ```
 #Steps to follow
+#Read below for exact instruction
 
 #login worker
 cd /home/opc/soa_k8lab/scripts
 ./3_KubeNode_Firewall_Config.sh
 ```
 
+ Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
+ 
+1. **This script run on on worker node ONLY.**
+2. Same as step 2. We are setting the pre-req for k8.
+
+
+
+
 ## Step 4: 4_KubeMaster_Kubernetes_Config.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+```
+#Steps to follow
+#Read below for exact instruction
+
+#login master
+cd /home/opc/soa_k8lab/scripts
+./4_KubeMaster_Kubernetes_Config.sh
+
+#Check master node ready
+kubectl get no
+
+#Copy the join command to use in step 5
+```
 
  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
  
@@ -152,24 +171,26 @@ kubectl get no
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 
-### Steps to follow
-```
-#Steps to follow
-
-#login master
-cd /home/opc/soa_k8lab/scripts
-./4_KubeMaster_Kubernetes_Config.sh
-
-#Check master node ready
-kubectl get no
-
-#Copy the join command to use in step 5
 
 
-```
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
 **[Run on worker node ONLY]**
+
+### Steps to follow
+```
+#Steps to follow
+#Read below for exact instruction
+
+#Login worker
+#Open the 5_KubeNode_Kubernetes_Config.sh and add the join command
+
+cd /home/opc/soa_k8lab/scripts
+./5_KubeNode_Kubernetes_Config.sh
+
+#Check worker node ready
+kubectl get no
+```
 
  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
  
@@ -192,21 +213,21 @@ kubectl get po
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 
-### Steps to follow
-```
-#Steps to follow
 
-#Login worker
-#Open the 5_KubeNode_Kubernetes_Config.sh and add the join command
 
-cd /home/opc/soa_k8lab/scripts
-./5_KubeNode_Kubernetes_Config.sh
-
-#Check worker node ready
-kubectl get no
-```
 ## Step 6: 6_Check_Kubedns.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./6_Check_Kubedns.sh
+```
 
 Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/) for more details
 
@@ -216,18 +237,26 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
-### Steps to follow
- ```
-#Steps to follow
 
-#Login master
 
-cd /home/opc/soa_k8lab/scripts
-./6_Check_Kubedns.sh
-```
 
 ## Step 7: 7_Kube_proxy.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+cd /home/opc/soa_k8lab/scripts
+./7_Kube_proxy.sh
+
+#After which run kubectl proxy
+kubectl proxy
+
+#Open broswer to http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+```
 
 Refer to [K8 Dashboard](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) for more details
 
@@ -246,19 +275,8 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
-### Steps to follow
- ```
-#Steps to follow
 
-#Login master
-cd /home/opc/soa_k8lab/scripts
-./7_Kube_proxy.sh
 
-#After which run kubectl proxy
-kubectl proxy
-
-#Open broswer to http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
-```
 
 ## Step 8: 8_Git_helm.sh
 **[Run on master node ONLY]**
@@ -556,5 +574,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNTE1NjYwMCwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbLTYzNjQ5NDM0MCwyMTQzMzk4NzU5XX0=
 -->
