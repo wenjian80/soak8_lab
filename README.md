@@ -497,8 +497,9 @@ Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
 #Change the ip before running the script 
 
 cd /home/opc/soa_k8lab/scripts
-./12_Mount_File.sh
+./13_Soa_pv.sh
 
+kubectl get pv,pvc -n soans
 
 ```
 
@@ -532,6 +533,20 @@ kubectl get pv,pvc -n soans
 
 ## Step 14: 14_Soa_DomainJob.sh
 **[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+
+cd /home/opc/soa_k8lab/scripts
+./14_Soa_DomainJob.sh
+
+ls -lrth /soashared/soa
+
+```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -628,5 +643,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc5MjgwMDY4LDIxNDMzOTg3NTldfQ==
+eyJoaXN0b3J5IjpbLTIwMTE2MzQwOTEsMjE0MzM5ODc1OV19
 -->
