@@ -64,6 +64,13 @@ cd /home/opc/soa_k8lab/scripts
 2. We are using docker  version 19.03.1.ol in this lab.
 
 ```
+#Steps
+
+#login master
+cd /home/opc/soa_k8lab/scripts
+./1_Docker_Config.sh
+
+#login worker
 cd /home/opc/soa_k8lab/scripts
 ./1_Docker_Config.sh
 ```
@@ -77,6 +84,9 @@ cd /home/opc/soa_k8lab/scripts
 3. We are disabling the firewall on linux for lab purpose.
 
 ```
+#Steps
+
+#login master
 cd /home/opc/soa_k8lab/scripts
 ./2_KubeMaster_Firewall_Config.sh
 ```
@@ -90,6 +100,9 @@ cd /home/opc/soa_k8lab/scripts
 2. Same as step 2. We are setting the pre-req for k8.
 
 ```
+#Steps
+
+#login **worker*
 cd /home/opc/soa_k8lab/scripts
 ./3_KubeNode_Firewall_Config.sh
 ```
@@ -147,7 +160,7 @@ kubectl get po
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 ```
-#Open the file and
+#Open the 5_KubeNode_Kubernetes_Config.sh and add the join command
 cd /home/opc/soa_k8lab/scripts
 ./5_KubeNode_Kubernetes_Config.sh
 ```
@@ -433,5 +446,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODU4MTI1MDksMjE0MzM5ODc1OV19
+eyJoaXN0b3J5IjpbLTgzOTY2Mzk0MywyMTQzMzk4NzU5XX0=
 -->
