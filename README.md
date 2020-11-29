@@ -33,6 +33,24 @@
 
 # 3. Lab steps
 
+### Steps to follow
+```
+#Steps to follow
+#Read below for exact instruction
+
+#Go to https://github.com/wenjian80/soak8_lab and download as zip to local machine
+
+#login master
+yum install git
+cd /home/opc
+https://github.com/wenjian80/soak8_lab
+
+
+#login worker
+cd /home/opc/soa_k8lab/scripts
+./0_InitialMachine_Config.sh
+```
+
 1. Exercise are running as root for lab purpose. Login to as opc, sudo su.
 2. Download this git project as zip on your local machine.
 3. Login to your master and worker node
@@ -41,6 +59,9 @@
 6. sudo su 
 7. chmod -R 777 /home/opc/soak8_lab
 8. All these scripts are referencing and the path in /home/opc/soak8_lab and /home/opc/soak8_lab/scripts , so pls follow the naming.
+
+
+
 
 
 ## Step 0: 0_InitialMachine_Config.sh
@@ -694,5 +715,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQwMDQ2ODBdfQ==
+eyJoaXN0b3J5IjpbLTY3NjA2NzQ3OCwtMTYwNDAwNDY4MF19
 -->
