@@ -46,13 +46,10 @@
 ## Step 0: 0_InitialMachine_Config.sh
 **[Run on master and worker node]**
 
-
-1. This script need to run on both master and worker node.
-2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
-
 **Steps to follow**
 ```
 #Steps to follow
+#Read below for exact instruction
 
 #login master
 cd /home/opc/soa_k8lab/scripts
@@ -63,28 +60,48 @@ cd /home/opc/soa_k8lab/scripts
 ./0_InitialMachine_Config.sh
 ```
 
+1. This script need to run on both master and worker node.
+2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
+
+
+
+
 ## Step 1: 1_Docker_Config.sh
 **[Run on master and worker node]**
+
+**Steps to follow**
+```
+#Steps to follow
+#Read below for exact instruction
+
+#login master
+cd /home/opc/soa_k8lab/scripts
+./1_Docker_Config.sh
+
+#login worker
+cd /home/opc/soa_k8lab/scripts
+./1_Docker_Config.sh
+```
 
  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
  
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
 
-**Steps to follow**
+
+
+## Step 2: 2_KubeMaster_Firewall_Config.sh
+**[Run on master node ONLY]**
+
+### Steps to follow
 ```
 #Steps to follow
+#Read below for exact instruction
 
 #login master
 cd /home/opc/soa_k8lab/scripts
-./1_Docker_Config.sh
-
-#login worker
-cd /home/opc/soa_k8lab/scripts
-./1_Docker_Config.sh
+./2_KubeMaster_Firewall_Config.sh
 ```
-## Step 2: 2_KubeMaster_Firewall_Config.sh
-**[Run on master node ONLY]**
 
  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
  
@@ -92,14 +109,8 @@ cd /home/opc/soa_k8lab/scripts
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
 
-### Steps to follow
-```
-#Steps to follow
 
-#login master
-cd /home/opc/soa_k8lab/scripts
-./2_KubeMaster_Firewall_Config.sh
-```
+
 
 ## Step 3: 3_KubeNode_Firewall_Config.sh
 **[Run on worker node ONLY]**
@@ -382,10 +393,6 @@ The output of the script will be as such. It will take around 3-5min.
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
-#see all resource and pod
-kubectl get po -n soans
-kubectl get po -n opns
-kubectl get all -A
 ```
 
 ## Step 11: 11_Soa_secret.sh
@@ -549,5 +556,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyNTUzNDczNiwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMTEwNTE1NjYwMCwyMTQzMzk4NzU5XX0=
 -->
