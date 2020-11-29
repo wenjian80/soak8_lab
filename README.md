@@ -346,7 +346,9 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 1. **This script run on on master node ONLY.**
 2. Once you finish the script the traefik will as a webserver/LB to access the weblogic.
-3. You can access the weblogic console via the below
+3. You can access the weblogic console via the below url.
+4. The user name is weblogic/Welcome1 
+5. The username and password was defined earlier in [1_Soa_secret.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/11_Soa_secret.sh)
 ```
 http://[workernodeip]:30305/console/
 ```
@@ -355,7 +357,8 @@ http://[workernodeip]:30305/console/
 
 1. **This script run on on master node ONLY.**
 2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
-3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed
+3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed.
+4. 
 ```
 http://[workerip]:30305/console/login/LoginForm.jsp
 ```
@@ -398,5 +401,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzQ4NDU5OTRdfQ==
+eyJoaXN0b3J5IjpbMTM0NjMyODcxOSwtMTM3NDg0NTk5NF19
 -->
