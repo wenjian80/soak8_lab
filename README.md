@@ -50,6 +50,11 @@
 1. This script need to run on both master and worker node.
 2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
 
+```
+cd /home/opc/soa_k8lab/scripts
+./0_InitialMachine_Config.sh
+```
+
 ## Step 1: 1_Docker_Config.sh
 **[Run on master and worker node]**
 
@@ -58,6 +63,10 @@
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
 
+```
+cd /home/opc/soa_k8lab/scripts
+./1_Docker_Config.sh
+```
 ## Step 2: 2_KubeMaster_Firewall_Config.sh
 **[Run on master node ONLY]**
 
@@ -66,6 +75,11 @@
 1. **This script run on on master node ONLY.**
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
+
+```
+cd /home/opc/soa_k8lab/scripts
+./2_KubeMaster_Firewall_Config.sh
+```
 
 ## Step 3: 3_KubeNode_Firewall_Config.sh
 **[Run on worker node ONLY]**
@@ -402,5 +416,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MzM5ODc1OV19
+eyJoaXN0b3J5IjpbMTEzNzc0MDMyOSwyMTQzMzk4NzU5XX0=
 -->
