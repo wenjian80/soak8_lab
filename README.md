@@ -144,7 +144,12 @@ kubectl get no
 cd /home/opc/soa_k8lab/scripts
 ./4_KubeMaster_Kubernetes_Config.sh
 
+#Check master node ready
+kubectl get no
+
 #Copy the join command to use in step 5
+
+
 ```
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
@@ -178,6 +183,9 @@ kubectl get po
 
 cd /home/opc/soa_k8lab/scripts
 ./5_KubeNode_Kubernetes_Config.sh
+
+#Check worker node ready
+kubectl get no
 ```
 ## Step 6: 6_Check_Kubedns.sh
 **[Run on master node ONLY]**
@@ -191,7 +199,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
  ```
-#Steps
+#Steps to follow
 
 #Login master
 
@@ -220,10 +228,9 @@ kubectl proxy
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
  ```
-#Steps
+#Steps to follow
 
 #Login master
-
 cd /home/opc/soa_k8lab/scripts
 ./7_Kube_proxy.sh
 
@@ -241,7 +248,7 @@ kubectl proxy
 3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
 
  ```
-#Steps
+#Steps to follow
 
 #Login master
 
@@ -278,14 +285,14 @@ kubectl get all -A
 ```
 
  ```
-#Steps
+#Steps to follow
 
 #Login master
 
 cd /home/opc/soa_k8lab/scripts
 ./9_Operator.sh
 
-
+#watch the pod create and 
 
 ```
 
@@ -507,5 +514,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NDY3ODI3MSwyMTQzMzk4NzU5XX0=
+eyJoaXN0b3J5IjpbMTAxNDY5MjU5MCwyMTQzMzk4NzU5XX0=
 -->
