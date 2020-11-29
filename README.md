@@ -155,6 +155,8 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 ## Step 9: 9_Operator.sh
 **[Run on master node ONLY]**
 
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
+
 1. **This script run on on master node ONLY.**
 2.  The script pull the necessary repo to install weblogic operator and scripts.
 3. it also create the necessary k8 namespace to be used, such as soans, opns.
@@ -178,6 +180,8 @@ kubectl get all -A
 ```
 ## Step 10: 10_Rcu.sh
 **[Run on master node ONLY]**
+
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
 1. **This script run on on master node ONLY.**
 2. This script is to pull a image to run the soa rcu creation against an external database.
@@ -234,11 +238,15 @@ The output of the script will be as such. It will take around 3-5min.
 ## Step 11: 11_Soa_secret.sh
 **[Run on master node ONLY]**
 
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
+
 1. **This script run on on master node ONLY.**
 2. This script is to create the necessary secret to be used in the later steps
 
 ## Step 12: 12_Mount_File.sh
 **[Run on master and worker node]**
+
+Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
 1. **This script run on on master node and worker node.**
 2. This script is into nfs component in the OS. It also mount the file system into both master and worker node.
@@ -370,5 +378,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MzUyNDY1NywxODk2NTU4NzA2XX0=
+eyJoaXN0b3J5IjpbLTExNTcyOTYzODUsMTg5NjU1ODcwNl19
 -->
