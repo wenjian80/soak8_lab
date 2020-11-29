@@ -1,4 +1,6 @@
+# Disclaimer
 
+Please refer to 
 # Purpose
 1. The purpose of this lab excerise is to minc the same environment setup on premise.
 2. We are using an external database as the soa repository.
@@ -25,7 +27,6 @@
 10. [Traefik chart 1.87.7/ App 1.7.26](https://github.com/helm/charts/blob/master/stable/traefik/Chart.yaml) 
 
 # 3. Lab steps
-TODO to explain steps
 
 1. Exercise are running as root for lab purpose. Login to as opc, sudo su.
 2. Download this git project as zip on your local machine.
@@ -392,5 +393,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MzU4MTAzMl19
+eyJoaXN0b3J5IjpbMTQ1NzM4Njc5MCwxMTczNTgxMDMyXX0=
 -->
