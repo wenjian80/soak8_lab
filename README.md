@@ -349,7 +349,10 @@ http://[workernodeip]:30305/console/
 
 1. **This script run on on master node ONLY.**
 2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
-
+3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed
+```
+http://[workerip]:30305/console/login/LoginForm.jsp
+```
 
 ## Step 18: 18_Prom_Setting.sh
 **[Run on master node ONLY]**
@@ -383,10 +386,11 @@ http://[workernodeip]:32100/login
 8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
 9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
 10. [Oracle Blog Production Support](Announcing%20Oracle%20SOA%20Suite%20on%20Containers%20&%20Kubernetes%20for%20Production%20Workloads)
+
 Slack support
 
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzAyMzkwXX0=
+eyJoaXN0b3J5IjpbMTE3MzU4MTAzMl19
 -->
