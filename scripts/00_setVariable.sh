@@ -1,3 +1,16 @@
+#Rremove escape
+sudo su
+chmod -R 777 /home/opc/soak8_lab/
+sed -i -e "s/^M//" *.sh
+sed -i -e 's/\r$//' *.sh
+
+sed -i -e "s/^M//" *.yaml
+
+sed -i -e "s/^M//" *.json
+
+sed -i -e "s/^M//" *.py
+
+
 #Pls update your variables here
 
 #Update the below based on "Database private ip" in your labinfo.txt
@@ -35,3 +48,5 @@ sed -i "s/IPCHANGE/$NFSIP/g" create-pv-pvc-inputs.yaml
 
 #Changes in create-domain-inputs.yaml
 sed -i "s/VCNCHANGE/$SUBNET/g" create-domain-inputs.yaml
+
+
