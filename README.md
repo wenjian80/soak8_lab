@@ -386,6 +386,10 @@ kubectl get all -A
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
+
+#It will wait a while to pull the contaier to start. While it is waiting , open a new window to master node and run the below to check the progress and if there is any error.
+kubectl describe po rcu -n soans
+
 ```
 
 
@@ -411,6 +415,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 ```
 sed -i 's/IPCHANGE/[YOURIP]/g' database.yaml
 Eg  sed -i 's/IPCHANGE/10.0.0.1/g' database.yaml
+Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 ```
 ### **Chnage username and password**
 1. Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/10_Rcu.sh), you need to replace $1 and $2 with your oracle account username and password
@@ -422,8 +427,11 @@ Eg  sed -i 's/IPCHANGE/10.0.0.1/g' database.yaml
 4. You can use the below command to change or open up and edit it
 
 ```
-sed -i 's/UIDCHANGE/a.a@a.com/g' 10_Rcu.sh
-sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
+Eg sed -i 's/UIDCHANGE/a.a@a.com/g' 10_Rcu.sh
+Eg sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
+
+Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh
+Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 ```
 
 ## **Change the database vcn name**
@@ -436,7 +444,9 @@ PDB1.VCNCHANGE
 4. You can use the below command to change or open up and edit it
 
 ```
-sed -i 's/VCNCHANGE/aaa.aaa.com.com/g'10_Rcu.sh
+sed -i 's/VCNCHANGE/aaa.aaa.comEg sed -i 's/VCNCHANGE/[Your vcn]/g' 10_Rcu.sh
+Eg sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' 10_Rcu.sh
+Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
 ```
 ### **Script output**
 The output of the script will be as such. It will take around 3-5min.
@@ -717,5 +727,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwOTMzMDExM119
+eyJoaXN0b3J5IjpbMzI5NTY1MjQ1XX0=
 -->
