@@ -432,6 +432,7 @@ Eg sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
 
 Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh
 Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
+*My password here is just a temp, no there is nothing to hack if you want to use this :)
 ```
 
 ## **Change the database vcn name**
@@ -727,5 +728,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5NTY1MjQ1XX0=
+eyJoaXN0b3J5IjpbLTIwNjM3OTAxOThdfQ==
 -->
