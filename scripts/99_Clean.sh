@@ -32,6 +32,18 @@ kubectl edit pvc soainfra-domain-pvc -n soans
 kubectl delete pvc soainfra-domain-pvc -n soans
 kubectl delete pv soainfra-domain-pv -n soans
 
+#If terminating is stuck edit again and see if the finalizers is there
+#Remove the below 2 line
+#  finalizers:
+#  - kubernetes.io/pv-protection
+kubectl edit pv soainfra-domain-pv -n soans
+
+#Remove the below 2 line
+#  finalizers:
+#  - kubernetes.io/pv-protection
+kubectl edit pvc soainfra-domain-pvc -n soans
+
+
 #check what resoruces in soans namespace
 kubectl get all -n soans
 
