@@ -34,6 +34,7 @@
 # 3. Lab steps
 
 ### Steps to follow
+It will take you around 1-2 Hour to run finished the sc
 ```
 #Steps to follow
 #Read below for exact instruction
@@ -728,5 +729,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjM3OTAxOThdfQ==
+eyJoaXN0b3J5IjpbNjc0MDUyNzM3LC0yMDYzNzkwMTk4XX0=
 -->
