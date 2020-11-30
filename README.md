@@ -586,7 +586,10 @@ kubectl get pv,pvc -n soans
 cd /home/opc/soa_k8lab/scripts
 ./14_Soa_DomainJob.sh
 
-ls -lrth /soashared/soa
+#open a new session and look at the job logs
+kubectl get po - n soans
+kubectl logs soainfra-create-soa-infra-domain-job-l2kg6 -n soans --follow
+
 
 ```
 
@@ -735,5 +738,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNTQwMTMwNV19
+eyJoaXN0b3J5IjpbNDAyODIyMDYwXX0=
 -->
