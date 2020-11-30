@@ -117,7 +117,7 @@ vi 00_setVariable.sh
 ```
 
 1. This script need to run on both master and worker node.
-2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
+2. We are setting up the parameters for your environment.
 
 ## Step 0: 0_InitialMachine_Config.sh
 **[Run on master and worker node]**
@@ -430,17 +430,20 @@ kubectl get all -A
 
 #Login master
 
+#Your Parameters should have been in step 00, double check again
 #change your database ip in database.yaml
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 #Check contents if it is change
 #more database.yaml
 
+#Your Parameters should have been in step 00, double check again
 #change your username and password in 10_Rcu.sh
 #Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
 #Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 #Check contents if it is change
 #more 10_Rcu.sh
 
+#Your Parameters should have been in step 00, double check again
 #change your database vcn in 10_Rcu.sh
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
 #Check contents if it is change
@@ -548,6 +551,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 #Read below for exact instruction
 
 #Login master
+#Your Parameters should have been in step 00, double check again
 #Change the ip in 12_Mount_File.sh before running the script 
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Check contents if it is change
@@ -557,6 +561,7 @@ cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
+#Your Parameters should have been in step 00, double check again
 #Change the ip in 12_Mount_File.sh before running the script 
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Check contents if it is change
@@ -599,6 +604,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Read below for exact instruction
 
 #Login master
+#Your Parameters should have been in step 00, double check again
 #Change the ip in create-pv-pvc-inputs.yaml before running the script 
 #Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
 #Check contents if it is change
@@ -833,6 +839,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NzY5ODAwNCw0MjA5MTc3MjgsMTgxMz
+eyJoaXN0b3J5IjpbMTc3NjE5MTEyNCw0MjA5MTc3MjgsMTgxMz
 cxMjYyOV19
 -->
