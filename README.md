@@ -34,7 +34,7 @@
 # 3. Lab steps
 
 ### Steps to follow
-It will take you around 1-2 Hour to run finished the excercise.
+It will take you around 1 Hour to run finished the excercise.
 
 ```
 #Steps to follow
@@ -840,5 +840,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NTkxNTM5MV19
+eyJoaXN0b3J5IjpbLTE5MDYxNzA1OThdfQ==
 -->
