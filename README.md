@@ -385,7 +385,7 @@ kubectl get all -A
 #more database.yaml
 
 #change your username and password in 10_Rcu.sh
-#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
+#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
 #Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 #Check contents if it is change
 #more 10_Rcu.sh
@@ -770,5 +770,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMDA4NTExNl19
+eyJoaXN0b3J5IjpbNTQ0NTExNzgzXX0=
 -->
