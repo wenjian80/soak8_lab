@@ -67,7 +67,7 @@ chmod -R 777 /home/opc/soak8_lab
 
 ### Replace the settings with your environment
 
-Open up your labinfo.txt and 
+Open up your labinfo.txt and get the information on hand.
 Login to master node and change the below
 
 ```
@@ -76,6 +76,7 @@ Login to master node and change the below
 
 #login master
 #change your database ip in database.yaml 
+#Change the ip to "Database private ip" in your labinfo.txt
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml 
 #Check contents if it is change #more database.yaml 
 
@@ -807,6 +808,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NTAxNTM5NywzOTU3OTkzNTIsLTE3Mj
+eyJoaXN0b3J5IjpbOTkxNDg1MDY2LC05NzUwMTUzOTcsLTE3Mj
 QwMTM1MDVdfQ==
 -->
