@@ -7,7 +7,8 @@ kubectl delete domain soainfra -n soans
 kubectl get po -n soans
 
 #Remove contents in shared folder
-rm -Rf /soashared/soa/*
+cd /soashared
+rm -Rf soa
 
 #Sample for dropping schema
 cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema
@@ -40,10 +41,18 @@ kubectl get ns
 #Just delete all namespace
 kubectl delete ns soans
 
+#clear traefik 
+helm delete soainfra-ingress --namespace soans
+helm delete traefik --namespace traefik
+helm repo remove  traefik
+kubectl delete ns traefik
+
 #List the helm and delete all of it
 helm list -A
 helm delete weblogic-operator -n opns
 
-#todo clear traefik and monitoring namespace
-kubectl delete ns traefik
+#delete monitoring
+cd /home/opc/kube-prometheus
+kubectl delete -f manifests/setup
 kubectl delete ns monitoring
+
