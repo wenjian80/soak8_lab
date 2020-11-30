@@ -648,6 +648,9 @@ echo "You can check the logs for admin server pod kubectl logs soainfra-adminser
 
 Below is the output you should see, when all server started
 
+```
+kubectl get po -n soans
+```
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/soa_started.JPG)
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
@@ -745,6 +748,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODg1ODU1LC05NzA0NjY3ODIsNDAyOD
-IyMDYwXX0=
+eyJoaXN0b3J5IjpbLTUzMDAzNjExXX0=
 -->
