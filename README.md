@@ -590,7 +590,6 @@ cd /home/opc/soa_k8lab/scripts
 kubectl get po - n soans
 kubectl logs soainfra-create-soa-infra-domain-job-l2kg6 -n soans --follow
 
-
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -631,6 +630,10 @@ kubectl get po -n soans -w
 
 #tail the logs for admin server to see if is started
 kubectl logs soainfra-adminserver -n soans --follow
+
+#you should see admin, soa amd osb started.
+#Refer to sample image below
+kubectl get po -n soans
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -642,6 +645,13 @@ echo "After the command, issue kubectl get po -n soans -w and wait for server to
 
 echo "You can check the logs for admin server pod kubectl logs soainfra-adminserver -n soans --follow"
 ```
+
+Below is the output you should see, when all server started
+
+```
+kubectl get po -n soans
+```
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/soa_started.JPG)
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
 
@@ -738,5 +748,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAyODIyMDYwXX0=
+eyJoaXN0b3J5IjpbLTUzMDAzNjExXX0=
 -->
