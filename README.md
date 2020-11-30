@@ -440,9 +440,9 @@ PDB1.VCNCHANGE
 4. You can use the below command to change or open up and edit it
 
 ```
-sed -i 's/VCNCHANGE/aaa.aaa.comEg sed -i 's/VCNCHANGE/[Your vcn]/g'10_Rcu.sh
-Eg sed -i 's/VCNCHANGE/aaa.aaa.com.com/g'10_Rcu.sh
-Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g'10_Rcu.sh
+sed -i 's/VCNCHANGE/aaa.aaa.comEg sed -i 's/VCNCHANGE/[Your vcn]/g' 10_Rcu.sh
+Eg sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' 10_Rcu.sh
+Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
 ```
 ### **Script output**
 The output of the script will be as such. It will take around 3-5min.
@@ -723,5 +723,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMzg0ODcyMl19
+eyJoaXN0b3J5IjpbLTE4Mjk4MDQ3MTZdfQ==
 -->
