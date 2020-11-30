@@ -112,11 +112,16 @@ Replace the settings with your environment
 
 #login master
 cd /home/opc/soa_k8lab/scripts
-vi  
+vi 00_setVariable.sh
+#update your parameters
+./00_setVariable.sh
+ 
 
 #login worker
 cd /home/opc/soa_k8lab/scripts
-./0_InitialMachine_Config.sh
+vi 00_setVariable.sh
+#update your parameters
+./00_setVariable.sh
 ```
 
 1. This script need to run on both master and worker node.
@@ -816,6 +821,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwOTE3NzI4LDYyNzExNzU2MywxODEzNz
-EyNjI5XX0=
+eyJoaXN0b3J5IjpbLTEwMjM0MTQxNzAsNDIwOTE3NzI4LDE4MT
+M3MTI2MjldfQ==
 -->
