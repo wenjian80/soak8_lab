@@ -1,6 +1,7 @@
 # Kube Porxy dashbaord
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml
+#kubectl apply -f recommended_dashboard.yaml
 kubectl apply -f dashboard-admin.yaml
 
 echo "Token to login to dashboard"
