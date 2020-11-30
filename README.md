@@ -34,7 +34,8 @@
 # 3. Lab steps
 
 ### Steps to follow
-It will take you around 1-2 Hour to run finished the script
+It will take you around 1-2 Hour to run finished the excercise.
+
 ```
 #Steps to follow
 #Read below for exact instruction
@@ -729,6 +730,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk1NzE2NDEyLDY3NDA1MjczNywtMjA2Mz
-c5MDE5OF19
+eyJoaXN0b3J5IjpbMTI2MzY3NDE0MF19
 -->
