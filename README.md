@@ -78,7 +78,8 @@ Login to master node and change the below
 #change your database ip in database.yaml 
 #Change the ip to "Database private ip" in your labinfo.txt
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml 
-#Check contents if it is change #more database.yaml 
+#Check contents if it is change 
+#more database.yaml 
 
 #change your username and password in 10_Rcu.sh 
 #Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
@@ -808,6 +809,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxNDg1MDY2LC05NzUwMTUzOTcsLTE3Mj
+eyJoaXN0b3J5IjpbMTk5MTc5MDM5Miw5OTE0ODUwNjYsLTE3Mj
 QwMTM1MDVdfQ==
 -->
