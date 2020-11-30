@@ -386,6 +386,10 @@ kubectl get all -A
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
+
+#While it is running you can run the below to check the progress and if there is any error.
+kubectl describe po rcu -n soans
+
 ```
 
 
@@ -723,5 +727,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjk4MDQ3MTZdfQ==
+eyJoaXN0b3J5IjpbLTIwMjk2NTk5MzRdfQ==
 -->
