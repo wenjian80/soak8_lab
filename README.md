@@ -630,6 +630,8 @@ kubectl get po -n soans -w
 
 #tail the logs for admin server to see if is started
 kubectl logs soainfra-adminserver -n soans --follow
+
+
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -737,5 +739,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQ3NDYzNzAsNDAyODIyMDYwXX0=
+eyJoaXN0b3J5IjpbLTk3MDQ2Njc4MiwtMTI3NDc0NjM3MCw0MD
+I4MjIwNjBdfQ==
 -->
