@@ -15,4 +15,4 @@ cd /home/opc/fmw-kubernetes/OracleSOASuite/kubernetes/create-rcu-schema
 
 #Sample for dropping schema
 #cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema
-#./drop-rcu-schema.sh -s SOA1 -t soaessosb -d database.soans.svc.cluster.local:1521/PDB1.subnet11251534.vcn11251534.oraclevcn.com -q WelcomE1234## -r WelcomE1234## -n soans
+#./drop-rcu-schema.sh -s SOA1 -t soaessosb -d database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE -q WelcomE1234## -r WelcomE1234## -n soans
