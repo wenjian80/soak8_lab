@@ -74,7 +74,6 @@ Login to both master and worker node and change the below.
 #Steps to follow
 #Read below for exact instruction
 
-#login master
 #change your database ip in database.yaml 
 #Change the ip to "Database private ip" in your labinfo.txt
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml 
@@ -818,6 +817,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODk3NjI5NDEsMTk5MTc5MDM5MiwtMT
-cyNDAxMzUwNV19
+eyJoaXN0b3J5IjpbMjA3MDQwMDE0NSwtMTU4OTc2Mjk0MSwxOT
+kxNzkwMzkyLC0xNzI0MDEzNTA1XX0=
 -->
