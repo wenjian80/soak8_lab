@@ -688,6 +688,8 @@ kubectl get po -n soans
 cd /home/opc/soa_k8lab/scripts
 ./16_Traefik_LB.sh
 
+#Access http://[workernodeip]:30305/console/ to wls console
+
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -772,5 +774,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODEwMjg2Ml19
+eyJoaXN0b3J5IjpbMTkxMzMxNzExMl19
 -->
