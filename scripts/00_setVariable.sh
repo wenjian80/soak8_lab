@@ -1,35 +1,38 @@
 #Pls update your variables here
 TODO
 
-#Change the ip to "Database private ip" in your labinfo.txt
-DATABASEIP=[put ip here]
+#Update the below based on "Database private ip" in your labinfo.txt
+DATABASEIP=put ip here
+#DATABASEIP=10.0.0.4
 
-#Change the ip to "Oracle account username/password" in your labinfo.txt
-UID=[put ip here]
-PWD=[put ip here]
+#Update the below based on "Oracle account username/password" in your labinfo.txt
+UID=put uid here
+PWD=put pwd phere
+#UID=wenjian80@gmail.com
+#PWD=Welcome_1234#
 
 
-#change your database ip in database.yaml 
-#Change the ip to "Database private ip" in your labinfo.txt
-#Eg sed -i 's/IPCHANGE/$DATABASEIP/g' database.yaml 
-#Check contents if it is change 
-#more database.yaml 
+#Update the below based on "Database subnet" in your labinfo.txt
+SUBNET=put subnet here
+#SUBNET=subnet11251534.vcn11251534.oraclevcn.com
 
-#change your username and password in 10_Rcu.sh 
-#Change your username and password in "Oracle account username/password"
-#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
-#Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh 
-#Check contents if it is change 
-#more 10_Rcu.sh 
+#Update the below based on "NFS IP" in your labinfo.txt
+NFSIP=put ip here
+#NFSIP=10.0.0.6
 
-#change your database vcn in 10_Rcu.sh 
-#Change the subnet in "Database subnet"
-#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh 
-#Check contents if it is change 
-#more 10_Rcu.sh
+#Changes in 10_Rcu.sh 
+sed -i 's/UIDCHANGE/$UID/g' 10_Rcu.sh 
+sed -i 's/PWDCHANGE/$PWD/g' 10_Rcu.sh 
+sed -i 's/VCNCHANGE/$SUBNET/g' 10_Rcu.sh 
 
-#Change the ip in 12_Mount_File.sh 
-#Change the ip to "NFS ip" in your labinfo.txt
-#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh 
-#Check contents if it is change 
-#more 12_Mount_File.sh
+#Changes in database.yaml 
+sed -i 's/IPCHANGE/$DATABASEIP/g' database.yaml 
+
+#Changes in 12_Mount_File.sh 
+sed -i 's/IPCHANGE/$NFSIP/g' 12_Mount_File.sh 
+
+#Changes in create-pv-pvc-inputs.yaml
+sed -i 's/IPCHANGE/$NFSIP/g' create-pv-pvc-inputs.yaml
+
+#Changes in create-domain-inputs.yaml
+sed -i 's/VCNCHANGE/$SUBNET/g' create-domain-inputs.yaml
