@@ -3,8 +3,8 @@ kubectl create namespace traefik
 cd /home/opc/weblogic-kubernetes-operator
 helm repo add traefik https://containous.github.io/traefik-helm-chart
  
-helm install traefik  traefik/traefik --namespace traefik --values kubernetes/samples/scripts/charts/traefik/values.yaml --set  "kubernetes.namespaces={traefik}" --set "service.type=NodePort" --wait
-
+helm install traefik  traefik/traefik --namespace traefik --values kubernetes/samples/charts/traefik/values.yaml --set  "kubernetes.namespaces={traefik}" --set "service.type=NodePort" --wait
+ 
 kubectl get all -n traefik
  
 #Configure Traefik to manage Ingresses created in this namespace:
