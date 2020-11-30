@@ -68,7 +68,7 @@ chmod -R 777 /home/opc/soak8_lab
 ### Replace the settings with your environment
 
 Open up your labinfo.txt and get the information on hand.
-Login to master node and change the below
+Login to both master and worker node and change the below.
 
 ```
 #Steps to follow
@@ -94,6 +94,11 @@ Login to master node and change the below
 #Check contents if it is change 
 #more 10_Rcu.sh
 
+#Change the ip in 12_Mount_File.sh 
+#Change the ip to "NFS ip" in your labinfo.txt
+#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh 
+#Check contents if it is change 
+#more 12_Mount_File.sh
 
 ```
 
@@ -813,6 +818,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAyOTE1MTM0LDE5OTE3OTAzOTIsLTE3Mj
-QwMTM1MDVdfQ==
+eyJoaXN0b3J5IjpbLTE1ODk3NjI5NDEsMTk5MTc5MDM5MiwtMT
+cyNDAxMzUwNV19
 -->
