@@ -55,6 +55,9 @@ note: node-ip is the external ip address of a node.
 
 curl http://132.145.206.79:31111/test.html
 
+kubectl exec -it nginx-deployment-69f46cd759-7tq6j -- /bin/sh
+nslookup my-service.default
+
 *******************************************************************
 4. Cleanup
 
