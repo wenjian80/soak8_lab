@@ -112,7 +112,7 @@ Replace the settings with your environment
 
 #login master
 cd /home/opc/soa_k8lab/scripts
- 
+vi  
 
 #login worker
 cd /home/opc/soa_k8lab/scripts
@@ -816,5 +816,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI3MTE3NTYzLDE4MTM3MTI2MjldfQ==
+eyJoaXN0b3J5IjpbNDIwOTE3NzI4LDYyNzExNzU2MywxODEzNz
+EyNjI5XX0=
 -->
