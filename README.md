@@ -97,10 +97,27 @@ NFSIP=put ip here
 Replace the settings with your environment
 
 **[Run on master and worker node]**
-**Steps to follow**
 
-1) Login to both master and worker node.
-2) Open up 00_setVariable.sh and update your settings
+**Steps to follow**
+```
+#Steps to follow
+#Read below for exact instruction
+
+#login master
+cd /home/opc/soa_k8lab/scripts
+vi 00_setVariable.sh
+#make sure all your settings is correct
+./00_setVariable.sh
+
+#login worker
+cd /home/opc/soa_k8lab/scripts
+vi 00_setVariable.sh
+#make sure all your settings is correct
+./00_setVariable.sh
+```
+
+1. This script need to run on both master and worker node.
+2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
 
 ## Step 0: 0_InitialMachine_Config.sh
 **[Run on master and worker node]**
@@ -112,16 +129,11 @@ Replace the settings with your environment
 
 #login master
 cd /home/opc/soa_k8lab/scripts
-vi 00_setVariable.sh
-#update your parameters
-./00_setVariable.sh
- 
+./0_InitialMachine_Config.sh
 
 #login worker
 cd /home/opc/soa_k8lab/scripts
-vi 00_setVariable.sh
-#update your parameters
-./00_setVariable.sh
+./0_InitialMachine_Config.sh
 ```
 
 1. This script need to run on both master and worker node.
@@ -821,6 +833,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjM0MTQxNzAsNDIwOTE3NzI4LDE4MT
-M3MTI2MjldfQ==
+eyJoaXN0b3J5IjpbLTg4NzY5ODAwNCw0MjA5MTc3MjgsMTgxMz
+cxMjYyOV19
 -->
