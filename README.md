@@ -737,6 +737,7 @@ http://[workerip]:30305/console/login/LoginForm.jsp
 cd /home/opc/soa_k8lab/scripts
 ./18_Prom_Setting.sh
 
+
 ```
 
 1. **This script run on on master node ONLY.**
@@ -774,5 +775,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMzMxNzExMl19
+eyJoaXN0b3J5IjpbNTk2MDA2MTQsMTkxMzMxNzExMl19
 -->
