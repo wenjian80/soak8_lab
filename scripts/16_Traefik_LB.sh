@@ -20,3 +20,9 @@ helm install soainfra-ingress  kubernetes/ingress-per-domain  --namespace soans 
 kubectl describe ingress soainfra-traefik -n soans
 
 #http://158.101.19.71:30305/console/login/LoginForm.jsp
+
+#clean
+#helm delete soainfra-ingress --namespace soans
+#helm delete traefik --namespace traefik
+#helm repo remove  traefik
+#kubectl delete ns traefik
