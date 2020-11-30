@@ -590,7 +590,6 @@ cd /home/opc/soa_k8lab/scripts
 kubectl get po - n soans
 kubectl logs soainfra-create-soa-infra-domain-job-l2kg6 -n soans --follow
 
-
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -738,5 +737,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAyODIyMDYwXX0=
+eyJoaXN0b3J5IjpbLTEyNzQ3NDYzNzAsNDAyODIyMDYwXX0=
 -->
