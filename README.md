@@ -67,7 +67,7 @@ chmod -R 777 /home/opc/soak8_lab
 
 ### Replace the settings with your environment
 
-open up your labinfo.txt
+Open up your labinfo.txt and 
 Login to master node and change the below
 
 ```
@@ -807,5 +807,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk1Nzk5MzUyLC0xNzI0MDEzNTA1XX0=
+eyJoaXN0b3J5IjpbLTk3NTAxNTM5NywzOTU3OTkzNTIsLTE3Mj
+QwMTM1MDVdfQ==
 -->
