@@ -388,7 +388,7 @@ kubectl get all -A
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
-
+#Please wait for the script to finish. Refer to below for the output you should be seeing.
 #It will wait a while to pull the contaier to start. While it is waiting , open a new window to master node and run the below to check the progress and if there is any error.
 kubectl describe po rcu -n soans
 
@@ -730,5 +730,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MzY3NDE0MF19
+eyJoaXN0b3J5IjpbLTE1MzcwMjk4XX0=
 -->
