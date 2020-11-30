@@ -380,8 +380,11 @@ kubectl get all -A
 #Login master
 
 #change your database ip in database.yaml
+#Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 
 #change your username and password in 10_Rcu.sh
+#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
+Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 
 #change your database vcn in 10_Rcu.sh
  
@@ -748,5 +751,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMDAzNjExXX0=
+eyJoaXN0b3J5IjpbLTEyNDM5MjgwMDUsLTUzMDAzNjExXX0=
 -->
