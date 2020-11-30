@@ -68,37 +68,28 @@ chmod -R 777 /home/opc/soak8_lab
 ### Replace the settings with your environment [TODO]
 
 Open up your labinfo.txt and get the information on hand.
-Login to both master and worker node and change the below.
+1) Login to both master and worker node.
+2) Open up 00_setVariable.sh and update your variabels
 
 ```
-#Steps to follow
-#Read below for exact instruction
+#Update the below based on "Database private ip" in your labinfo.txt
+DATABASEIP=put ip here
+#DATABASEIP=10.0.0.4
 
-#change your database ip in database.yaml 
-#Change the ip to "Database private ip" in your labinfo.txt
-#Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml 
-#Check contents if it is change 
-#more database.yaml 
+#Update the below based on "Oracle account username/password" in your labinfo.txt
+USERID=put uid here
+PASSWORD=put pwd phere
+#USERID=wenjian80@gmail.com
+#PASSWORD=Welcome_1234#
 
-#change your username and password in 10_Rcu.sh 
-#Change your username and password in "Oracle account username/password"
-#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
-#Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh 
-#Check contents if it is change 
-#more 10_Rcu.sh 
 
-#change your database vcn in 10_Rcu.sh 
-#Change the subnet in "Database subnet"
-#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh 
-#Check contents if it is change 
-#more 10_Rcu.sh
+#Update the below based on "Database subnet" in your labinfo.txt
+SUBNET=put subnet here
+#SUBNET=subnet11251534.vcn11251534.oraclevcn.com
 
-#Change the ip in 12_Mount_File.sh 
-#Change the ip to "NFS ip" in your labinfo.txt
-#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh 
-#Check contents if it is change 
-#more 12_Mount_File.sh
-
+#Update the below based on "NFS IP" in your labinfo.txt
+NFSIP=put ip here
+#NFSIP=10.0.0.6
 ```
 
 
@@ -817,5 +808,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzcxMjYyOV19
+eyJoaXN0b3J5IjpbMjAzNTYyMTkyOCwxODEzNzEyNjI5XX0=
 -->
