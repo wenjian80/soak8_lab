@@ -33,20 +33,20 @@ NFSIP=put ip here
 #NFSIP=10.0.0.6
 
 #Changes in 10_Rcu.sh 
-sed -i "s/UIDCHANGE/$USERID/g" 10_Rcu.sh 
-sed -i "s/PWDCHANGE/$PASSWORD/g" 10_Rcu.sh 
-sed -i "s/VCNCHANGE/$SUBNET/g" 10_Rcu.sh 
+sed -i 's/UIDCHANGE/'$USERID'/g' 10_Rcu.sh 
+sed -i 's/PWDCHANGE/'$PASSWORD'/g' 10_Rcu.sh 
+sed -i 's/VCNCHANGE/'$SUBNET'/g' 10_Rcu.sh 
 
 #Changes in database.yaml 
-sed -i "s/IPCHANGE/$DATABASEIP/g" database.yaml 
+sed -i 's/IPCHANGE/'$DATABASEIP'/g' database.yaml 
 
 #Changes in 12_Mount_File.sh 
-sed -i "s/IPCHANGE/$NFSIP/g" 12_Mount_File.sh 
+sed -i 's/IPCHANGE/'$NFSIP'/g' 12_Mount_File.sh 
 
 #Changes in create-pv-pvc-inputs.yaml
-sed -i "s/IPCHANGE/$NFSIP/g" create-pv-pvc-inputs.yaml
+sed -i 's/IPCHANGE/'$NFSIP'/g' create-pv-pvc-inputs.yaml
 
 #Changes in create-domain-inputs.yaml
-sed -i "s/VCNCHANGE/$SUBNET/g" create-domain-inputs.yaml
+sed -i 's/VCNCHANGE/'$SUBNET'/g' create-domain-inputs.yaml
 
 
