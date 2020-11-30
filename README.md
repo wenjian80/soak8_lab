@@ -34,7 +34,7 @@
 # 3. Lab steps
 
 ### Steps to follow
-It will take you around 1-2 Hour to run finished the excercise.
+It will take you around 1 Hour to run finished the excercise.
 
 ```
 #Steps to follow
@@ -65,43 +65,59 @@ chmod -R 777 /home/opc/soak8_lab
 8. All these scripts are referencing and the path in /home/opc/soak8_lab and /home/opc/soak8_lab/scripts , so pls follow the naming.
 
 
-### Replace the settings with your environment [TODO]
+### Replace the settings with your environment
 
 Open up your labinfo.txt and get the information on hand.
-Login to both master and worker node and change the below.
 
+1) Login to both master and worker node.
+2) Open up 00_setVariable.sh and update your settings
+
+```
+#Update the below based on "Database private ip" in your labinfo.txt
+DATABASEIP=put ip here
+#DATABASEIP=10.0.0.4
+
+#Update the below based on "Oracle account username/password" in your labinfo.txt
+USERID=put uid here
+PASSWORD=put pwd phere
+#USERID=wenjian80@gmail.com
+#PASSWORD=Welcome_1234#
+
+
+#Update the below based on "Database subnet" in your labinfo.txt
+SUBNET=put subnet here
+#SUBNET=subnet11251534.vcn11251534.oraclevcn.com
+
+#Update the below based on "NFS IP" in your labinfo.txt
+NFSIP=put ip here
+#NFSIP=10.0.0.6
+```
+
+## Step 00: Set Parameters
+Replace the settings with your environment
+
+**[Run on master and worker node]**
+
+**Steps to follow**
 ```
 #Steps to follow
 #Read below for exact instruction
 
-#change your database ip in database.yaml 
-#Change the ip to "Database private ip" in your labinfo.txt
-#Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml 
-#Check contents if it is change 
-#more database.yaml 
+#login master
+cd /home/opc/soa_k8lab/scripts
+vi 00_setVariable.sh
+#make sure all your settings is correct
+./00_setVariable.sh
 
-#change your username and password in 10_Rcu.sh 
-#Change your username and password in "Oracle account username/password"
-#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
-#Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh 
-#Check contents if it is change 
-#more 10_Rcu.sh 
-
-#change your database vcn in 10_Rcu.sh 
-#Change the subnet in "Database subnet"
-#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh 
-#Check contents if it is change 
-#more 10_Rcu.sh
-
-#Change the ip in 12_Mount_File.sh 
-#Change the ip to "NFS ip" in your labinfo.txt
-#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh 
-#Check contents if it is change 
-#more 12_Mount_File.sh
-
+#login worker
+cd /home/opc/soa_k8lab/scripts
+vi 00_setVariable.sh
+#make sure all your settings is correct
+./00_setVariable.sh
 ```
 
-
+1. This script need to run on both master and worker node.
+2. We are setting up the parameters for your environment.
 
 ## Step 0: 0_InitialMachine_Config.sh
 **[Run on master and worker node]**
@@ -414,17 +430,20 @@ kubectl get all -A
 
 #Login master
 
+#Your Parameters should have been in step 00, double check again
 #change your database ip in database.yaml
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 #Check contents if it is change
 #more database.yaml
 
+#Your Parameters should have been in step 00, double check again
 #change your username and password in 10_Rcu.sh
 #Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
 #Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 #Check contents if it is change
 #more 10_Rcu.sh
 
+#Your Parameters should have been in step 00, double check again
 #change your database vcn in 10_Rcu.sh
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
 #Check contents if it is change
@@ -532,6 +551,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 #Read below for exact instruction
 
 #Login master
+#Your Parameters should have been in step 00, double check again
 #Change the ip in 12_Mount_File.sh before running the script 
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Check contents if it is change
@@ -541,6 +561,7 @@ cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
+#Your Parameters should have been in step 00, double check again
 #Change the ip in 12_Mount_File.sh before running the script 
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Check contents if it is change
@@ -583,6 +604,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Read below for exact instruction
 
 #Login master
+#Your Parameters should have been in step 00, double check again
 #Change the ip in create-pv-pvc-inputs.yaml before running the script 
 #Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
 #Check contents if it is change
@@ -635,6 +657,7 @@ kubectl get pv,pvc -n soans
 
 #Login master
 
+#Your Parameters should have been in step 00, double check again
 #Change the database vcn in create-domain-inputs.yaml before running the script
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
 #Check contents if it is change
@@ -817,5 +840,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMzcxMjYyOV19
+eyJoaXN0b3J5IjpbLTE5MDYxNzA1OThdfQ==
 -->
