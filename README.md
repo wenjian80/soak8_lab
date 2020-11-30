@@ -410,7 +410,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 ```
 sed -i 's/IPCHANGE/[YOURIP]/g' database.yaml
-Eg sed -i 's/IPCHANGE/10.0.0.1/g' database.yaml
+Eg  sed -i 's/IPCHANGE/10.0.0.1/g' database.yaml
 Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 ```
 ### **Chnage username and password**
@@ -440,7 +440,7 @@ PDB1.VCNCHANGE
 4. You can use the below command to change or open up and edit it
 
 ```
-Eg sed -i 's/VCNCHANGE/[Your vcn]/g'10_Rcu.sh
+sed -i 's/VCNCHANGE/aaa.aaa.comEg sed -i 's/VCNCHANGE/[Your vcn]/g'10_Rcu.sh
 Eg sed -i 's/VCNCHANGE/aaa.aaa.com.com/g'10_Rcu.sh
 Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g'10_Rcu.sh
 ```
@@ -723,5 +723,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3OTAxMDU2Ml19
+eyJoaXN0b3J5IjpbMTkzMzg0ODcyMl19
 -->
