@@ -656,6 +656,8 @@ kubectl logs soainfra-adminserver -n soans --follow
 #you should see admin, soa amd osb started.
 #Refer to sample image below
 kubectl get po -n soans
+
+#Wait for admin, soa and osb to be started before proceed to next step.
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -770,5 +772,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ0NTExNzgzXX0=
+eyJoaXN0b3J5IjpbMjM1OTM4MTkxXX0=
 -->
