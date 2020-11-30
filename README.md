@@ -738,6 +738,13 @@ cd /home/opc/soa_k8lab/scripts
 ./18_Prom_Setting.sh
 
 
+#Accessing Prometheus
+http://[workernodeip]:32101/graph
+
+#Accessing Grafana (admin/admin as default username and password)
+http://[workernodeip]:32100/login 
+
+
 ```
 
 1. **This script run on on master node ONLY.**
@@ -775,5 +782,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2MDA2MTQsMTkxMzMxNzExMl19
+eyJoaXN0b3J5IjpbLTE3MjQwMTM1MDVdfQ==
 -->
