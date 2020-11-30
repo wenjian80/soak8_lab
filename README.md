@@ -607,7 +607,8 @@ rcuDatabaseURL: database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE
 4. You can use the below command to change or open up and edit it
 
 ```
-sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
+Eg sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
+Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
 ```
 
 ## Step 15: 15_Soa_DomainConfig.sh
@@ -734,5 +735,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MzYyNzMyMywtMTUzNzAyOThdfQ==
+eyJoaXN0b3J5IjpbMTAwNTQwMTMwNV19
 -->
