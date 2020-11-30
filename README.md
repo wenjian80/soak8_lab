@@ -657,6 +657,7 @@ kubectl get pv,pvc -n soans
 
 #Login master
 
+#Your Parameters should have been in step 00, double check again
 #Change the database vcn in create-domain-inputs.yaml before running the script
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
 #Check contents if it is change
@@ -839,6 +840,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NjE5MTEyNCw0MjA5MTc3MjgsMTgxMz
-cxMjYyOV19
+eyJoaXN0b3J5IjpbMTA4NTkxNTM5MV19
 -->
