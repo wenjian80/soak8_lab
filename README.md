@@ -520,6 +520,8 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 ```
 sed -i 's/IPCHANGE/[YOURIP]/g' 12_Mount_File.sh
 Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
+Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
+
 ```
 ## Step 13: 13_Soa_pv.sh
 **[Run on master node ONLY]**
@@ -558,6 +560,8 @@ weblogicDomainStorageNFSServer: IPCHANGE
 ```
 sed -i 's/IPCHANGE/[YOURIP]/g' create-pv-pvc-inputs.yaml
 Eg  sed -i 's/IPCHANGE/10.0.0.1/g' create-pv-pvc-inputs.yaml
+Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
+
 ```
 ### **Check output**
 1. Afrter running the script run the below command to check 
@@ -730,5 +734,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzcwMjk4XX0=
+eyJoaXN0b3J5IjpbLTk4MzYyNzMyMywtMTUzNzAyOThdfQ==
 -->
