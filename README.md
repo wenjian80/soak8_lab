@@ -387,7 +387,8 @@ kubectl get all -A
 Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 
 #change your database vcn in 10_Rcu.sh
- 
+Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
+
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
@@ -751,5 +752,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDM5MjgwMDUsLTUzMDAzNjExXX0=
+eyJoaXN0b3J5IjpbMTQ0MzkzNzU0OCwtMTI0MzkyODAwNSwtNT
+MwMDM2MTFdfQ==
 -->
