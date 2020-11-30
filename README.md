@@ -34,6 +34,8 @@
 # 3. Lab steps
 
 ### Steps to follow
+It will take you around 1-2 Hour to run finished the excercise.
+
 ```
 #Steps to follow
 #Read below for exact instruction
@@ -386,7 +388,7 @@ kubectl get all -A
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
-
+#Please wait for the script to finish. Refer to below for the output you should be seeing.
 #It will wait a while to pull the contaier to start. While it is waiting , open a new window to master node and run the below to check the progress and if there is any error.
 kubectl describe po rcu -n soans
 
@@ -432,6 +434,7 @@ Eg sed -i 's/PWDCHANGE/Acs@#!_/g' 10_Rcu.sh
 
 Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh
 Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
+*My password here is just a temp, no there is nothing to hack if you want to use this :)
 ```
 
 ## **Change the database vcn name**
@@ -517,6 +520,8 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 ```
 sed -i 's/IPCHANGE/[YOURIP]/g' 12_Mount_File.sh
 Eg  sed -i 's/IPCHANGE/10.0.0.1/g' 12_Mount_File.sh
+Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
+
 ```
 ## Step 13: 13_Soa_pv.sh
 **[Run on master node ONLY]**
@@ -555,6 +560,8 @@ weblogicDomainStorageNFSServer: IPCHANGE
 ```
 sed -i 's/IPCHANGE/[YOURIP]/g' create-pv-pvc-inputs.yaml
 Eg  sed -i 's/IPCHANGE/10.0.0.1/g' create-pv-pvc-inputs.yaml
+Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
+
 ```
 ### **Check output**
 1. Afrter running the script run the below command to check 
@@ -579,7 +586,10 @@ kubectl get pv,pvc -n soans
 cd /home/opc/soa_k8lab/scripts
 ./14_Soa_DomainJob.sh
 
-ls -lrth /soashared/soa
+#open a new session and look at the job logs
+kubectl get po - n soans
+kubectl logs soainfra-create-soa-infra-domain-job-l2kg6 -n soans --follow
+
 
 ```
 
@@ -600,7 +610,8 @@ rcuDatabaseURL: database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE
 4. You can use the below command to change or open up and edit it
 
 ```
-sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
+Eg sed -i 's/VCNCHANGE/aaa.aaa.com.com/g' create-domain-inputs.yaml
+Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
 ```
 
 ## Step 15: 15_Soa_DomainConfig.sh
@@ -727,5 +738,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5NTY1MjQ1XX0=
+eyJoaXN0b3J5IjpbNDAyODIyMDYwXX0=
 -->
