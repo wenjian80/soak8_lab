@@ -82,15 +82,19 @@ Login to master node and change the below
 #more database.yaml 
 
 #change your username and password in 10_Rcu.sh 
+#Change your username and password in "Oracle account username/password"
 #Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
 #Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh 
 #Check contents if it is change 
 #more 10_Rcu.sh 
 
 #change your database vcn in 10_Rcu.sh 
-#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh #Check contents if it is change #more 10_Rcu.sh
+#Change the subnet in "Database subnet"
+#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh 
+#Check contents if it is change 
+#more 10_Rcu.sh
 
-#login worker
+
 ```
 
 
@@ -809,6 +813,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTc5MDM5Miw5OTE0ODUwNjYsLTE3Mj
+eyJoaXN0b3J5IjpbNDAyOTE1MTM0LDE5OTE3OTAzOTIsLTE3Mj
 QwMTM1MDVdfQ==
 -->
