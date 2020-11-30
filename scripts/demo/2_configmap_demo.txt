@@ -1,0 +1,10 @@
+kubectl apply -f configmap.yaml
+
+kubectl apply -f configmap_pod.yaml
+
+kubectl exec -it pod-configmap  sh
+env
+
+
+kubectl delete -f configmap.yaml
+kubectl delete -f configmap_pod.yaml

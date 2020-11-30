@@ -1,0 +1,1874 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2020-06-17T06:58:07Z",
+                "generateName": "example-cluster-storage-",
+                "labels": {
+                    "coherenceCluster": "example-cluster",
+                    "coherenceDeployment": "example-cluster-storage",
+                    "coherenceRole": "storage",
+                    "coherenceWKAMember": "true",
+                    "component": "coherencePod",
+                    "controller-revision-hash": "example-cluster-storage-75f567f5d9",
+                    "statefulset.kubernetes.io/pod-name": "example-cluster-storage-0"
+                },
+                "name": "example-cluster-storage-0",
+                "namespace": "coherence-example",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "StatefulSet",
+                        "name": "example-cluster-storage",
+                        "uid": "e6229c42-b067-11ea-b23c-0000170227ee"
+                    }
+                ],
+                "resourceVersion": "3305266",
+                "selfLink": "/api/v1/namespaces/coherence-example/pods/example-cluster-storage-0",
+                "uid": "e625c517-b067-11ea-b23c-0000170227ee"
+            },
+            "spec": {
+                "affinity": {
+                    "podAntiAffinity": {
+                        "preferredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "podAffinityTerm": {
+                                    "labelSelector": {
+                                        "matchExpressions": [
+                                            {
+                                                "key": "coherenceCluster",
+                                                "operator": "In",
+                                                "values": [
+                                                    "example-cluster"
+                                                ]
+                                            },
+                                            {
+                                                "key": "coherenceRole",
+                                                "operator": "In",
+                                                "values": [
+                                                    "storage"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "topologyKey": "failure-domain.beta.kubernetes.io/zone"
+                                },
+                                "weight": 1
+                            }
+                        ]
+                    }
+                },
+                "containers": [
+                    {
+                        "command": [
+                            "/bin/sh",
+                            "-x",
+                            "/scripts/startCoherence.sh",
+                            "server"
+                        ],
+                        "env": [
+                            {
+                                "name": "COH_WKA",
+                                "value": "example-cluster-wka"
+                            },
+                            {
+                                "name": "COH_APP_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app"
+                            },
+                            {
+                                "name": "COH_EXTRA_CLASSPATH",
+                                "value": "/u01/oracle/oracle_home/coherence/app/lib/*:/u01/oracle/oracle_home/coherence/app/conf"
+                            },
+                            {
+                                "name": "COH_MGMT_HTTP_PORT",
+                                "value": "30000"
+                            },
+                            {
+                                "name": "COH_METRICS_PORT",
+                                "value": "9612"
+                            },
+                            {
+                                "name": "COH_MACHINE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_MEMBER_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.name"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_POD_UID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.uid"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "OPERATOR_HOST",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "operatorhost",
+                                        "name": "coherence-operator-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_SITE_INFO_LOCATION",
+                                "value": "http://$(OPERATOR_HOST)/site/$(COH_MACHINE_NAME)"
+                            },
+                            {
+                                "name": "COH_RACK_INFO_LOCATION",
+                                "value": "http://$(OPERATOR_HOST)/rack/$(COH_MACHINE_NAME)"
+                            },
+                            {
+                                "name": "COH_CLUSTER_NAME",
+                                "value": "example-cluster"
+                            },
+                            {
+                                "name": "COH_ROLE",
+                                "value": "storage"
+                            },
+                            {
+                                "name": "COH_UTIL_DIR",
+                                "value": "/utils"
+                            },
+                            {
+                                "name": "JVM_USE_CONTAINER_LIMITS",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JVM_FLIGHT_RECORDER",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JVM_HEAP_SIZE",
+                                "value": "512m"
+                            },
+                            {
+                                "name": "JVM_GC_LOGGING",
+                                "value": "true"
+                            },
+                            {
+                                "name": "COH_CACHE_CONFIG",
+                                "value": "storage-cache-config.xml"
+                            },
+                            {
+                                "name": "OPERATOR_REQUEST_TIMEOUT",
+                                "value": "120"
+                            },
+                            {
+                                "name": "COH_MGMT_ENABLED",
+                                "value": "false"
+                            },
+                            {
+                                "name": "COH_METRICS_ENABLED",
+                                "value": "true"
+                            },
+                            {
+                                "name": "COH_HEALTH_PORT",
+                                "value": "6676"
+                            },
+                            {
+                                "name": "COH_LOGGING_CONFIG",
+                                "value": "/scripts/logging.properties"
+                            }
+                        ],
+                        "image": "container-registry.oracle.com/middleware/coherence:12.2.1.4.0",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 5,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 6676,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 45,
+                            "periodSeconds": 60,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "name": "coherence",
+                        "ports": [
+                            {
+                                "containerPort": 7,
+                                "name": "coherence",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 6676,
+                                "name": "health",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 9612,
+                                "name": "metrics",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 50,
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 6676,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 30,
+                            "periodSeconds": 60,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "32"
+                            },
+                            "requests": {
+                                "cpu": "0"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/logs",
+                                "name": "log-dir"
+                            },
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/u01/oracle/oracle_home/coherence/app",
+                                "name": "application-dir"
+                            },
+                            {
+                                "mountPath": "/scripts",
+                                "name": "coherence-scripts"
+                            },
+                            {
+                                "mountPath": "/jvm",
+                                "name": "jvm"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            "-c",
+                            "/etc/fluent.conf"
+                        ],
+                        "env": [
+                            {
+                                "name": "COHERENCE_POD_ID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.uid"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "FLUENTD_CONF",
+                                "value": "fluentd-coherence.conf"
+                            },
+                            {
+                                "name": "FLUENT_ELASTICSEARCH_SED_DISABLE",
+                                "value": "true"
+                            },
+                            {
+                                "name": "ELASTICSEARCH_USER",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchuser",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_PASSWORD",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchpassword",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_HOSTS",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchhosts",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_SCHEME",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchscheme",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            }
+                        ],
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "fluentd",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/fluentd/etc/fluentd-coherence.conf",
+                                "name": "fluentd-coherence-conf",
+                                "subPath": "fluentd-coherence.conf"
+                            },
+                            {
+                                "mountPath": "/logs",
+                                "name": "log-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "hostname": "example-cluster-storage-0",
+                "imagePullSecrets": [
+                    {
+                        "name": "coherence-example-secret"
+                    }
+                ],
+                "initContainers": [
+                    {
+                        "command": [
+                            "/files/utils-init"
+                        ],
+                        "env": [
+                            {
+                                "name": "COH_UTIL_DIR",
+                                "value": "/utils"
+                            },
+                            {
+                                "name": "COH_CLUSTER_NAME",
+                                "value": "example-cluster"
+                            }
+                        ],
+                        "image": "oracle/coherence-operator:2.1.1-utils",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "coherence-k8s-utils",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    {
+                        "command": [
+                            "/utils/copy"
+                        ],
+                        "env": [
+                            {
+                                "name": "EXTERNAL_APP_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app"
+                            },
+                            {
+                                "name": "APP_DIR",
+                                "value": "/app"
+                            },
+                            {
+                                "name": "EXTERNAL_LIB_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app/lib"
+                            },
+                            {
+                                "name": "LIB_DIR",
+                                "value": "/app/lib"
+                            },
+                            {
+                                "name": "EXTERNAL_CONF_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app/conf"
+                            },
+                            {
+                                "name": "CONF_DIR",
+                                "value": "/app/conf"
+                            }
+                        ],
+                        "image": "bjlim80/deployment-example:2.1.2",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "application",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/u01/oracle/oracle_home/coherence/app",
+                                "name": "application-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "nodeName": "k8-coh-worker1",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "subdomain": "coherence",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "emptyDir": {},
+                        "name": "log-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "utils-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "application-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "jvm"
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 511,
+                            "name": "example-cluster-storage-scripts"
+                        },
+                        "name": "coherence-scripts"
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "name": "example-cluster-storage-efk-config"
+                        },
+                        "name": "fluentd-coherence-conf"
+                    },
+                    {
+                        "name": "default-token-r4rtt",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-r4rtt"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:12Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:59:29Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:59:29Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:07Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://b1fdeeb95cb64478f0452093ccb1efa9fdf89639f3917f1a6d81045f3dfc7c0b",
+                        "image": "container-registry.oracle.com/middleware/coherence:12.2.1.4.0",
+                        "imageID": "docker-pullable://container-registry.oracle.com/middleware/coherence@sha256:9717304470eb39fc3647643c92bc4019c5aefb47f339e351899975036db8c88e",
+                        "lastState": {},
+                        "name": "coherence",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2020-06-17T06:58:15Z"
+                            }
+                        }
+                    },
+                    {
+                        "containerID": "docker://7ac89ea1b19389371395dff862dfab0e6a799ca704d7b67d3c2dcdfaf23eaa15",
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imageID": "docker-pullable://fluent/fluentd-kubernetes-daemonset@sha256:f7fa2c03cef32ed05d169930bcf0f8f44380f47dcf59470094f459a8f7995c84",
+                        "lastState": {},
+                        "name": "fluentd",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2020-06-17T06:58:15Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.0.3",
+                "initContainerStatuses": [
+                    {
+                        "containerID": "docker://9bf33a31f2078964d6b94b75db6672665d3939d3afdfcb23aabee8a5bb9aad68",
+                        "image": "oracle/coherence-operator:2.1.1-utils",
+                        "imageID": "docker-pullable://oracle/coherence-operator@sha256:9be64c88c81c8f58b1b08d1c7ee837e535224ac9652aee412b341824532019b0",
+                        "lastState": {},
+                        "name": "coherence-k8s-utils",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "terminated": {
+                                "containerID": "docker://9bf33a31f2078964d6b94b75db6672665d3939d3afdfcb23aabee8a5bb9aad68",
+                                "exitCode": 0,
+                                "finishedAt": "2020-06-17T06:58:09Z",
+                                "reason": "Completed",
+                                "startedAt": "2020-06-17T06:58:09Z"
+                            }
+                        }
+                    },
+                    {
+                        "containerID": "docker://6157c5430d2ef1aa85702456025af17a265150e9153b4c8d80d2292f7966b18c",
+                        "image": "bjlim80/deployment-example:2.1.2",
+                        "imageID": "docker-pullable://bjlim80/deployment-example@sha256:50438249f7f1575435292294fce5d52412bce056e28796d1712f19609856d296",
+                        "lastState": {},
+                        "name": "application",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "terminated": {
+                                "containerID": "docker://6157c5430d2ef1aa85702456025af17a265150e9153b4c8d80d2292f7966b18c",
+                                "exitCode": 0,
+                                "finishedAt": "2020-06-17T06:58:12Z",
+                                "reason": "Completed",
+                                "startedAt": "2020-06-17T06:58:12Z"
+                            }
+                        }
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.1.118",
+                "qosClass": "Burstable",
+                "startTime": "2020-06-17T06:58:07Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2020-06-17T06:58:07Z",
+                "generateName": "example-cluster-storage-",
+                "labels": {
+                    "coherenceCluster": "example-cluster",
+                    "coherenceDeployment": "example-cluster-storage",
+                    "coherenceRole": "storage",
+                    "coherenceWKAMember": "true",
+                    "component": "coherencePod",
+                    "controller-revision-hash": "example-cluster-storage-75f567f5d9",
+                    "statefulset.kubernetes.io/pod-name": "example-cluster-storage-1"
+                },
+                "name": "example-cluster-storage-1",
+                "namespace": "coherence-example",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "StatefulSet",
+                        "name": "example-cluster-storage",
+                        "uid": "e6229c42-b067-11ea-b23c-0000170227ee"
+                    }
+                ],
+                "resourceVersion": "3305196",
+                "selfLink": "/api/v1/namespaces/coherence-example/pods/example-cluster-storage-1",
+                "uid": "e626d69b-b067-11ea-b23c-0000170227ee"
+            },
+            "spec": {
+                "affinity": {
+                    "podAntiAffinity": {
+                        "preferredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "podAffinityTerm": {
+                                    "labelSelector": {
+                                        "matchExpressions": [
+                                            {
+                                                "key": "coherenceCluster",
+                                                "operator": "In",
+                                                "values": [
+                                                    "example-cluster"
+                                                ]
+                                            },
+                                            {
+                                                "key": "coherenceRole",
+                                                "operator": "In",
+                                                "values": [
+                                                    "storage"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "topologyKey": "failure-domain.beta.kubernetes.io/zone"
+                                },
+                                "weight": 1
+                            }
+                        ]
+                    }
+                },
+                "containers": [
+                    {
+                        "command": [
+                            "/bin/sh",
+                            "-x",
+                            "/scripts/startCoherence.sh",
+                            "server"
+                        ],
+                        "env": [
+                            {
+                                "name": "COH_WKA",
+                                "value": "example-cluster-wka"
+                            },
+                            {
+                                "name": "COH_APP_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app"
+                            },
+                            {
+                                "name": "COH_EXTRA_CLASSPATH",
+                                "value": "/u01/oracle/oracle_home/coherence/app/lib/*:/u01/oracle/oracle_home/coherence/app/conf"
+                            },
+                            {
+                                "name": "COH_MGMT_HTTP_PORT",
+                                "value": "30000"
+                            },
+                            {
+                                "name": "COH_METRICS_PORT",
+                                "value": "9612"
+                            },
+                            {
+                                "name": "COH_MACHINE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_MEMBER_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.name"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_POD_UID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.uid"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "OPERATOR_HOST",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "operatorhost",
+                                        "name": "coherence-operator-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_SITE_INFO_LOCATION",
+                                "value": "http://$(OPERATOR_HOST)/site/$(COH_MACHINE_NAME)"
+                            },
+                            {
+                                "name": "COH_RACK_INFO_LOCATION",
+                                "value": "http://$(OPERATOR_HOST)/rack/$(COH_MACHINE_NAME)"
+                            },
+                            {
+                                "name": "COH_CLUSTER_NAME",
+                                "value": "example-cluster"
+                            },
+                            {
+                                "name": "COH_ROLE",
+                                "value": "storage"
+                            },
+                            {
+                                "name": "COH_UTIL_DIR",
+                                "value": "/utils"
+                            },
+                            {
+                                "name": "JVM_USE_CONTAINER_LIMITS",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JVM_FLIGHT_RECORDER",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JVM_HEAP_SIZE",
+                                "value": "512m"
+                            },
+                            {
+                                "name": "JVM_GC_LOGGING",
+                                "value": "true"
+                            },
+                            {
+                                "name": "COH_CACHE_CONFIG",
+                                "value": "storage-cache-config.xml"
+                            },
+                            {
+                                "name": "OPERATOR_REQUEST_TIMEOUT",
+                                "value": "120"
+                            },
+                            {
+                                "name": "COH_MGMT_ENABLED",
+                                "value": "false"
+                            },
+                            {
+                                "name": "COH_METRICS_ENABLED",
+                                "value": "true"
+                            },
+                            {
+                                "name": "COH_HEALTH_PORT",
+                                "value": "6676"
+                            },
+                            {
+                                "name": "COH_LOGGING_CONFIG",
+                                "value": "/scripts/logging.properties"
+                            }
+                        ],
+                        "image": "container-registry.oracle.com/middleware/coherence:12.2.1.4.0",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 5,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 6676,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 45,
+                            "periodSeconds": 60,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "name": "coherence",
+                        "ports": [
+                            {
+                                "containerPort": 7,
+                                "name": "coherence",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 6676,
+                                "name": "health",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 9612,
+                                "name": "metrics",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 50,
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 6676,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 30,
+                            "periodSeconds": 60,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "32"
+                            },
+                            "requests": {
+                                "cpu": "0"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/logs",
+                                "name": "log-dir"
+                            },
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/u01/oracle/oracle_home/coherence/app",
+                                "name": "application-dir"
+                            },
+                            {
+                                "mountPath": "/scripts",
+                                "name": "coherence-scripts"
+                            },
+                            {
+                                "mountPath": "/jvm",
+                                "name": "jvm"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            "-c",
+                            "/etc/fluent.conf"
+                        ],
+                        "env": [
+                            {
+                                "name": "COHERENCE_POD_ID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.uid"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "FLUENTD_CONF",
+                                "value": "fluentd-coherence.conf"
+                            },
+                            {
+                                "name": "FLUENT_ELASTICSEARCH_SED_DISABLE",
+                                "value": "true"
+                            },
+                            {
+                                "name": "ELASTICSEARCH_USER",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchuser",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_PASSWORD",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchpassword",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_HOSTS",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchhosts",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_SCHEME",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchscheme",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            }
+                        ],
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "fluentd",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/fluentd/etc/fluentd-coherence.conf",
+                                "name": "fluentd-coherence-conf",
+                                "subPath": "fluentd-coherence.conf"
+                            },
+                            {
+                                "mountPath": "/logs",
+                                "name": "log-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "hostname": "example-cluster-storage-1",
+                "imagePullSecrets": [
+                    {
+                        "name": "coherence-example-secret"
+                    }
+                ],
+                "initContainers": [
+                    {
+                        "command": [
+                            "/files/utils-init"
+                        ],
+                        "env": [
+                            {
+                                "name": "COH_UTIL_DIR",
+                                "value": "/utils"
+                            },
+                            {
+                                "name": "COH_CLUSTER_NAME",
+                                "value": "example-cluster"
+                            }
+                        ],
+                        "image": "oracle/coherence-operator:2.1.1-utils",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "coherence-k8s-utils",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    {
+                        "command": [
+                            "/utils/copy"
+                        ],
+                        "env": [
+                            {
+                                "name": "EXTERNAL_APP_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app"
+                            },
+                            {
+                                "name": "APP_DIR",
+                                "value": "/app"
+                            },
+                            {
+                                "name": "EXTERNAL_LIB_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app/lib"
+                            },
+                            {
+                                "name": "LIB_DIR",
+                                "value": "/app/lib"
+                            },
+                            {
+                                "name": "EXTERNAL_CONF_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app/conf"
+                            },
+                            {
+                                "name": "CONF_DIR",
+                                "value": "/app/conf"
+                            }
+                        ],
+                        "image": "bjlim80/deployment-example:2.1.2",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "application",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/u01/oracle/oracle_home/coherence/app",
+                                "name": "application-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "nodeName": "k8-coh-worker1",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "subdomain": "coherence",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "emptyDir": {},
+                        "name": "log-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "utils-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "application-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "jvm"
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 511,
+                            "name": "example-cluster-storage-scripts"
+                        },
+                        "name": "coherence-scripts"
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "name": "example-cluster-storage-efk-config"
+                        },
+                        "name": "fluentd-coherence-conf"
+                    },
+                    {
+                        "name": "default-token-r4rtt",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-r4rtt"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:11Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:48Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:48Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:07Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://aedb40498b71113224fc0638ded20ff09d70dc0cdb04449d96ee8317ff87070e",
+                        "image": "container-registry.oracle.com/middleware/coherence:12.2.1.4.0",
+                        "imageID": "docker-pullable://container-registry.oracle.com/middleware/coherence@sha256:9717304470eb39fc3647643c92bc4019c5aefb47f339e351899975036db8c88e",
+                        "lastState": {},
+                        "name": "coherence",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2020-06-17T06:58:14Z"
+                            }
+                        }
+                    },
+                    {
+                        "containerID": "docker://52d70094e838002745a187fd69c4b0e08cf6460d6572347a94641a11b090bcb7",
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imageID": "docker-pullable://fluent/fluentd-kubernetes-daemonset@sha256:f7fa2c03cef32ed05d169930bcf0f8f44380f47dcf59470094f459a8f7995c84",
+                        "lastState": {},
+                        "name": "fluentd",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2020-06-17T06:58:15Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.0.3",
+                "initContainerStatuses": [
+                    {
+                        "containerID": "docker://a9e577b2d8e219b74404c45bccd99a3c08de98609ab4313c92987416c6b8122f",
+                        "image": "oracle/coherence-operator:2.1.1-utils",
+                        "imageID": "docker-pullable://oracle/coherence-operator@sha256:9be64c88c81c8f58b1b08d1c7ee837e535224ac9652aee412b341824532019b0",
+                        "lastState": {},
+                        "name": "coherence-k8s-utils",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "terminated": {
+                                "containerID": "docker://a9e577b2d8e219b74404c45bccd99a3c08de98609ab4313c92987416c6b8122f",
+                                "exitCode": 0,
+                                "finishedAt": "2020-06-17T06:58:10Z",
+                                "reason": "Completed",
+                                "startedAt": "2020-06-17T06:58:09Z"
+                            }
+                        }
+                    },
+                    {
+                        "containerID": "docker://b717883f40511b7ddf541c320eef450660ee91703164df2dd3588201dba29bde",
+                        "image": "bjlim80/deployment-example:2.1.2",
+                        "imageID": "docker-pullable://bjlim80/deployment-example@sha256:50438249f7f1575435292294fce5d52412bce056e28796d1712f19609856d296",
+                        "lastState": {},
+                        "name": "application",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "terminated": {
+                                "containerID": "docker://b717883f40511b7ddf541c320eef450660ee91703164df2dd3588201dba29bde",
+                                "exitCode": 0,
+                                "finishedAt": "2020-06-17T06:58:11Z",
+                                "reason": "Completed",
+                                "startedAt": "2020-06-17T06:58:11Z"
+                            }
+                        }
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.1.119",
+                "qosClass": "Burstable",
+                "startTime": "2020-06-17T06:58:07Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2020-06-17T06:58:17Z",
+                "generateName": "example-cluster-storage-",
+                "labels": {
+                    "coherenceCluster": "example-cluster",
+                    "coherenceDeployment": "example-cluster-storage",
+                    "coherenceRole": "storage",
+                    "coherenceWKAMember": "true",
+                    "component": "coherencePod",
+                    "controller-revision-hash": "example-cluster-storage-9c644fd98",
+                    "statefulset.kubernetes.io/pod-name": "example-cluster-storage-2"
+                },
+                "name": "example-cluster-storage-2",
+                "namespace": "coherence-example",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "StatefulSet",
+                        "name": "example-cluster-storage",
+                        "uid": "e6229c42-b067-11ea-b23c-0000170227ee"
+                    }
+                ],
+                "resourceVersion": "3305317",
+                "selfLink": "/api/v1/namespaces/coherence-example/pods/example-cluster-storage-2",
+                "uid": "ebe57664-b067-11ea-b23c-0000170227ee"
+            },
+            "spec": {
+                "affinity": {
+                    "podAntiAffinity": {
+                        "preferredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "podAffinityTerm": {
+                                    "labelSelector": {
+                                        "matchExpressions": [
+                                            {
+                                                "key": "coherenceCluster",
+                                                "operator": "In",
+                                                "values": [
+                                                    "example-cluster"
+                                                ]
+                                            },
+                                            {
+                                                "key": "coherenceRole",
+                                                "operator": "In",
+                                                "values": [
+                                                    "storage"
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "topologyKey": "failure-domain.beta.kubernetes.io/zone"
+                                },
+                                "weight": 1
+                            }
+                        ]
+                    }
+                },
+                "containers": [
+                    {
+                        "command": [
+                            "/bin/sh",
+                            "-x",
+                            "/scripts/startCoherence.sh",
+                            "server"
+                        ],
+                        "env": [
+                            {
+                                "name": "COH_WKA",
+                                "value": "example-cluster-wka"
+                            },
+                            {
+                                "name": "COH_APP_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app"
+                            },
+                            {
+                                "name": "COH_EXTRA_CLASSPATH",
+                                "value": "/u01/oracle/oracle_home/coherence/app/lib/*:/u01/oracle/oracle_home/coherence/app/conf"
+                            },
+                            {
+                                "name": "COH_MGMT_HTTP_PORT",
+                                "value": "30000"
+                            },
+                            {
+                                "name": "COH_METRICS_PORT",
+                                "value": "9612"
+                            },
+                            {
+                                "name": "COH_MACHINE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_MEMBER_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.name"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_POD_UID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.uid"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "OPERATOR_HOST",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "operatorhost",
+                                        "name": "coherence-operator-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "COH_SITE_INFO_LOCATION",
+                                "value": "http://$(OPERATOR_HOST)/site/$(COH_MACHINE_NAME)"
+                            },
+                            {
+                                "name": "COH_RACK_INFO_LOCATION",
+                                "value": "http://$(OPERATOR_HOST)/rack/$(COH_MACHINE_NAME)"
+                            },
+                            {
+                                "name": "COH_CLUSTER_NAME",
+                                "value": "example-cluster"
+                            },
+                            {
+                                "name": "COH_ROLE",
+                                "value": "storage"
+                            },
+                            {
+                                "name": "COH_UTIL_DIR",
+                                "value": "/utils"
+                            },
+                            {
+                                "name": "JVM_USE_CONTAINER_LIMITS",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JVM_FLIGHT_RECORDER",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JVM_HEAP_SIZE",
+                                "value": "512m"
+                            },
+                            {
+                                "name": "JVM_GC_LOGGING",
+                                "value": "true"
+                            },
+                            {
+                                "name": "COH_CACHE_CONFIG",
+                                "value": "storage-cache-config.xml"
+                            },
+                            {
+                                "name": "OPERATOR_REQUEST_TIMEOUT",
+                                "value": "120"
+                            },
+                            {
+                                "name": "COH_MGMT_ENABLED",
+                                "value": "false"
+                            },
+                            {
+                                "name": "COH_METRICS_ENABLED",
+                                "value": "true"
+                            },
+                            {
+                                "name": "COH_HEALTH_PORT",
+                                "value": "6676"
+                            },
+                            {
+                                "name": "COH_LOGGING_CONFIG",
+                                "value": "/scripts/logging.properties"
+                            }
+                        ],
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 5,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 6676,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 45,
+                            "periodSeconds": 60,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "name": "coherence",
+                        "ports": [
+                            {
+                                "containerPort": 7,
+                                "name": "coherence",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 6676,
+                                "name": "health",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 9612,
+                                "name": "metrics",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 50,
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 6676,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 30,
+                            "periodSeconds": 60,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "32"
+                            },
+                            "requests": {
+                                "cpu": "0"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/logs",
+                                "name": "log-dir"
+                            },
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/u01/oracle/oracle_home/coherence/app",
+                                "name": "application-dir"
+                            },
+                            {
+                                "mountPath": "/scripts",
+                                "name": "coherence-scripts"
+                            },
+                            {
+                                "mountPath": "/jvm",
+                                "name": "jvm"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    {
+                        "args": [
+                            "-c",
+                            "/etc/fluent.conf"
+                        ],
+                        "env": [
+                            {
+                                "name": "COHERENCE_POD_ID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.uid"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "FLUENTD_CONF",
+                                "value": "fluentd-coherence.conf"
+                            },
+                            {
+                                "name": "FLUENT_ELASTICSEARCH_SED_DISABLE",
+                                "value": "true"
+                            },
+                            {
+                                "name": "ELASTICSEARCH_USER",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchuser",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_PASSWORD",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchpassword",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_HOSTS",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchhosts",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "ELASTICSEARCH_SCHEME",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "elasticsearchscheme",
+                                        "name": "coherence-monitoring-config",
+                                        "optional": true
+                                    }
+                                }
+                            }
+                        ],
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "fluentd",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/fluentd/etc/fluentd-coherence.conf",
+                                "name": "fluentd-coherence-conf",
+                                "subPath": "fluentd-coherence.conf"
+                            },
+                            {
+                                "mountPath": "/logs",
+                                "name": "log-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "hostname": "example-cluster-storage-2",
+                "imagePullSecrets": [
+                    {
+                        "name": "coherence-example-secret"
+                    }
+                ],
+                "initContainers": [
+                    {
+                        "command": [
+                            "/files/utils-init"
+                        ],
+                        "env": [
+                            {
+                                "name": "COH_UTIL_DIR",
+                                "value": "/utils"
+                            },
+                            {
+                                "name": "COH_CLUSTER_NAME",
+                                "value": "example-cluster"
+                            }
+                        ],
+                        "image": "oracle/coherence-operator:2.1.1-utils",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "coherence-k8s-utils",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    {
+                        "command": [
+                            "/utils/copy"
+                        ],
+                        "env": [
+                            {
+                                "name": "EXTERNAL_APP_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app"
+                            },
+                            {
+                                "name": "APP_DIR",
+                                "value": "/app"
+                            },
+                            {
+                                "name": "EXTERNAL_LIB_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app/lib"
+                            },
+                            {
+                                "name": "LIB_DIR",
+                                "value": "/app/lib"
+                            },
+                            {
+                                "name": "EXTERNAL_CONF_DIR",
+                                "value": "/u01/oracle/oracle_home/coherence/app/conf"
+                            },
+                            {
+                                "name": "CONF_DIR",
+                                "value": "/app/conf"
+                            }
+                        ],
+                        "image": "bjlim80/deployment-example:2.1.2",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "application",
+                        "resources": {},
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/utils",
+                                "name": "utils-dir"
+                            },
+                            {
+                                "mountPath": "/u01/oracle/oracle_home/coherence/app",
+                                "name": "application-dir"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "default-token-r4rtt",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "nodeName": "k8-coh-worker1",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "subdomain": "coherence",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "emptyDir": {},
+                        "name": "log-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "utils-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "application-dir"
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "jvm"
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 511,
+                            "name": "example-cluster-storage-scripts"
+                        },
+                        "name": "coherence-scripts"
+                    },
+                    {
+                        "configMap": {
+                            "defaultMode": 420,
+                            "name": "example-cluster-storage-efk-config"
+                        },
+                        "name": "fluentd-coherence-conf"
+                    },
+                    {
+                        "name": "default-token-r4rtt",
+                        "secret": {
+                            "defaultMode": 420,
+                            "secretName": "default-token-r4rtt"
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:23Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:17Z",
+                        "message": "containers with unready status: [coherence]",
+                        "reason": "ContainersNotReady",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:17Z",
+                        "message": "containers with unready status: [coherence]",
+                        "reason": "ContainersNotReady",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2020-06-17T06:58:17Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "docker://bc6ab5946e8b80c6a9f28389b8beb2b7ada9e911fc4db1339147666897ca08af",
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imageID": "docker-pullable://fluent/fluentd-kubernetes-daemonset@sha256:f7fa2c03cef32ed05d169930bcf0f8f44380f47dcf59470094f459a8f7995c84",
+                        "lastState": {
+                            "terminated": {
+                                "containerID": "docker://bc6ab5946e8b80c6a9f28389b8beb2b7ada9e911fc4db1339147666897ca08af",
+                                "exitCode": 2,
+                                "finishedAt": "2020-06-17T06:59:48Z",
+                                "reason": "Error",
+                                "startedAt": "2020-06-17T06:59:48Z"
+                            }
+                        },
+                        "name": "coherence",
+                        "ready": false,
+                        "restartCount": 4,
+                        "state": {
+                            "waiting": {
+                                "message": "Back-off 1m20s restarting failed container=coherence pod=example-cluster-storage-2_coherence-example(ebe57664-b067-11ea-b23c-0000170227ee)",
+                                "reason": "CrashLoopBackOff"
+                            }
+                        }
+                    },
+                    {
+                        "containerID": "docker://547c3fd13049fa12e36c49bd55fcc2e56b293c155dcb116d769959c45df605c5",
+                        "image": "fluent/fluentd-kubernetes-daemonset:v1.3.3-debian-elasticsearch-1.3",
+                        "imageID": "docker-pullable://fluent/fluentd-kubernetes-daemonset@sha256:f7fa2c03cef32ed05d169930bcf0f8f44380f47dcf59470094f459a8f7995c84",
+                        "lastState": {},
+                        "name": "fluentd",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "running": {
+                                "startedAt": "2020-06-17T06:58:25Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.0.0.3",
+                "initContainerStatuses": [
+                    {
+                        "containerID": "docker://7b50a36323eaefe55ed9d1c36474ee1ea12fc303423a14f7ffe06f717b4723aa",
+                        "image": "oracle/coherence-operator:2.1.1-utils",
+                        "imageID": "docker-pullable://oracle/coherence-operator@sha256:9be64c88c81c8f58b1b08d1c7ee837e535224ac9652aee412b341824532019b0",
+                        "lastState": {},
+                        "name": "coherence-k8s-utils",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "terminated": {
+                                "containerID": "docker://7b50a36323eaefe55ed9d1c36474ee1ea12fc303423a14f7ffe06f717b4723aa",
+                                "exitCode": 0,
+                                "finishedAt": "2020-06-17T06:58:21Z",
+                                "reason": "Completed",
+                                "startedAt": "2020-06-17T06:58:21Z"
+                            }
+                        }
+                    },
+                    {
+                        "containerID": "docker://408ac8ee334093fd6375ced9048c6450ccebd4f85f469b32852b6aef5718f084",
+                        "image": "bjlim80/deployment-example:2.1.2",
+                        "imageID": "docker-pullable://bjlim80/deployment-example@sha256:50438249f7f1575435292294fce5d52412bce056e28796d1712f19609856d296",
+                        "lastState": {},
+                        "name": "application",
+                        "ready": true,
+                        "restartCount": 0,
+                        "state": {
+                            "terminated": {
+                                "containerID": "docker://408ac8ee334093fd6375ced9048c6450ccebd4f85f469b32852b6aef5718f084",
+                                "exitCode": 0,
+                                "finishedAt": "2020-06-17T06:58:22Z",
+                                "reason": "Completed",
+                                "startedAt": "2020-06-17T06:58:22Z"
+                            }
+                        }
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.1.121",
+                "qosClass": "Burstable",
+                "startTime": "2020-06-17T06:58:17Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}

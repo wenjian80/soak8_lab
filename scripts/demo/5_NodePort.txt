@@ -1,0 +1,73 @@
+
+*******************************************************************
+2. Create and Display Deployment and NodePort
+
+kubectl apply -f nginx-np.yaml
+kubectl apply -f nginx-np-svc.yaml
+kubectl get service -l app=nginx-app
+kubectl get po -o wide
+kubectl describe svc my-service
+
+*******************************************************************
+3. Testing
+
+# To get inside the pod
+kubectl exec -it [POD NAME] -- /bin/sh
+
+kubectl exec -it nginx-deployment-5c87f57cdb-lcnlc -- /bin/sh
+
+
+# Create test HTML page
+cat <<EOF > /usr/share/nginx/html/test.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Testing..</title>
+</head>
+<body>
+<h1 style="color:rgb(90,70,250);">Hello, NodePort Service...!</h1>
+<h2>Congratulations, you passed :-) </h2>
+</body>
+</html>
+EOF
+exit
+
+Test using Pod IP:
+~~~~~~~~~~~~~~~~~~~~~~~
+kubectl get po -o wide
+curl http://[POD-IP]/test.html
+
+curl http://10.244.1.82/test.html
+
+NodePort  –  Accessing using Service IP
+
+Test using Service IP:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+kubectl get svc -l app=nginx-app
+curl http://[cluster-ip]/test.html
+
+curl http://10.111.118.212/test.html
+
+Test using Node IP (external IP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+http://nodep-ip:nodePort/test.html
+note: node-ip is the external ip address of a node.
+
+curl http://132.145.206.79:31111/test.html
+
+*******************************************************************
+4. Cleanup
+
+kubectl delete -f nginx-np.yaml
+kubectl delete -f nginx-np-svc.yaml
+kubectl get deploy
+kubectl get svc
+kubectl get pods
+
+*******************************************************************
+
+
+
+
+
+ 
