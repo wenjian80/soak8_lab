@@ -387,7 +387,7 @@ cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
 
-#It will wait a while to pull the contaier to start. While it is waiting , open a new window to master node ayou can run the below to check the progress and if there is any error.
+#It will wait a while to pull the contaier to start. While it is waiting , open a new window to master node and run the below to check the progress and if there is any error.
 kubectl describe po rcu -n soans
 
 ```
@@ -727,5 +727,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTcwNTkwMDYsMTA3ODkwNzM0MV19
+eyJoaXN0b3J5IjpbMzI5NTY1MjQ1LC0xOTk3MDU5MDA2LDEwNz
+g5MDczNDFdfQ==
 -->
