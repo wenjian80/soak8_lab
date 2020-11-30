@@ -1,13 +1,12 @@
 #Pls update your variables here
-TODO
 
 #Update the below based on "Database private ip" in your labinfo.txt
 DATABASEIP=put ip here
 #DATABASEIP=10.0.0.4
 
 #Update the below based on "Oracle account username/password" in your labinfo.txt
-UID=put uid here
-PWD=put pwd phere
+USERID=put uid here
+PASSWORD=put pwd phere
 #UID=wenjian80@gmail.com
 #PWD=Welcome_1234#
 
@@ -21,8 +20,8 @@ NFSIP=put ip here
 #NFSIP=10.0.0.6
 
 #Changes in 10_Rcu.sh 
-sed -i 's/UIDCHANGE/$UID/g' 10_Rcu.sh 
-sed -i 's/PWDCHANGE/$PWD/g' 10_Rcu.sh 
+sed -i 's/UIDCHANGE/$USERID/g' 10_Rcu.sh 
+sed -i 's/PWDCHANGE/$PASSWORD/g' 10_Rcu.sh 
 sed -i 's/VCNCHANGE/$SUBNET/g' 10_Rcu.sh 
 
 #Changes in database.yaml 
