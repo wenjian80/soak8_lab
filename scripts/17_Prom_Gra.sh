@@ -77,5 +77,5 @@ kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/b
 kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/manageApplication.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001 -n wls-exporter-soa -f "/u01/exporter/soa/wls-exporter.war" -t soa_cluster
 
 echo "Login to weblogic console you will see 3 wls-exporter deployed"
-echo "http://158.101.19.71:30305/console/login/LoginForm.jsp"
+echo "http://[Workerip]:30305/console/login/LoginForm.jsp"
 
