@@ -67,14 +67,26 @@ chmod -R 777 /home/opc/soak8_lab
 
 ### Replace the settings with your environment
 
-The steps are describe later in the steps, but let's change everything before we start.
+open up your labinfo.txt
+Login to master node and change the below
 
 ```
 #Steps to follow
 #Read below for exact instruction
 
-
 #login master
+#change your database ip in database.yaml 
+#Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml 
+#Check contents if it is change #more database.yaml 
+
+#change your username and password in 10_Rcu.sh 
+#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
+#Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh 
+#Check contents if it is change 
+#more 10_Rcu.sh 
+
+#change your database vcn in 10_Rcu.sh 
+#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh #Check contents if it is change #more 10_Rcu.sh
 
 #login worker
 ```
@@ -795,5 +807,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMTI2NTc0MCwtMTcyNDAxMzUwNV19
+eyJoaXN0b3J5IjpbMzk1Nzk5MzUyLC0xNzI0MDEzNTA1XX0=
 -->
