@@ -380,11 +380,21 @@ kubectl get all -A
 #Login master
 
 #change your database ip in database.yaml
+#Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
+#Check contents if it is change
+#more database.yaml
 
 #change your username and password in 10_Rcu.sh
+#Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
+#Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
+#Check contents if it is change
+#more 10_Rcu.sh
 
 #change your database vcn in 10_Rcu.sh
- 
+#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
+#Check contents if it is change
+#more 10_Rcu.sh
+
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
 
@@ -488,12 +498,18 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 #Login master
 #Change the ip in 12_Mount_File.sh before running the script 
+#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
+#Check contents if it is change
+#more 12_Mount_File.sh
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
 #Change the ip in 12_Mount_File.sh before running the script 
+#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
+#Check contents if it is change
+#more 12_Mount_File.sh
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
@@ -533,6 +549,9 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 #Login master
 #Change the ip in create-pv-pvc-inputs.yaml before running the script 
+#Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
+#Check contents if it is change
+#more create-pv-pvc-inputs.yaml
 
 cd /home/opc/soa_k8lab/scripts
 ./13_Soa_pv.sh
@@ -582,6 +601,9 @@ kubectl get pv,pvc -n soans
 #Login master
 
 #Change the database vcn in create-domain-inputs.yaml before running the script
+#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
+#Check contents if it is change
+#more create-domain-inputs.yaml
 
 cd /home/opc/soa_k8lab/scripts
 ./14_Soa_DomainJob.sh
@@ -634,6 +656,8 @@ kubectl logs soainfra-adminserver -n soans --follow
 #you should see admin, soa amd osb started.
 #Refer to sample image below
 kubectl get po -n soans
+
+#Wait for admin, soa and osb to be started before proceed to next step, because steps 17 are deploying exporter using wlst into the server.
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -663,6 +687,8 @@ kubectl get po -n soans
 #Login master
 cd /home/opc/soa_k8lab/scripts
 ./16_Traefik_LB.sh
+
+#Access http://[workernodeip]:30305/console/ to wls console
 
 ```
 
@@ -711,6 +737,14 @@ http://[workerip]:30305/console/login/LoginForm.jsp
 cd /home/opc/soa_k8lab/scripts
 ./18_Prom_Setting.sh
 
+
+#Accessing Prometheus
+http://[workernodeip]:32101/graph
+
+#Accessing Grafana (admin/admin as default username and password)
+http://[workernodeip]:32100/login 
+
+
 ```
 
 1. **This script run on on master node ONLY.**
@@ -748,5 +782,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMDAzNjExXX0=
+eyJoaXN0b3J5IjpbLTE3MjQwMTM1MDVdfQ==
 -->
