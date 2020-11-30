@@ -384,10 +384,10 @@ kubectl get all -A
 
 #change your username and password in 10_Rcu.sh
 #Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
-Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
+#Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
 
 #change your database vcn in 10_Rcu.sh
-Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
+#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
 
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
@@ -492,12 +492,14 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 #Login master
 #Change the ip in 12_Mount_File.sh before running the script 
+#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
 #Change the ip in 12_Mount_File.sh before running the script 
+#Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
@@ -537,6 +539,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 #Login master
 #Change the ip in create-pv-pvc-inputs.yaml before running the script 
+#Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
 
 cd /home/opc/soa_k8lab/scripts
 ./13_Soa_pv.sh
@@ -586,6 +589,7 @@ kubectl get pv,pvc -n soans
 #Login master
 
 #Change the database vcn in create-domain-inputs.yaml before running the script
+#Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
 
 cd /home/opc/soa_k8lab/scripts
 ./14_Soa_DomainJob.sh
@@ -752,6 +756,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MzkzNzU0OCwtMTI0MzkyODAwNSwtNT
-MwMDM2MTFdfQ==
+eyJoaXN0b3J5IjpbOTAyMjEzNzI3LDE0NDM5Mzc1NDgsLTUzMD
+AzNjExXX0=
 -->
