@@ -37,7 +37,6 @@ sed -i "s/VCNCHANGE/$SUBNET/g" 10_Rcu.sh
 
 #Changes in database.yaml 
 sed -i "s/IPCHANGE/$DATABASEIP/g" database.yaml 
-l 
 
 #Changes in 12_Mount_File.sh 
 sed -i "s/IPCHANGE/$NFSIP/g" 12_Mount_File.sh 
