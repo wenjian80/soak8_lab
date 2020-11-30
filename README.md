@@ -65,6 +65,19 @@ chmod -R 777 /home/opc/soak8_lab
 8. All these scripts are referencing and the path in /home/opc/soak8_lab and /home/opc/soak8_lab/scripts , so pls follow the naming.
 
 
+### Replace the settings with your environment
+
+The steps are describe later in the steps, but let's change everything before we start.
+
+```
+#Steps to follow
+#Read below for exact instruction
+
+
+#login master
+
+#login worker
+```
 
 
 
@@ -782,5 +795,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjQwMTM1MDVdfQ==
+eyJoaXN0b3J5IjpbMTQxMTI2NTc0MCwtMTcyNDAxMzUwNV19
 -->
