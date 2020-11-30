@@ -1,9 +1,9 @@
 kubectl create namespace traefik
-
-cd /home/opc/weblogic-kubernetes-operator
 helm repo add traefik https://containous.github.io/traefik-helm-chart
- 
-helm install traefik  traefik/traefik --namespace traefik --values kubernetes/samples/charts/traefik/values.yaml --set  "kubernetes.namespaces={traefik}" --set "service.type=NodePort" --wait
+
+
+cd /home/opc/fmw-kubernetes/OracleSOASuite/
+helm install traefik  traefik/traefik --namespace traefik --values kubernetes/charts/traefik/values.yaml --set  "kubernetes.namespaces={traefik}" --set "service.type=NodePort" --wait
  
 kubectl get all -n traefik
  
