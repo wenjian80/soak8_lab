@@ -48,7 +48,6 @@ yum install git
 cd /home/opc
 git clone https://github.com/wenjian80/soak8_lab
 chmod -R 777 /home/opc/soak8_lab
-source /root/.bashrc
 
 #set shortcut
 cd /root
@@ -862,5 +861,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODc0MzQ4OThdfQ==
+eyJoaXN0b3J5IjpbLTgzNTU1Nzg0NF19
 -->
