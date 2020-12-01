@@ -4,7 +4,7 @@
 2. The scripts provided are just a reference.
 
 # Purpose
-1. The purpose of this lab excerise is to minc the same environment setup on premise.
+1. The purpose of this lab excerise is to minc the same environment setup on premise, although the exact steps can be also run in OKE (Oracle Cloud Kubenetes Engine)
 2. We are using an external database as the soa repository.
 3. We are installing k8 from scratch. In this lab however we are not creating a HA for master node. We can refer to K8 documentation on how to set it up.
 4. For lab purpose we are using 1 master and 1 worker. Deployment are done in worker node as master are not tainted to run workload.
@@ -873,5 +873,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwMzQxODczXX0=
+eyJoaXN0b3J5IjpbNjU5MjU1MjMzXX0=
 -->
