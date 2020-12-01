@@ -608,7 +608,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 #Login master
 #Your Parameters should have been in step 00, double check again
-#grep -na "ip" 12_Mount_File.sh
+#grep -na "ip" create-pv-pvc-inputs.yaml
 #Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
 #Check contents if it is change
 #more create-pv-pvc-inputs.yaml
@@ -843,5 +843,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTAyNjUwMjIsLTk1Nzg5NjMyMV19
+eyJoaXN0b3J5IjpbMTc5MDQxMDM3LC0xNzkwMjY1MDIyLC05NT
+c4OTYzMjFdfQ==
 -->
