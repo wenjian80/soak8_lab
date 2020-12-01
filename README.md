@@ -437,10 +437,7 @@ kubectl get all -A
 #Login master
 
 #Your Parameters should have been in step 00, double check again
-#change your database ip in database.yaml
-#Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
-#Check contents if it is change
-#more database.yaml
+#grep -na "ip" database.yaml
 
 #Your Parameters should have been in step 00, double check again
 #change your username and password in 10_Rcu.sh
@@ -846,5 +843,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1Nzg5NjMyMV19
+eyJoaXN0b3J5IjpbLTE5MTM3NjM3LC05NTc4OTYzMjFdfQ==
 -->
