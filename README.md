@@ -80,7 +80,10 @@ Open up your labinfo.txt and get the information on hand.
 1) Login to both master and worker node.
 2) Open up 00_setVariable.sh and update your settings
 
+
 ```
+vi 00_setVariable.sh
+
 #Update the below based on "Database private ip" in your labinfo.txt
 DATABASEIP=put ip here
 #DATABASEIP=10.0.0.4
@@ -99,6 +102,10 @@ SUBNET=put subnet here
 #Update the below based on "NFS IP" in your labinfo.txt
 NFSIP=put ip here
 #NFSIP=10.0.0.6
+
+# save the file
+#Check content again
+more 00_setVariable.sh
 ```
 
 ## Step 00: Set Parameters
@@ -862,5 +869,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMDI0MzU4XX0=
+eyJoaXN0b3J5IjpbLTE1NzgwMjA0MDNdfQ==
 -->
