@@ -1,5 +1,3 @@
-# WORK IN PROGRESS DO NOT RUN YET
-
 # Disclaimer
 
 1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
@@ -870,5 +868,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNDAzODMzMF19
+eyJoaXN0b3J5IjpbLTEwNTAyNjM0MzNdfQ==
 -->
