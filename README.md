@@ -53,7 +53,7 @@ chmod -R 777 /home/opc/soak8_lab
 cd /root
 echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
-s
+sourc
 
 #login worker
 sudo su
@@ -862,5 +862,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NDcwMzg2MywtODM1NTU3ODQ0XX0=
+eyJoaXN0b3J5IjpbNTI2Mjg4NzY4LDE1NzQ3MDM4NjMsLTgzNT
+U1Nzg0NF19
 -->
