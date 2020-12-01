@@ -738,7 +738,7 @@ kubectl get po -n soans -w
 #tail the logs for admin server to see if is started
 kubectl logs soainfra-adminserver -n soans --follow
 
-#you should see admin, soa amd osb started.
+#you should see admin, soa amd osb started before proceed to next steps
 #Refer to sample image below
 kubectl get po -n soans
 
@@ -870,5 +870,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNTA1OTYwXX0=
+eyJoaXN0b3J5IjpbMTMyNDAzODMzMF19
 -->
