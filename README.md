@@ -418,8 +418,11 @@ cd /home/opc/soa_k8lab/scripts
 
 #see all resource and pod
 kubectl get po -n soans
-kubectl get po -n opns
 kubectl get all -A
+
+#Check operator is running befroe proceed
+kubectl get po -n opns
+
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -870,5 +873,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4OTcxNDgyXX0=
+eyJoaXN0b3J5IjpbNDQwMzQxODczXX0=
 -->
