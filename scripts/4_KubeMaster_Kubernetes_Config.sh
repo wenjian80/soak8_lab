@@ -95,3 +95,17 @@ echo $output
 #Install a pod network add-on: flannel (so that your pods can communicate with each other)
 #Note : If you are using different cidr block other than default value of 10.244.0.0/16, then update kube-flannel.yml with correct cidr address before deploying into Cluster
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.12.0/Documentation/kube-flannel.yml
+
+
+echo "Install auto complete"
+yum install bash-completion
+
+cd /root
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+kubectl completion bash >/etc/bash_completion.d/kubectl
+
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
+
+
+source /root/.bashrc
