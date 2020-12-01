@@ -557,20 +557,18 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 #Login master
 #Your Parameters should have been in step 00, double check again
-#Change the ip in 12_Mount_File.sh before running the script 
+#grep -na "mount" 12_Mount_File.sh
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
-#Check contents if it is change
-#more 12_Mount_File.sh
+
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
 #Your Parameters should have been in step 00, double check again
-#Change the ip in 12_Mount_File.sh before running the script 
+#grep -na "mount" 12_Mount_File.sh
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
-#Check contents if it is change
-#more 12_Mount_File.sh
+
 
 cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
@@ -610,7 +608,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 #Login master
 #Your Parameters should have been in step 00, double check again
-#Change the ip in create-pv-pvc-inputs.yaml before running the script 
+#grep -na "ip" 12_Mount_File.sh
 #Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
 #Check contents if it is change
 #more create-pv-pvc-inputs.yaml
@@ -845,5 +843,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MjU0NzQxNywtOTU3ODk2MzIxXX0=
+eyJoaXN0b3J5IjpbLTE3OTAyNjUwMjIsLTk1Nzg5NjMyMV19
 -->
