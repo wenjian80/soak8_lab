@@ -47,8 +47,21 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 sysctl --system
 
-
 echo "Step 5"
+echo "Install auto complete"
+yum install bash-completion
+
+cd /root
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+kubectl completion bash >/etc/bash_completion.d/kubectl
+
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
+
+
+source /root/.bashrc
+
+echo "Step 6"
 ### Get the nslookup IP address of master node to use with apiserver-advertise-address during Setting up Kubernetes master
 ip_addr=`nslookup $(hostname -f) | grep -m2 Address | tail -n1| awk -F: '{print $2}'| tr -d " "`  
 echo $ip_addr
@@ -97,15 +110,3 @@ echo $output
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.12.0/Documentation/kube-flannel.yml
 
 
-echo "Install auto complete"
-yum install bash-completion
-
-cd /root
-echo 'source <(kubectl completion bash)' >>~/.bashrc
-kubectl completion bash >/etc/bash_completion.d/kubectl
-
-echo 'alias k=kubectl' >>~/.bashrc
-echo 'complete -F __start_kubectl k' >>~/.bashrc
-
-
-source /root/.bashrc
