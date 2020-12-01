@@ -9,6 +9,7 @@
 3. We are installing k8 from scratch. In this lab however we are not creating a HA for master node. We can refer to K8 documentation on how to set it up.
 4. For lab purpose we are using 1 master and 1 worker. Deployment are done in worker node as master are not tainted to run workload.
 5. Since soa on k8 require a PV/PVC, in on prem context it will either a NFS or san storage etc. In this lab we are using Oracle Cloud File System to act as the NFS.
+6. We are pulling straight from registry, we are pulling and tagging into our own registry. Refer to [docker images](https://github.com/oracle/docker-images), [wls docker sample](https://github.com/wenjian80/wlsdockersample) for more details on building own image as well as patching etc.
 
 
 # 1. Prereq
@@ -417,8 +418,11 @@ cd /home/opc/soa_k8lab/scripts
 
 #see all resource and pod
 kubectl get po -n soans
-kubectl get po -n opns
 kubectl get all -A
+
+#Check operator is running befroe proceed
+kubectl get po -n opns
+
 ```
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
@@ -869,5 +873,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjYwNDYxNzRdfQ==
+eyJoaXN0b3J5IjpbNDQwMzQxODczXX0=
 -->
