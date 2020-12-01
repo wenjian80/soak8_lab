@@ -732,6 +732,7 @@ cd /home/opc/soa_k8lab/scripts
 ./15_Soa_DomainConfig.sh
 
 #watch the pod, ctrl c to stop
+#a job will be spin to introspect the namespace and spin up the servers.
 kubectl get po -n soans -w
 
 #tail the logs for admin server to see if is started
@@ -869,5 +870,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxODYyMDQwM119
+eyJoaXN0b3J5IjpbLTUwNTA1OTYwXX0=
 -->
