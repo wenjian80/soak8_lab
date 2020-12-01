@@ -1,4 +1,7 @@
 #Clean everything
+#This script is not to be excute as it is.
+#Since pvc and pv is set with finailier, it wil lnot be destory
+#Follow the command line to destory
 
 #delete all po in soa ns
 kubectl delete domain soainfra -n soans

@@ -1,4 +1,3 @@
-# https://docs.oracle.com/en/operating-systems/oracle-linux/kubernetes/ol_about_kubernetes.html
 # Yum Configuration
 
 yum-config-manager --enable ol7_addons
