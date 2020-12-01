@@ -720,6 +720,7 @@ Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain
 #Read below for exact instruction
 
 #Login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./15_Soa_DomainConfig.sh
 
@@ -761,6 +762,7 @@ kubectl get po -n soans
 #Read below for exact instruction
 
 #Login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./16_Traefik_LB.sh
 
@@ -787,6 +789,7 @@ http://[workernodeip]:30305/console/
 #Read below for exact instruction
 
 #Login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./17_Prom_Gra.sh
 
@@ -810,6 +813,7 @@ http://[workerip]:30305/console/login/LoginForm.jsp
 #Read below for exact instruction
 
 #Login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./18_Prom_Setting.sh
 
@@ -858,5 +862,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODUwMzY2MiwtMjEyMTI2MjkwMl19
+eyJoaXN0b3J5IjpbLTExODc0MzQ4OThdfQ==
 -->
