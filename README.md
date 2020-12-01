@@ -11,7 +11,7 @@
 5. Since soa on k8 require a PV/PVC, in on prem context it will either a NFS or san storage etc. In this lab we are using Oracle Cloud File System to act as the NFS.
 6. We are pulling straight from registry, we are not pulling and tagging into our own registry. Refer to [docker images](https://github.com/oracle/docker-images), [wls docker sample](https://github.com/wenjian80/wlsdockersample) for more details on building own image as well as patching etc.
 7. All the command have been compress into scripts for easy execution, you can take a look all the scripts to see what is doing as there are comments in the scripts. 
-8. Take a look 
+8. Take a look [enter link description here](https://github.com/wenjian80/soak8_lab/tree/main/slides)
 
 
 # 1. Prereq
@@ -870,5 +870,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQ3Nzc0ODIsLTc1ODg2MzczXX0=
+eyJoaXN0b3J5IjpbMTg3NDk2NjMyNiwtMTkxNDc3NzQ4MiwtNz
+U4ODYzNzNdfQ==
 -->
