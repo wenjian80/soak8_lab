@@ -807,7 +807,7 @@ cd /home/opc/soa_k8lab/scripts
 4. The user name is weblogic/Welcome1 
 5. The username and password was defined earlier in [1_Soa_secret.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/11_Soa_secret.sh)
 ```
-http://[workerip]:30305/console/login/LoginForm.jsp
+http://[workerip]:30305/console
 ```
 
 ## Step 18: 18_Prom_Setting.sh
@@ -868,5 +868,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTAyNjM0MzNdfQ==
+eyJoaXN0b3J5IjpbLTIwNTY0MDc5NjBdfQ==
 -->
