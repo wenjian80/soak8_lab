@@ -1,13 +1,13 @@
 #!/bin/bash
 
-sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.sh
-sed -i -e 's/\r$//' /home/opc/soak8_lab/scripts/*.sh
+#sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.sh
+#sed -i -e 's/\r$//' /home/opc/soak8_lab/scripts/*.sh
 
-sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.yaml
+#sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.yaml
 
-sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.json
+#sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.json
 
-sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.py
+#sed -i -e "s/^M//" /home/opc/soak8_lab/scripts/*.py
 
 #Pls update your variables here
 
