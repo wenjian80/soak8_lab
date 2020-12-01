@@ -48,6 +48,11 @@ cd /home/opc
 git clone https://github.com/wenjian80/soak8_lab
 chmod -R 777 /home/opc/soak8_lab
 
+#set shortcut
+cd /root
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
+
 #login worker
 yum install git
 cd /home/opc
@@ -840,5 +845,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDYxNzA1OThdfQ==
+eyJoaXN0b3J5IjpbNDMyMjc5MTY1LC0xOTA2MTcwNTk4XX0=
 -->
