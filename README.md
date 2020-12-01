@@ -43,6 +43,7 @@ It will take you around 1 Hour to run finished the excercise.
 #Go to https://github.com/wenjian80/soak8_lab and download as zip to local machine so you can take a llok att he scripts.
 
 #login master
+sudo su
 yum install git
 cd /home/opc
 git clone https://github.com/wenjian80/soak8_lab
@@ -55,6 +56,7 @@ echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
 
 #login worker
+sudo su
 yum install git
 cd /home/opc
 git clone https://github.com/wenjian80/soak8_lab
@@ -110,12 +112,14 @@ Replace the settings with your environment
 #Read below for exact instruction
 
 #login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 vi 00_setVariable.sh
 #make sure all your settings is correct
 ./00_setVariable.sh
 
 #login worker
+sudo su
 cd /home/opc/soa_k8lab/scripts
 vi 00_setVariable.sh
 #make sure all your settings is correct
@@ -134,10 +138,12 @@ vi 00_setVariable.sh
 #Read below for exact instruction
 
 #login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./0_InitialMachine_Config.sh
 
 #login worker
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./0_InitialMachine_Config.sh
 ```
@@ -157,10 +163,12 @@ cd /home/opc/soa_k8lab/scripts
 #Read below for exact instruction
 
 #login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./1_Docker_Config.sh
 
 #login worker
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./1_Docker_Config.sh
 ```
@@ -181,6 +189,7 @@ cd /home/opc/soa_k8lab/scripts
 #Read below for exact instruction
 
 #login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./2_KubeMaster_Firewall_Config.sh
 ```
@@ -203,6 +212,7 @@ cd /home/opc/soa_k8lab/scripts
 #Read below for exact instruction
 
 #login worker
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./3_KubeNode_Firewall_Config.sh
 ```
@@ -224,6 +234,7 @@ cd /home/opc/soa_k8lab/scripts
 #Read below for exact instruction
 
 #login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./4_KubeMaster_Kubernetes_Config.sh
 
@@ -265,6 +276,7 @@ kubectl get no
 #Read below for exact instruction
 
 #Login worker
+sudo su
 #Open the 5_KubeNode_Kubernetes_Config.sh and add the join command
 
 cd /home/opc/soa_k8lab/scripts
@@ -306,7 +318,7 @@ kubectl get po
 #Read below for exact instruction
 
 #Login master
-
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./6_Check_Kubedns.sh
 ```
@@ -331,6 +343,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 #Read below for exact instruction
 
 #Login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./7_Kube_proxy.sh
 
@@ -369,7 +382,7 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 #Read below for exact instruction
 
 #Login master
-
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./8_Git_helm.sh
 
@@ -391,7 +404,7 @@ cd /home/opc/soa_k8lab/scripts
 #Read below for exact instruction
 
 #Login master
-
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./9_Operator.sh
 
@@ -435,7 +448,7 @@ kubectl get all -A
 #Read below for exact instruction
 
 #Login master
-
+sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "ip" database.yaml
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
@@ -537,6 +550,7 @@ The output of the script will be as such. It will take around 3-5min.
 #Read below for exact instruction
 
 #Login master
+sudo su
 cd /home/opc/soa_k8lab/scripts
 ./11_Soa_secret.sh
 
@@ -556,6 +570,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 #Read below for exact instruction
 
 #Login master
+sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "mount" 12_Mount_File.sh
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
@@ -565,6 +580,7 @@ cd /home/opc/soa_k8lab/scripts
 ./12_Mount_File.sh
 
 #Login worker
+sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "mount" 12_Mount_File.sh
 #Eg sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
@@ -607,6 +623,7 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 #Read below for exact instruction
 
 #Login master
+sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "weblogicDomainStorageNFSServer" create-pv-pvc-inputs.yaml
 #Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
@@ -657,7 +674,7 @@ kubectl get pv,pvc -n soans
 #Read below for exact instruction
 
 #Login master
-
+sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "rcuDatabaseURL" create-domain-inputs.yaml
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
@@ -841,5 +858,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjEyNjI5MDJdfQ==
+eyJoaXN0b3J5IjpbLTU1ODUwMzY2MiwtMjEyMTI2MjkwMl19
 -->
