@@ -437,24 +437,22 @@ kubectl get all -A
 #Login master
 
 #Your Parameters should have been in step 00, double check again
-
+#grep -na "ip" database.yaml
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 
 
 
 #Your Parameters should have been in step 00, double check again
 #grep -na "docker-username" 10_Rcu.sh
-
+#grep -na "docker-password" 10_Rcu.sh
 #Eg sed -i 's/UIDCHANGE/wenjian80@gmail.com/g' 10_Rcu.sh 
 #Eg sed -i 's/PWDCHANGE/Welcome_1234#/g' 10_Rcu.sh
-#Check contents if it is change
-#more 10_Rcu.sh
+
 
 #Your Parameters should have been in step 00, double check again
 #grep -na "PDB1" 10_Rcu.sh
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
-#Check contents if it is change
-#more 10_Rcu.sh
+
 
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
@@ -847,5 +845,5 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MjQzNTMzLC05NTc4OTYzMjFdfQ==
+eyJoaXN0b3J5IjpbMTQ0MjU0NzQxNywtOTU3ODk2MzIxXX0=
 -->
