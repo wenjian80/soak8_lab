@@ -855,13 +855,12 @@ http://[workernodeip]:32100/login
 7. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
 8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
 9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-10. [Oracle Blog Production Support](Announcing%20Oracle%20SOA%20Suite%20on%20Containers%20&%20Kubernetes%20for%20Production%20Workloads)
-11. [asdasdad](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+11. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMDI4NzcxN119
+eyJoaXN0b3J5IjpbLTkxMDI0MzU4XX0=
 -->
