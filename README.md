@@ -608,10 +608,8 @@ Eg  sed -i 's/IPCHANGE/10.0.0.6/g' 12_Mount_File.sh
 
 #Login master
 #Your Parameters should have been in step 00, double check again
-#grep -na "ip" create-pv-pvc-inputs.yaml
+#grep -na "weblogicDomainStorageNFSServer" create-pv-pvc-inputs.yaml
 #Eg  sed -i 's/IPCHANGE/10.0.0.6/g' create-pv-pvc-inputs.yaml
-#Check contents if it is change
-#more create-pv-pvc-inputs.yaml
 
 cd /home/opc/soa_k8lab/scripts
 ./13_Soa_pv.sh
@@ -661,7 +659,7 @@ kubectl get pv,pvc -n soans
 #Login master
 
 #Your Parameters should have been in step 00, double check again
-#Change the database vcn in create-domain-inputs.yaml before running the script
+#grep 
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' create-domain-inputs.yaml
 #Check contents if it is change
 #more create-domain-inputs.yaml
@@ -843,6 +841,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MDQxMDM3LC0xNzkwMjY1MDIyLC05NT
-c4OTYzMjFdfQ==
+eyJoaXN0b3J5IjpbODg1MDk3NTk0LDE3OTA0MTAzNywtOTU3OD
+k2MzIxXX0=
 -->
