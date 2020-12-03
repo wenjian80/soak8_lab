@@ -59,7 +59,8 @@ managedServerSSLPort: 8002
 # SOA Suite Docker image.
 # The operator requires SOA Suite 12.2.1.4.0.
 # Refer to https://oracle.github.io/fmw-kubernetes/soa-domains/userguide/prepare-your-environment/#obtaining-the-soa-suite-docker-image/  for details on how to obtain or create the image.
-image: container-registry.oracle.com/middleware/soasuite:12.2.1.4
+#image: container-registry.oracle.com/middleware/soasuite:12.2.1.4
+image: bjlim80/soasuite:12.2.1.4-20.4.2
 
 # Image pull policy
 # Legal values are "IfNotPresent", "Always", or "Never"
