@@ -478,6 +478,8 @@ sudo su
 
 #Try login to container registry to pull the image, sometimes the speed of the registry is slow.
 #This is presume you already check on the agreeement for pulling soa images.
+#There are many location for container registry if one is slow we can change the location and customize the script.
+#In actual production we are suppose to build the image ourself and put in our own registry
 #docker login container-registry.oracle.com
 #It will promot for user name
 #It will promot for password
@@ -883,5 +885,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NjM5NTQxOF19
+eyJoaXN0b3J5IjpbLTE2OTczMzQxNjddfQ==
 -->
