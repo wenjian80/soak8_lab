@@ -476,6 +476,12 @@ sudo su
 #grep -na "PDB1" 10_Rcu.sh
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
 
+#Try login to container registry to pull the image, sometimes the speed of the registry is slow.
+#This is presume you already check on the agreeement for pulling soa images.
+#docker login container-registry.oracle.com
+#It will promot for user name
+
+
 
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
@@ -877,5 +883,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjQ5MTc4ODldfQ==
+eyJoaXN0b3J5IjpbMTkzMjYxOTc0NCwtMTY2NDkxNzg4OV19
 -->
