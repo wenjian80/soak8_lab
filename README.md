@@ -480,9 +480,8 @@ sudo su
 #This is presume you already check on the agreeement for pulling soa images.
 #docker login container-registry.oracle.com
 #It will promot for user name
-#It will promot for 
-
-
+#It will promot for password
+#docker pull container-registry.oracle.com/middleware/soasuite:12.2.1.4
 
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
@@ -884,6 +883,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5OTE3NTg4MCwxOTMyNjE5NzQ0LC0xNj
-Y0OTE3ODg5XX0=
+eyJoaXN0b3J5IjpbLTM3NjM5NTQxOF19
 -->
