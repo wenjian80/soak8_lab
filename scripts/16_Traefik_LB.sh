@@ -26,7 +26,7 @@ helm install soa-traefik-ingress  kubernetes/samples/charts/ingress-per-domain -
 #cd /home/opc/fmw-kubernetes/OracleSOASuite/
 #helm install soainfra-ingress  kubernetes/ingress-per-domain  --namespace soans --values /home/opc/soak8_lab/scripts/ingress_domainvalues.yaml 
 
-kubectl describe ingress soa-traefik-ingress -n soans
+kubectl describe ingress soainfra-traefik -n soans
 
 #http://158.101.19.71:30305/console/login/LoginForm.jsp
 
