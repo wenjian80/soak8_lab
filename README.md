@@ -809,7 +809,7 @@ http://[workernodeip]:30305/console/
 
 #Login master
 sudo su
-cd /home/opc/soa_k8lab/scripts
+cd /home/opc/soak8_lab/scripts
 ./17_Prom_Gra.sh
 
 ```
@@ -885,5 +885,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTczMzQxNjddfQ==
+eyJoaXN0b3J5IjpbMTAwNzc5MzEzNV19
 -->
