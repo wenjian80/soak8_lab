@@ -10,8 +10,11 @@
 4. For lab purpose we are using 1 master and 1 worker. Deployment are done in worker node as master are not tainted to run workload.
 5. Since soa on k8 require a PV/PVC, in on prem context it will either a NFS or san storage etc. In this lab we are using Oracle Cloud File System to act as the NFS.
 6. We are pulling straight from registry, we are not pulling and tagging into our own registry. Refer to [docker images](https://github.com/oracle/docker-images), [wls docker sample](https://github.com/wenjian80/wlsdockersample) for more details on building own image as well as patching etc.
-7. All the command have been compress into scripts for easy execution, you can take a look all the scripts to see what is doing as there are comments in the scripts. 
-8. Take a look [K8/Wls_Operator 101](https://github.com/wenjian80/soak8_lab/tree/main/slides) to understand the concept of k8 and the operator,
+7. The official supported image is via this [here](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/#obtain-the-oracle-soa-suite-docker-image), however in this lab we are just pulling from container registry 
+8. All the command have been compress into scripts for easy execution, you can take a look all the scripts to see what is doing as there are comments in the scripts. 
+9. At this point of writing this document, it is using all the prereq as mentioned in [prereq](https://github.com/wenjian80/soak8_lab#2-version-tested), other than K8/Docker/Helm we are pulling WebLogic operator 3.0.1 and fmw soa script 20.3.3. Refer to [FMW SOA K8](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prerequisites/) and [Release Notes](https://oracle.github.io/fmw-kubernetes/soa-domains/release-notes/) to check what is the latest version that is supported and pull the relevant branch.
+10. We are using [20.3.3](https://github.com/oracle/fmw-kubernetes/tree/release/20.3.3/OracleSOASuite/kubernetes)  branch at the point of writing this document. Perhaps a new version will be release when you reading this document, 
+11. Take a look [K8/Wls_Operator 101](https://github.com/wenjian80/soak8_lab/tree/main/slides) to understand the concept of k8 and the operator,
 
 
 # 1. Prereq
@@ -75,7 +78,7 @@ chmod -R 777 /home/opc/soak8_lab
 Open up your labinfo.txt and get the information on hand.
 
 1) Login to both master and worker node.
-2) Open up 00_setVariable.sh and update your settings
+2) Open up [00_setVariable.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/00_setVariable.sh) and update your settings
 
 
 ```
@@ -869,6 +872,10 @@ Slack support
 
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
+
+# TODO
+1. EFK 
+2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODM0OTE1MjFdfQ==
+eyJoaXN0b3J5IjpbLTE2NjQ5MTc4ODldfQ==
 -->
