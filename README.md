@@ -12,7 +12,7 @@
 6. We are pulling straight from registry, we are not pulling and tagging into our own registry. Refer to [docker images](https://github.com/oracle/docker-images), [wls docker sample](https://github.com/wenjian80/wlsdockersample) for more details on building own image as well as patching etc.
 7. The official supported image is via this [here](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/#obtain-the-oracle-soa-suite-docker-image), however in this lab we are just pulling from container registry 
 8. All the command have been compress into scripts for easy execution, you can take a look all the scripts to see what is doing as there are comments in the scripts. 
-9. It is using all the prereq as mentioned in [prereq](https://github.com/wenjian80/soak8_lab#2-version-tested), other than K8/Docker/Helm we are pulling 
+9. It is using all the prereq as mentioned in [prereq](https://github.com/wenjian80/soak8_lab#2-version-tested), other than K8/Docker/Helm we are pulling WebLogic operator 3.0.1 and fmw soa script 20.3.3. Refer to [FMW SOA K8](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) and 
 10. Take a look [K8/Wls_Operator 101](https://github.com/wenjian80/soak8_lab/tree/main/slides) to understand the concept of k8 and the operator,
 
 
@@ -872,6 +872,6 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjYxMDkyMTAsODg3Mzk1NzczLC04MT
-c0OTEyMDNdfQ==
+eyJoaXN0b3J5IjpbLTIwMDY2Nzg2OTcsLTIwMjYxMDkyMTAsLT
+gxNzQ5MTIwM119
 -->
