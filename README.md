@@ -78,7 +78,7 @@ chmod -R 777 /home/opc/soak8_lab
 Open up your labinfo.txt and get the information on hand.
 
 1) Login to both master and worker node.
-2) Open up  and update your settings
+2) Open up [00_setVariable.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/00_setVariable.sh) and update your settings
 
 
 ```
@@ -877,5 +877,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTQ4MDcxNTcsLTY0OTIyNTU5N119
+eyJoaXN0b3J5IjpbLTE2NjQ5MTc4ODldfQ==
 -->
