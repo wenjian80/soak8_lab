@@ -6,5 +6,5 @@ yum-config-manager --enable ol7_addons
 
 yum-config-manager --disable ol7_UEKR4
 yum-config-manager --enable ol7_UEKR5
-yum update
+yum update --skip-broken
 
