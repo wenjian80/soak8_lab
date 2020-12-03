@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd /home/opc/
 
 git clone https://github.com/oracle/weblogic-kubernetes-operator.git  -b release/3.0.1
