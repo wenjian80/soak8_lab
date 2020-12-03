@@ -57,7 +57,7 @@ kubectl get ns
 kubectl delete ns soans
 
 #clear traefik 
-helm delete soainfra-ingress --namespace soans
+helm delete soa-traefik-ingress --namespace soans
 helm delete traefik --namespace traefik
 helm repo remove  traefik
 kubectl delete ns traefik

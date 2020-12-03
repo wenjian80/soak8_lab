@@ -27,24 +27,25 @@ kubectl get all -n opns
 #kubectl logs -n opns -c weblogic-operator deployments/weblogic-operator
 
 
-#TO TEST
+#Refer to https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/#set-up-the-code-repository-to-deploy-oracle-soa-suite-domains
+#Certain releases may change
 #TO CHANGE ALL PATH IN REST OF THE SCRIPTS
 
-#export WORKDIR=/home/opc/
+WORKDIR=/home/opc/
+export WORKDIR=/home/opc/
 
+mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-soa-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-soa-domain_backup
+cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/create-soa-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
 
-#mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-soa-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-soa-domain_backup
-#cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/create-soa-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
+mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/common  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/common_backup
+cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/common  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
 
-#mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/common  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/common_backup
-#cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/common  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
+mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema_backup
+cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/create-rcu-schema  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
 
-#mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema_backup
-#cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/create-rcu-schema  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
+mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/charts/ingress-per-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/charts/ingress-per-domain_backup
+cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/ingress-per-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/charts/
 
-#mv -f ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/charts/ingress-per-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/charts/ingress-per-domain_backup
-#cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/ingress-per-domain  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/charts/
+cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/imagetool-scripts  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
 
-#cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/imagetool-scripts  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
-
-#cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/charts  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
+cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/charts  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
