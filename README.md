@@ -480,6 +480,7 @@ sudo su
 #This is presume you already check on the agreeement for pulling soa images.
 #docker login container-registry.oracle.com
 #It will promot for user name
+#It will promot for 
 
 
 
@@ -883,5 +884,6 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMjYxOTc0NCwtMTY2NDkxNzg4OV19
+eyJoaXN0b3J5IjpbMTM5OTE3NTg4MCwxOTMyNjE5NzQ0LC0xNj
+Y0OTE3ODg5XX0=
 -->
