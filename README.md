@@ -872,6 +872,10 @@ Slack support
 
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
+
+# TODO
+1. EFK 
+2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ3MzgyNTUyXX0=
+eyJoaXN0b3J5IjpbLTY0OTIyNTU5N119
 -->
