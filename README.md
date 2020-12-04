@@ -10,8 +10,8 @@
 3. We are installing k8 from scratch. In this lab however we are not creating a HA for master node. We can refer to K8 documentation on how to set it up.
 4. For lab purpose we are using 1 master and 1 worker. Deployment are done in worker node as master are not tainted to run workload.
 5. Since soa on k8 require a PV/PVC, in on prem context it will either a NFS or san storage etc. In this lab we are using Oracle Cloud File System to act as the NFS.
-6. We are pulling straight from registry, we are not pulling and tagging into our own registry. Refer to [docker images](https://github.com/oracle/docker-images), [wls docker sample](https://github.com/wenjian80/wlsdockersample) for more details on building own image as well as patching etc.
-7. The official supported image is via this [here](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/#obtain-the-oracle-soa-suite-docker-image), however in this lab we are just pulling from container registry 
+6. For lab purpose, i have build an image and upload to docker hub so we are pulling straight from docker hub registry. In real life we are pulling and tagging into our own registry. Refer to [docker images](https://github.com/oracle/docker-images), [wls docker sample](https://github.com/wenjian80/wlsdockersample) for more details on building own image as well as patching etc.
+7. The official supported image is via this [here](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/#obtain-the-oracle-soa-suite-docker-image), however in this lab we are just pulling from docker hub. The image is public so therefore no secret is required. 
 8. All the command have been compress into scripts for easy execution, you can take a look all the scripts to see what is doing as there are comments in the scripts. 
 9. At this point of writing this document, it is using all the prereq as mentioned in [prereq](https://github.com/wenjian80/soak8_lab#2-version-tested), other than K8/Docker/Helm we are pulling WebLogic operator 3.0.1 and fmw soa script 20.3.3. Refer to [FMW SOA K8](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prerequisites/) and [Release Notes](https://oracle.github.io/fmw-kubernetes/soa-domains/release-notes/) to check what is the latest version that is supported and pull the relevant branch.
 10. We are using [20.3.3](https://github.com/oracle/fmw-kubernetes/tree/release/20.3.3/OracleSOASuite/kubernetes)  branch at the point of writing this document. Perhaps a new version will be release when you reading this document, 
@@ -89,9 +89,10 @@ vi 00_setVariable.sh
 DATABASEIP=put ip here
 #DATABASEIP=10.0.0.4
 
+#This is not required as we are pulling from public docker hub
 #Update the below based on "Oracle account username/password" in your labinfo.txt
-USERID=put uid here
-PASSWORD=put pwd phere
+#USERID=put uid here
+#PASSWORD=put pwd phere
 #USERID=wenjian80@gmail.com
 #PASSWORD=Welcome_1234#
 
@@ -465,7 +466,7 @@ sudo su
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 
 
-
+#This section is not required since we are pulling for public docker hub.
 #Your Parameters should have been in step 00, double check again
 #grep -na "docker-username" 10_Rcu.sh
 #grep -na "docker-password" 10_Rcu.sh
@@ -476,15 +477,6 @@ sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "PDB1" 10_Rcu.sh
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
-
-#Try login to container registry to pull the image, sometimes the speed of the registry is slow.
-#This is presume you already check on the agreeement for pulling soa images.
-#There are many location for container registry if one is slow we can change the location and customize the script.
-#In actual production we are suppose to build the image ourself and put in our own registry
-#docker login container-registry.oracle.com
-#It will promot for user name
-#It will promot for password
-#docker pull container-registry.oracle.com/middleware/soasuite:12.2.1.4
 
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
@@ -886,5 +878,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzQxNzU1M119
+eyJoaXN0b3J5IjpbMTcyMDI4MTI5N119
 -->
