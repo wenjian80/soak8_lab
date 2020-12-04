@@ -15,9 +15,10 @@
 DATABASEIP=put ip here
 #DATABASEIP=10.0.0.31
 
+#Ignore this section. We are pulling from public docker hub
 #Update the below based on "Oracle account username/password" in your labinfo.txt
-USERID=put uid here
-PASSWORD=put pwd phere
+#USERID=put uid here
+#PASSWORD=put pwd phere
 #USERID=wenjian80@gmail.com
 #PASSWORD=Welcome_1234#
 
