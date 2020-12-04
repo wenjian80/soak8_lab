@@ -12,8 +12,6 @@
 
 > Cloud username/password: [Fill in later]
 
-> Oracle account username/password: [Fill in later]
-
 > Location of private and public key: [Fill in later]
 
 > Master ip: [Fill in> later]
@@ -26,16 +24,7 @@
 
 > NFS ip: [Fill in later]
 
-# 1. Oracle account
-
- 1. An oracle account need to be created. https://profile.oracle.com/myprofile/account/create-account.jspx
- 2. Login to https://container-registry.oracle.com, 
- 3. Click on middleware->soasuite and  accept the agreement. You have to see the green tick shown below.
- ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/registry.JPG)
-
-4. You should have put the "Oracle account username/password" detail in the notepad.
-
-# 2. Oracle cloud account
+# 1. Oracle cloud account
 
 1.You will be using oracle cloud account for the labs.
 
@@ -43,7 +32,7 @@
 
 3. 4. You should have put the "Cloud Tenancy" and  "Cloud username/password" detail in the notepad.
 
-# 3. Create 2 compute, Dbaas and Oracle File system
+# 2. Create 2 compute, Dbaas and Oracle File system
 
 ## 3.1 Login to oracle cloud
 
@@ -246,5 +235,6 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODIyODE5NiwtMTM0MjY3ODQwNF19
+eyJoaXN0b3J5IjpbMTc4Njc2ODMxNCwxMDI4MjI4MTk2LC0xMz
+QyNjc4NDA0XX0=
 -->
