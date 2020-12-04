@@ -466,7 +466,7 @@ sudo su
 #Eg sed -i 's/IPCHANGE/10.0.0.4/g' database.yaml
 
 
-
+#This section is not required since we are pulling for public docker hub.
 #Your Parameters should have been in step 00, double check again
 #grep -na "docker-username" 10_Rcu.sh
 #grep -na "docker-password" 10_Rcu.sh
@@ -477,15 +477,6 @@ sudo su
 #Your Parameters should have been in step 00, double check again
 #grep -na "PDB1" 10_Rcu.sh
 #Eg sed -i 's/VCNCHANGE/subnet11251534.vcn11251534.oraclevcn.com/g' 10_Rcu.sh
-
-#Try login to container registry to pull the image, sometimes the speed of the registry is slow.
-#This is presume you already check on the agreeement for pulling soa images.
-#There are many location for container registry if one is slow we can change the location and customize the script.
-#In actual production we are suppose to build the image ourself and put in our own registry
-#docker login container-registry.oracle.com
-#It will promot for user name
-#It will promot for password
-#docker pull container-registry.oracle.com/middleware/soasuite:12.2.1.4
 
 cd /home/opc/soa_k8lab/scripts
 ./10_Rcu.sh
@@ -887,6 +878,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NzQzODM2MywtMzM1MjkwMDgxLC0yOT
-M0MTc1NTNdfQ==
+eyJoaXN0b3J5IjpbMTcyMDI4MTI5N119
 -->
