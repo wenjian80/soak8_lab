@@ -98,8 +98,11 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database2.JPG)
 
-4. Choose Storage Management Software as Logical 
-4,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
+4. Choose Storage Management Software as Logical Volumne Manager so the provisioing of database wil be faster.
+
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/dblvm.JPG)
+
+5,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database3.JPG)
 
@@ -236,6 +239,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDc2ODQ1OTksMTc4Njc2ODMxNCwxMD
-I4MjI4MTk2LC0xMzQyNjc4NDA0XX0=
+eyJoaXN0b3J5IjpbLTEwNjg3ODc1MjBdfQ==
 -->
