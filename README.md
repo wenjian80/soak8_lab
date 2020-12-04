@@ -19,7 +19,7 @@
 
 
 # 1. Prereq
-1. Please follow the prereq to set your environment ready.  Follow the instruction on [prereq](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/prereq.md)
+1. Please follow the prereq to set your environment ready.  Follow the instruction on [prereq](https://github.com/wenjian80/soak8_lab/blob/main/prereq.md)
 2. You should already have your labinfo.txt fill up on hand. We will be referencing those info in these exercise.
 3. Open up the script to look at the various command before executing. 
 4. Do follow the steps carefully and look at the instruction on 
@@ -808,7 +808,7 @@ cd /home/opc/soak8_lab/scripts
 ```
 
 1. **This script run on on master node ONLY.**
-2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
+2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_lab/blob/main/promgraph.md) 
 3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed.
 4. The user name is weblogic/Welcome1 
 5. The username and password was defined earlier in [1_Soa_secret.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/11_Soa_secret.sh)
@@ -878,5 +878,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDI4MTI5N119
+eyJoaXN0b3J5IjpbMTcwMDI1MjI5XX0=
 -->
