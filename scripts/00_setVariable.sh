@@ -13,7 +13,7 @@
 
 #Update the below based on "Database private ip" in your labinfo.txt
 DATABASEIP=put ip here
-#DATABASEIP=10.0.0.4
+#DATABASEIP=10.0.0.31
 
 #Update the below based on "Oracle account username/password" in your labinfo.txt
 USERID=put uid here
