@@ -1,4 +1,4 @@
-# STILL WORK IN PROGESS
+
 # Disclaimer
 
 1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
@@ -878,5 +878,5 @@ Slack support
 1. EFK 
 2. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMDI1MjI5XX0=
+eyJoaXN0b3J5IjpbLTE2OTg0MjQzNywxNzAwMjUyMjldfQ==
 -->
