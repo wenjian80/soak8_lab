@@ -485,6 +485,7 @@ kubectl get all -A
 ```
 
 
+
 ## Step 10: 10_Rcu.sh
 **[Run on master node ONLY]**
 
@@ -966,6 +967,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA5ODU3NjM4LC0xODEyODU2MDMyLC0xOT
-A5ODExNzYyXX0=
+eyJoaXN0b3J5IjpbMTk4Mjg2MjkyLDUwOTg1NzYzOCwtMTkwOT
+gxMTc2Ml19
 -->
