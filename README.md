@@ -59,8 +59,8 @@
 17. Step 15: 15_Soa_DomainConfig.sh
 18. Step 16: 16_Traefik_LB.sh
 19. Step 17: 17_Efk.sh
-Step 18: 18_Prom_Gra.sh
-Step 19: 19_Prom_Setting.sh
+20. Step 18: 18_Prom_Gra.sh
+21. Step 19: 19_Prom_Setting.sh
 ###  Clone all lab 
 materials
 ### Steps to follow
@@ -952,6 +952,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjI2NTA0ODMwLDE1NDYwOTEwODYsNjAxMD
-Q2NTE2XX0=
+eyJoaXN0b3J5IjpbMTAwMzgwODUxMSwyMjY1MDQ4MzAsMTU0Nj
+A5MTA4Niw2MDEwNDY1MTZdfQ==
 -->
