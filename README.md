@@ -863,28 +863,70 @@ http://[workernodeip]:32100/login
 
 ### Steps to follow
 
-# Oracle Reference Links
+ ```
+#Steps to follow
+#Read below for exact instruction
 
-1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
-2. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-3. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
-4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
-5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
-6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-7. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
-8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
-9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-11. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+#Login master
+sudo su
+cd /home/opc/soa_k8lab/scripts
+./19_Efk.sh
+
+#Follow below instruction
+
+#Wait for all pod to shit down
+
+#After all pod is shut down restart using below command
+#kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
+```
+
+
+1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
+2. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
+```
+#Enabled EFK
+helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set elkIntegrationEnabled=true --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
+
+#Deployed EFK
+cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
+kubectl apply -f elasticsearch_and_kibana.yaml
+```
+3. Run below command the check the  node port of  kibana. The below example show the kibana is running a node port 30824. You can access the kibana via http://[workerip]:[nodeport]
+
+```
+[root@k8master opc]# kubectl get svc
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+elasticsearch   ClusterIP   10.97.235.142   <none>        9200/TCP,9300/TCP   5m57s
+kibana          NodePort    10.99.255.48    <none>        5601:30824/TCP      5m57s
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP             14m
+
+```
+4. Enabled logging for operator
+5. Create index pattern in Kibana 
+6. We need to create an index pattern in Kibana for the logs to be available in the dashboard.
+Create an index pattern "wls*" in Kibana > Management. After the server starts, you will be able to see the log data from the weblogic servers in the Kibana dashboard.
+
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
+
+
+7. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+8. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+9. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
+10. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+11. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+12. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+13. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+14. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+15. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
+16. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 
-# TODO
-1. Work in progress 19_Efk.sh
-2. EFK 
-3. Watch this space 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTIyMDg1NywtNDk3MTUwMjMzXX0=
+eyJoaXN0b3J5IjpbMTMyMzk1OTZdfQ==
 -->
