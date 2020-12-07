@@ -42,7 +42,13 @@ a) Add a new Startup class. You may choose any descriptive name and the class na
 b) Target the startup class to each server that you want to export logs from.
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup2.png)
 c) You can verify this by checking for the update in your config.xml which should be similar to this example:
-
+```
+<startup-class>
+  <name>weblogic-logging-exporter</name>
+  <target>AdminServer,soa_cluster</target>
+  <class-name>weblogic.logging.exporter.Startup</class-name>
+</startup-class>
+```
 ## 4. Update Weblogic Server CLASS Path. ##
 In this step, we set the class path for weblogic-logging-exporter and its dependencies.
 
@@ -148,5 +154,5 @@ soainfra-soa-server2   0/1       Terminating   0          4d
 ```
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNDg2NTIxOV19
+eyJoaXN0b3J5IjpbNTAzNzg3ODMyXX0=
 -->
