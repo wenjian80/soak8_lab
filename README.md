@@ -644,6 +644,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. **This script run on on master node and worker node.**
 2. This script is into nfs component in the OS. It also mount the file system into both master and worker node.
 3. **You need to make change to the below before running the script**
+4. Open up [12_Mount_File.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/12_Mount_File.sh) to see the commands
 
 ### **Change the NFS ip**
 1. Open up [12_Mount_File.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/12_Mount_File.sh) and replace the IPCHANGE.
@@ -688,6 +689,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. **This script run on on master node ONLY.**
 2. **You need to make change to the below before running the script**
 3. The script is using create-pv-pvc.sh to generate the yaml to create the pv and pvc.
+4. Open up [13_Soa_pv.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/13_Soa_pv.sh) to see the commands
 
 ### **Change the NFS ip**
 1. Open up [create-pv-pvc-inputs.yaml](https://github.com/wenjian80/soak8_labs/blob/main/scripts/create-pv-pvc-inputs.yaml) and look for weblogicDomainStorageNFSServer to change the ip. You need to open up your labinfo.txt and replace the ip for your nfs ip.
@@ -743,6 +745,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. **This script run on on master node ONLY.**
 2. **You need to make change to the below before running the script**
 3.  This script will create a job inside k8 to create the necessary files in the shared storage. it make use of create-domain.sh  to generate the yaml files in weblogic-domains folder under /home/opc/soak8_lab/scripts/weblogic-domains
+4. Open up [14_Soa_DomainJob.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/14_Soa_DomainJob.sh) to see the commands
 
 ## **Change the database vcn name**
 1. Open up [create-domain-inputs.yaml)](https://github.com/wenjian80/soak8_labs/blob/main/scripts/create-domain-inputs.yaml), you need to replace the vcn domain naming with the naming you have jot down in your labinfo.txt.
@@ -969,6 +972,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjIxNTAzMjEsMTk4Mjg2MjkyLC0xOT
+eyJoaXN0b3J5IjpbLTEzMTM1NTcyMTksMTk4Mjg2MjkyLC0xOT
 A5ODExNzYyXX0=
 -->
