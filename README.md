@@ -50,11 +50,11 @@ Below are the steps you need to run
 7. [Step 3: 3_KubeNode_Firewall_Config.sh [Run only worker]](https://github.com/wenjian80/soak8_lab#step-3-3_kubenode_firewall_configsh)
 8. [Step 4: 4_KubeMaster_Kubernetes_Config.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-4-4_kubemaster_kubernetes_configsh)
 9. [Step 5: 5_KubeNode_Kubernetes_Config.sh [Run only worker]](https://github.com/wenjian80/soak8_lab#step-5-5_kubenode_kubernetes_configsh)
-10. [Step 6: 6_Check_Kubedns.sh (https://github.com/wenjian80/soak8_lab#step-6-6_check_kubednssh)
-11. Step 7: 7_Kube_proxy.sh
-12. Step 8: 8_Git_helm.sh
-13. Step 9: 9_Operator.sh
-14. Step 10: 10_Rcu.sh
+10. [Step 6: 6_Check_Kubedns.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-6-6_check_kubednssh)
+11. [Step 7: 7_Kube_proxy.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-7-7_kube_proxysh)
+12. [Step 8: 8_Git_helm.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-8-8_git_helmsh)
+13. [Step 9: 9_Operator.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-9-9_operatorsh)
+14. [Step 10: 10_Rcu.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-10-10_rcush)
 15. Step 11: 11_Soa_secret.sh
 16. Step 12: 12_Mount_File.sh
 17. Step 14: 14_Soa_DomainJob.sh
@@ -956,6 +956,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjgzMTE3MTcsNDIzODE1NDg3LC03Nj
-YwNDU4OTFdfQ==
+eyJoaXN0b3J5IjpbLTEyNDYzODQ1OTQsLTExMjgzMTE3MTcsLT
+c2NjA0NTg5MV19
 -->
