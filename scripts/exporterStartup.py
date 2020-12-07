@@ -51,9 +51,7 @@ def deployExporter():
 		cmo.createStartupClass('exporter')
 		cd('/StartupClasses/exporter')
 		cmo.setClassName('weblogic.logging.exporter.Startup')
-		set('Targets',jarray.array([ObjectName('com.bea:Name=AdminServer,Type=Server')], ObjectName))		
-		set('Targets',jarray.array([ObjectName('com.bea:Name=osb_cluster,Type=Cluster')], ObjectName))
-		set('Targets',jarray.array([ObjectName('com.bea:Name=soa_cluster,Type=Cluster')], ObjectName))	
+		set('Targets',jarray.array([ObjectName('com.bea:Name=AdminServer,Type=Server'),ObjectName('com.bea:Name=osb_cluster,Type=Cluster'),ObjectName('com.bea:Name=soa_cluster,Type=Cluster')], ObjectName))				
 		save()
 		activate()
 	except:

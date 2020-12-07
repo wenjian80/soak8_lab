@@ -17,7 +17,7 @@ kubectl cp soans/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra
 
 #Echo the line
 cd /home/opc/soak8_lab/scripts
-classline="CLASSPATH=/u01/oracle/user_projects/domains/soainfra/weblogic-logging-exporter-1.0.0.jar:/u01/oracle/user_projects/domains/soainfra/snakeyaml-1.23.jar:\$\{CLASSPATH\}"
+classline=CLASSPATH=/u01/oracle/user_projects/domains/soainfra/weblogic-logging-exporter-1.0.0.jar:/u01/oracle/user_projects/domains/soainfra/snakeyaml-1.23.jar:\$\{CLASSPATH\}
 echo $classline >> setDomainEnv.sh
 echo "export CLASSPATH" >> setDomainEnv.sh
 
