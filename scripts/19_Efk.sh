@@ -34,8 +34,13 @@ kubectl cp /home/opc/soak8_lab/scripts/exporterStartup.py soans/soainfra-adminse
 kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/exporterStartup.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001
 
 #Shut down server
-#kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "NEVER" }]'
+echo "Shutting down server."
+echo "kubectl get po -n soans"
+echo "Make sure all server are shutdown"
+kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "NEVER" }]'
 
+echo "Run below command to restart after all is shutdown"
+echo "kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]"
 #Retsrat server
 #kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
 
