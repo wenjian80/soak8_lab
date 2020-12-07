@@ -863,6 +863,23 @@ http://[workernodeip]:32100/login
 
 ### Steps to follow
 
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+sudo su
+cd /home/opc/soa_k8lab/scripts
+./19_Efk.sh
+
+#Follow below instruction
+
+#Wait for all pod to shit down
+
+#After all pod is shut down restart using below command
+#kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
+```
+
 
 1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
 2. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
@@ -907,5 +924,5 @@ Slack support
 3. Watch this space 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1NjE1Mzg3LDE5NTUyMjA4NTddfQ==
+eyJoaXN0b3J5IjpbLTI4NDU4OTE2MCwxOTU1MjIwODU3XX0=
 -->
