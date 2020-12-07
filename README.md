@@ -188,6 +188,7 @@ cd /home/opc/soa_k8lab/scripts
 
 1. This script need to run on both master and worker node.
 2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
+3. Open up [0_InitialMachine_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/0_InitialMachine_Config.sh) to see the commands
 
 
 
@@ -215,6 +216,8 @@ cd /home/opc/soa_k8lab/scripts
  
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
+3. 3. Open up [0_InitialMachine_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/1_Docker_Config.sh) to see the commands
+
 
 
 
@@ -961,5 +964,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDk4MTE3NjJdfQ==
+eyJoaXN0b3J5IjpbMTU3MzM2NDQ4NywtMTkwOTgxMTc2Ml19
 -->
