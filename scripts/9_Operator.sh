@@ -17,6 +17,7 @@ chmod -R 777 /home/opc/fmw-kubernetes/
 
 cd /home/opc/weblogic-kubernetes-operator
 
+#No Efk
 #helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
 
 #Enabled EFK
@@ -51,3 +52,12 @@ cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/ingress-per-domain  $
 cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/imagetool-scripts  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
 
 cp -rf ${WORKDIR}/fmw-kubernetes/OracleSOASuite/kubernetes/charts  ${WORKDIR}/weblogic-kubernetes-operator/kubernetes/samples/scripts/
+
+
+#Deployed EFK
+cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
+kubectl apply -f elasticsearch_and_kibana.yaml
+
+#Check efk po in default namespace
+kubectl get po
+
