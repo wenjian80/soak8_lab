@@ -55,14 +55,15 @@ Below are the steps you need to run
 12. [Step 8: 8_Git_helm.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-8-8_git_helmsh)
 13. [Step 9: 9_Operator.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-9-9_operatorsh)
 14. [Step 10: 10_Rcu.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-10-10_rcush)
-15. Step 11: 11_Soa_secret.sh
-16. Step 12: 12_Mount_File.sh
-17. Step 14: 14_Soa_DomainJob.sh
-18. Step 15: 15_Soa_DomainConfig.sh
-19. Step 16: 16_Traefik_LB.sh
-20. Step 17: 17_Efk.sh
-21. Step 18: 18_Prom_Gra.sh
-22. Step 19: 19_Prom_Setting.sh
+15. [Step 11: 11_Soa_secret.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-11-11_soa_secretsh)
+16. [Step 12: 12_Mount_File.sh [Run on master and worker]](https://github.com/wenjian80/soak8_lab#step-12-12_mount_filesh)
+17. [Step 13: 13_Soa_pv.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-13-13_soa_pvsh)
+18. [Step 14: 14_Soa_DomainJob.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-14-14_soa_domainjobsh)
+19. Step 15: 15_Soa_DomainConfig.sh
+20. Step 16: 16_Traefik_LB.sh
+21. Step 17: 17_Efk.sh
+22. Step 18: 18_Prom_Gra.sh
+23. Step 19: 19_Prom_Setting.sh
 
 
 ###  Clone all lab 
@@ -956,6 +957,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDYzODQ1OTQsLTExMjgzMTE3MTcsLT
-c2NjA0NTg5MV19
+eyJoaXN0b3J5IjpbLTMzMzQwOTg2NiwtMTEyODMxMTcxNywtNz
+Y2MDQ1ODkxXX0=
 -->
