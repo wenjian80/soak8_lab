@@ -856,6 +856,10 @@ http://[workernodeip]:32100/login
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
 
+
+## Step 18: 19_Efk.sh
+**TODO**
+
 # Oracle Reference Links
 
 1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
@@ -879,5 +883,5 @@ Slack support
 2. EFK 
 3. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDk4NTg3NV19
+eyJoaXN0b3J5IjpbLTMxNjQzMjkyMl19
 -->
