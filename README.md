@@ -44,7 +44,7 @@ Below are the steps you need to run
 1. [Clone all lab materials](https://github.com/wenjian80/soak8_lab#clone-all-lab)
 2. [Replace the settings with your environment](https://github.com/wenjian80/soak8_lab#replace-the-settings-with-your-environment)
 3. [Step 00: Set Parameters ](https://github.com/wenjian80/soak8_lab#step-00-set-parameters)
-4. [enter link description here](https://github.com/wenjian80/soak8_lab#step-0-0_initialmachine_configsh)
+4. [Step 0: 0_InitialMachine_Config.sh](https://github.com/wenjian80/soak8_lab#step-0-0_initialmachine_configsh)
 5. Step 1: 1_Docker_Config.sh
 6. Step 2: 2_KubeMaster_Firewall_Config.sh
 7. Step 3: 3_KubeNode_Firewall_Config.sh
@@ -956,6 +956,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzA2MjEwMCwtNTIzOTQ5OTY4LC0xNj
+eyJoaXN0b3J5IjpbLTYxMTU2MTkwNiwtMjE3MDYyMTAwLC0xNj
 c4OTQ2OTYxXX0=
 -->
