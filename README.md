@@ -41,27 +41,28 @@
 # 3. Lab steps
 
 Below are the steps you need to run
-1. [enter link description here](https://github.com/wenjian80/soak8_lab#clone-all-lab)
-2. Replace the settings with your environment
-3. Step 0: 0_InitialMachine_Config.sh
-4. Step 1: 1_Docker_Config.sh
-5. Step 2: 2_KubeMaster_Firewall_Config.sh
-6. Step 3: 3_KubeNode_Firewall_Config.sh
-7. Step 4: 4_KubeMaster_Kubernetes_Config.sh
-8. Step 5: 5_KubeNode_Kubernetes_Config.sh
-9. Step 6: 6_Check_Kubedns.sh
-10. Step 7: 7_Kube_proxy.sh
-11. Step 8: 8_Git_helm.sh
-12. Step 9: 9_Operator.sh
-13. Step 10: 10_Rcu.sh
-14. Step 11: 11_Soa_secret.sh
-15. Step 12: 12_Mount_File.sh
-16. Step 14: 14_Soa_DomainJob.sh
-17. Step 15: 15_Soa_DomainConfig.sh
-18. Step 16: 16_Traefik_LB.sh
-19. Step 17: 17_Efk.sh
-20. Step 18: 18_Prom_Gra.sh
-21. Step 19: 19_Prom_Setting.sh
+1. [Clone all lab materials](https://github.com/wenjian80/soak8_lab#clone-all-lab)
+2. [Replace the settings with your environment](https://github.com/wenjian80/soak8_lab#replace-the-settings-with-your-environment)
+3. [Step 00: Set Parameters ](https://github.com/wenjian80/soak8_lab#step-00-set-parameters)
+4. [enter link description here](https://github.com/wenjian80/soak8_lab#step-0-0_initialmachine_configsh)
+5. Step 1: 1_Docker_Config.sh
+6. Step 2: 2_KubeMaster_Firewall_Config.sh
+7. Step 3: 3_KubeNode_Firewall_Config.sh
+8. Step 4: 4_KubeMaster_Kubernetes_Config.sh
+9. Step 5: 5_KubeNode_Kubernetes_Config.sh
+10. Step 6: 6_Check_Kubedns.sh
+11. Step 7: 7_Kube_proxy.sh
+12. Step 8: 8_Git_helm.sh
+13. Step 9: 9_Operator.sh
+14. Step 10: 10_Rcu.sh
+15. Step 11: 11_Soa_secret.sh
+16. Step 12: 12_Mount_File.sh
+17. Step 14: 14_Soa_DomainJob.sh
+18. Step 15: 15_Soa_DomainConfig.sh
+19. Step 16: 16_Traefik_LB.sh
+20. Step 17: 17_Efk.sh
+21. Step 18: 18_Prom_Gra.sh
+22. Step 19: 19_Prom_Setting.sh
 
 
 ###  Clone all lab 
@@ -955,6 +956,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMzk0OTk2OCwxNzE0MTg0Mjg5LC0xNj
+eyJoaXN0b3J5IjpbLTIxNzA2MjEwMCwtNTIzOTQ5OTY4LC0xNj
 c4OTQ2OTYxXX0=
 -->
