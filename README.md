@@ -1,4 +1,4 @@
-# STILL WORK IN PROGESS
+
 # Disclaimer
 
 1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
@@ -856,6 +856,13 @@ http://[workernodeip]:32100/login
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
 
+
+## Step 19: 19_Efk.sh
+**TODO**
+**[Run on master node ONLY]**
+
+### Steps to follow
+
 # Oracle Reference Links
 
 1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
@@ -875,8 +882,9 @@ Slack support
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 
 # TODO
-1. EFK 
-2. Watch this space 
+1. Work in progress 19_Efk.sh
+2. EFK 
+3. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwMDI1MjI5XX0=
+eyJoaXN0b3J5IjpbMTk1NTIyMDg1NywtNDk3MTUwMjMzXX0=
 -->
