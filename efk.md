@@ -32,18 +32,18 @@ kubectl cp snakeyaml-1.23.jar soans/soainfra-adminserver:/u01/oracle/user_projec
 kubectl cp weblogic-logging-exporter-0.1.1.jar soans/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra/
 ```
 
-##3. Add a startup class to your domain configuration##
+## 3. Add a startup class to your domain configuration ##
 In this step, we configure weblogic-logging-exporter JAR as a startup class in the Weblogic servers where we intend to collect the logs.
 
 In the Administration Console, navigate to "Environment" then "Startup and Shutdown classes" in the main menu.
 
 a) Add a new Startup class. You may choose any descriptive name and the class name must be "weblogic.logging.exporter.Startup".
-
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup1.png)
 b) Target the startup class to each server that you want to export logs from.
-
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup2.png)
 c) You can verify this by checking for the update in your config.xml which should be similar to this example:
 
-##4. Update Weblogic Server CLASS Path.##
+## 4. Update Weblogic Server CLASS Path. ##
 In this step, we set the class path for weblogic-logging-exporter and its dependencies.
 
 a) Copy setDomainEnv.sh from the pod to local folder.
@@ -82,7 +82,7 @@ b) Copy file to the domain folder in the weblogic server pod.
 kubectl cp WebLogicLoggingExporter.yaml soans-au01/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra/config/
 ```
 
-##6. Restart Weblogic Servers##
+## 6. Restart Weblogic Servers ##
 Now we can restart the weblogic servers for the weblogic-logging-exporter to get loaded in the servers.
 
 To restart the servers, edit the domain and change serverStartPolicy to NEVER for the weblogic servers to shutdow
@@ -130,7 +130,7 @@ FilterConfig{expression='NOT(MSGID = 'BEA-000449')', servers=[]}], domainUID='so
 
 ```
 
-## 7. Create index pattern in Kibana##
+## 7. Create index pattern in Kibana ##
 We need to create an index pattern in Kibana for the logs to be available in the dashboard.
 
 Create an index pattern "wls*" in Kibana > Management. After the server starts, you will be able to see the log data from the weblogic servers in the Kibana dashboard,
@@ -146,6 +146,7 @@ FilterConfig{expression='NOT(MSGID = 'BEA-000449')', servers=[]}], domainUID='so
 ================= url in executePutOrPostOnUrl: http://elasticsearch.default.svc.cluster.local:9200/wls
 soainfra-soa-server2   0/1       Terminating   0          4d
 ```
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3Njg1ODEwXX0=
+eyJoaXN0b3J5IjpbLTQzNDg2NTIxOV19
 -->
