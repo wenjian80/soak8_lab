@@ -7,15 +7,17 @@ wget https://github.com/oracle/weblogic-logging-exporter/releases/download/v1.0.
 wget https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.23/snakeyaml-1.23.jar
 
 #transfer into the server
+cd /home/opc/soak8_lab/scripts
 kubectl cp snakeyaml-1.23.jar soans/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra/
 kubectl cp weblogic-logging-exporter-1.0.0.jar soans/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra/
 
 #Get the setDomainEnv from server
+cd /home/opc/soak8_lab/scripts
 kubectl cp soans/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra/bin/setDomainEnv.sh /home/opc/soak8_lab/scripts/setDomainEnv.sh
 
 #Echo the line
 cd /home/opc/soak8_lab/scripts
-classline=CLASSPATH=/u01/oracle/user_projects/domains/soainfra/weblogic-logging-exporter-1.0.0.jar:/u01/oracle/user_projects/domains/soainfra/snakeyaml-1.23.jar:\$\{CLASSPATH\}
+classline="CLASSPATH=/u01/oracle/user_projects/domains/soainfra/weblogic-logging-exporter-1.0.0.jar:/u01/oracle/user_projects/domains/soainfra/snakeyaml-1.23.jar:\$\{CLASSPATH\}"
 echo $classline >> setDomainEnv.sh
 echo "export CLASSPATH" >> setDomainEnv.sh
 
@@ -28,7 +30,7 @@ kubectl cp WebLogicLoggingExporter.yaml soans/soainfra-adminserver:/u01/oracle/u
 
 #deploy exporter startup class
 cd /home/opc/soak8_lab/scripts
-kubectl cp /home/opc/soak8_lab/scripts/manageApplication.py soans/soainfra-adminserver:/u01/
+kubectl cp /home/opc/soak8_lab/scripts/exporterStartup.py soans/soainfra-adminserver:/u01/
 kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/exporterStartup.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001
 
 #Shut down server
