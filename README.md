@@ -40,6 +40,7 @@
 
 # 3. Lab steps
 
+###  Clone all lab materials
 ### Steps to follow
 It will take you around 1 Hour to run finished the excercise.
 
@@ -929,5 +930,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAxMDQ2NTE2XX0=
+eyJoaXN0b3J5IjpbMTU0NjA5MTA4Niw2MDEwNDY1MTZdfQ==
 -->
