@@ -40,6 +40,7 @@
 
 # 3. Lab steps
 
+Below are the steps you need to run
 1. Clone all lab materials
 2. Replace the settings with your environment
 3. Step 0: 0_InitialMachine_Config.sh
@@ -61,6 +62,8 @@
 19. Step 17: 17_Efk.sh
 20. Step 18: 18_Prom_Gra.sh
 21. Step 19: 19_Prom_Setting.sh
+
+
 ###  Clone all lab 
 materials
 ### Steps to follow
@@ -952,6 +955,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMzgwODUxMSwyMjY1MDQ4MzAsMTU0Nj
-A5MTA4Niw2MDEwNDY1MTZdfQ==
+eyJoaXN0b3J5IjpbLTE2Nzg5NDY5NjFdfQ==
 -->
