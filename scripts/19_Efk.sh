@@ -44,3 +44,8 @@ echo "kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace"
 #Retsrat server
 #kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
 
+
+#Check what is the node port for kibnana
+#kubectl get svc
+#Access the url via http://[workerip:[nodeport]]
+
