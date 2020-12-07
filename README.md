@@ -859,6 +859,9 @@ http://[workernodeip]:32100/login
 
 ## Step 19: 19_Efk.sh
 **TODO**
+**[Run on master node ONLY]**
+
+### Steps to follow
 
 # Oracle Reference Links
 
@@ -883,5 +886,5 @@ Slack support
 2. EFK 
 3. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NzE1MDIzM119
+eyJoaXN0b3J5IjpbMTk1NTIyMDg1NywtNDk3MTUwMjMzXX0=
 -->
