@@ -906,6 +906,8 @@ kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP             14
 6. We need to create an index pattern in Kibana for the logs to be available in the dashboard.
 Create an index pattern "wls*" in Kibana > Management. After the server starts, you will be able to see the log data from the weblogic servers in the Kibana dashboard.
 
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
+
 
 7. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
 8. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
@@ -926,6 +928,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NjAxNzk4LDIwMDE5MTI4NDcsLTI4ND
-U4OTE2MF19
+eyJoaXN0b3J5IjpbMTMyMzk1OTZdfQ==
 -->
