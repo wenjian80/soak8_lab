@@ -858,7 +858,6 @@ http://[workernodeip]:32100/login
 
 
 ## Step 19: 19_Efk.sh
-**TODO**
 **[Run on master node ONLY]**
 
 ### Steps to follow
@@ -928,5 +927,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMzk1OTZdfQ==
+eyJoaXN0b3J5IjpbMTg3Nzc1NjM3Ml19
 -->
