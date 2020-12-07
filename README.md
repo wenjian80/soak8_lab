@@ -349,7 +349,7 @@ kubectl get po
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
-
+5. Open up [5_KubeNode_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/5_KubeNode_Kubernetes_Config.sh to see the commands
 
 
 ## Step 6: 6_Check_Kubedns.sh
@@ -414,7 +414,7 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
-
+6. Open up [7_Kube_proxy.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/7_Kube_proxy.sh )to see the commands
 
 
 ## Step 8: 8_Git_helm.sh
@@ -435,8 +435,7 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on master node ONLY.**
 2. This script is to install Git and Helm 3.
 3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
-
-
+ 4. Open up [8_Git_helm.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/8_Git_helm.sh)to see the commands
 
 
 ## Step 9: 9_Operator.sh
@@ -967,6 +966,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTI4NTYwMzIsLTI1ODY4OTAxMCwtMT
-kwOTgxMTc2Ml19
+eyJoaXN0b3J5IjpbNTA5ODU3NjM4LC0xODEyODU2MDMyLC0xOT
+A5ODExNzYyXX0=
 -->
