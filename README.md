@@ -349,7 +349,7 @@ kubectl get po
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
-5. Open up [5_KubeNode_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/5_KubeNode_Kubernetes_Config.sh to see the commands
+5. Open up [5_KubeNode_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/5_KubeNode_Kubernetes_Config.sh) to see the commands
 
 
 ## Step 6: 6_Check_Kubedns.sh
@@ -977,5 +977,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDk4NDE3MjhdfQ==
+eyJoaXN0b3J5IjpbLTEyNDcyNjQ1OTddfQ==
 -->
