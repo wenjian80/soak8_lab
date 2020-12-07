@@ -865,18 +865,27 @@ http://[workernodeip]:32100/login
 
 
 1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
-2. The EFK has already been enabled and installed in 
+2. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
+```
+#Enabled EFK
+helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set elkIntegrationEnabled=true --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
 
-3. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
-4. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-5. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
-6. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
-7. [Oracle fmw docker images](https://github.com/oracle/docker-images)
-8. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-9. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
-10. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
-11. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-12. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+#Deployed EFK
+cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
+kubectl apply -f elasticsearch_and_kibana.yaml
+```
+3. Run below command the check the  node port of  
+
+4. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+5. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+6. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
+7. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+8. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+9. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+10. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+11. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+12. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
+13. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
@@ -889,5 +898,5 @@ Slack support
 3. Watch this space 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk2NTIyODExLDE5NTUyMjA4NTddfQ==
+eyJoaXN0b3J5IjpbLTU0ODQ3NjczNiwxOTU1MjIwODU3XX0=
 -->
