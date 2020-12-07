@@ -216,7 +216,7 @@ cd /home/opc/soa_k8lab/scripts
  
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
-3. 3. Open up [0_InitialMachine_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/1_Docker_Config.sh) to see the commands
+3. 3. Open up [1_Docker_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/1_Docker_Config.sh) to see the commands
 
 
 
@@ -964,5 +964,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3MzM2NDQ4NywtMTkwOTgxMTc2Ml19
+eyJoaXN0b3J5IjpbLTExNDIyMjg3NTcsMTU3MzM2NDQ4NywtMT
+kwOTgxMTc2Ml19
 -->
