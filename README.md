@@ -59,11 +59,11 @@ Below are the steps you need to run
 16. [Step 12: 12_Mount_File.sh [Run on master and worker]](https://github.com/wenjian80/soak8_lab#step-12-12_mount_filesh)
 17. [Step 13: 13_Soa_pv.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-13-13_soa_pvsh)
 18. [Step 14: 14_Soa_DomainJob.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-14-14_soa_domainjobsh)
-19. Step 15: 15_Soa_DomainConfig.sh
-20. Step 16: 16_Traefik_LB.sh
-21. Step 17: 17_Efk.sh
-22. Step 18: 18_Prom_Gra.sh
-23. Step 19: 19_Prom_Setting.sh
+19. [Step 15: 15_Soa_DomainConfig.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-15-15_soa_domainconfigsh)
+20. [ Step 16: 16_Traefik_LB.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-16-16_traefik_lbsh)
+21. [Step 17: 17_Efk.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-17-17_efksh)
+22. [Step 18: 18_Prom_Gra.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-18-18_prom_grash)
+23. 
 
 
 ###  Clone all lab 
@@ -957,6 +957,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMzQwOTg2NiwtMTEyODMxMTcxNywtNz
-Y2MDQ1ODkxXX0=
+eyJoaXN0b3J5IjpbNTQ1NDI0NjA1LC0xMTI4MzExNzE3LC03Nj
+YwNDU4OTFdfQ==
 -->
