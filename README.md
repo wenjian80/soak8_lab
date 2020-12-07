@@ -874,7 +874,16 @@ helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace 
 cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
 kubectl apply -f elasticsearch_and_kibana.yaml
 ```
-3. Run below command the check the  node port of  
+3. Run below command the check the  node port of  kibana. The below example show the kibana is running a node port 30824. You can access the kibana via http://[workerip]:[nodeport]
+
+```
+[root@k8master opc]# kubectl get svc
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+elasticsearch   ClusterIP   10.97.235.142   <none>        9200/TCP,9300/TCP   5m57s
+kibana          NodePort    10.99.255.48    <none>        5601:30824/TCP      5m57s
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP             14m
+
+```
 
 4. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
 5. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
@@ -898,5 +907,5 @@ Slack support
 3. Watch this space 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODQ3NjczNiwxOTU1MjIwODU3XX0=
+eyJoaXN0b3J5IjpbNDI1NjE1Mzg3LDE5NTUyMjA4NTddfQ==
 -->
