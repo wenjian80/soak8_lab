@@ -216,7 +216,7 @@ cd /home/opc/soa_k8lab/scripts
  
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
-3. 3. Open up [1_Docker_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/1_Docker_Config.sh) to see the commands
+3. Open up [1_Docker_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/1_Docker_Config.sh) to see the commands
 
 
 
@@ -240,6 +240,7 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on master node ONLY.**
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
+4. Open up [2_KubeMaster_Firewall_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/2_KubeMaster_Firewall_Config.sh) to see the commands
 
 
 
@@ -262,6 +263,7 @@ cd /home/opc/soa_k8lab/scripts
  
 1. **This script run on on worker node ONLY.**
 2. Same as step 2. We are setting the pre-req for k8.
+3. Open up [3_KubeNode_Firewall_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/3_KubeNode_Firewall_Config.sh) to see the commands
 
 
 
@@ -305,7 +307,7 @@ kubectl get no
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 
-
+6. Open up [4_KubeMaster_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/4_KubeMaster_Kubernetes_Config.sh) to see the commands
 
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
@@ -372,6 +374,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
+ 4. Open up [4_KubeMaster_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/6_Check_Kubedns.sh to see the commands
 
 
 
@@ -964,6 +967,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDIyMjg3NTcsMTU3MzM2NDQ4NywtMT
+eyJoaXN0b3J5IjpbLTI1ODY4OTAxMCwtMTE0MjIyODc1NywtMT
 kwOTgxMTc2Ml19
 -->
