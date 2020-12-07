@@ -918,11 +918,8 @@ Slack support
 -   oracle-weblogic.slack.com
 -   [https://weblogic-slack-inviter.herokuapp.com/](https://weblogic-slack-inviter.herokuapp.com/)
 
-# TODO
-1. Work in progress 19_Efk.sh
-2. EFK 
-3. Watch this space 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NDU4OTE2MF19
+eyJoaXN0b3J5IjpbLTE5OTExOTE3NDMsLTI4NDU4OTE2MF19
 -->
