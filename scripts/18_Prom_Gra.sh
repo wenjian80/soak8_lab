@@ -52,7 +52,9 @@ chmod 777 *
 
 #Make directory in admin port so we can deploy
 #Alyternatively we can deploy via console and upload the file
-#Pod is mortal, so it will not be there after restart
+#Pod is mortal, so it will not be there after restart if we copy the /u01/
+#/u01/oracle/user_projects is a shared directory mapped /soashared/soa
+#alternatively we can copy over there. lazy to retest the script again.
 kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter
 kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/admin
 kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/osb
