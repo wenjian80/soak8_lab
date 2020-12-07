@@ -834,7 +834,7 @@ http://[workernodeip]:30305/console/
 #Login master
 sudo su
 cd /home/opc/soa_k8lab/scripts
-./19_Efk.sh
+./17_Efk.sh
 
 #Follow below instruction
 
@@ -958,5 +958,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY2MjM4MjEwXX0=
+eyJoaXN0b3J5IjpbNjc3OTAxNDhdfQ==
 -->
