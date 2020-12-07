@@ -901,17 +901,21 @@ kibana          NodePort    10.99.255.48    <none>        5601:30824/TCP      5m
 kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP             14m
 
 ```
+4. Enabled logging for operator
+5. Create index pattern in Kibana We need to create an index pattern in Kibana for the logs to be available in the dashboard.
+Create an index pattern "wls*" in Kibana > Management. After the server starts, you will be able to see the log data from the weblogic servers in the Kibana dashboard.
 
-4. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
-5. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-6. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
-7. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
-8. [Oracle fmw docker images](https://github.com/oracle/docker-images)
-9. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-10. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
-11. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
-12. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-13. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+
+6. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+7. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+8. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
+9. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+10. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+11. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+12. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+13. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+14. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
+15. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
@@ -921,5 +925,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTExOTE3NDMsLTI4NDU4OTE2MF19
+eyJoaXN0b3J5IjpbMjAwMTkxMjg0NywtMjg0NTg5MTYwXX0=
 -->
