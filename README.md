@@ -374,7 +374,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
- 4. Open up [6_Check_Kubedns.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/6_Check_Kubedns.sh to see the commands
+ 4. Open up [6_Check_Kubedns.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/6_Check_Kubedns.sh) to see the commands
 
 
 
@@ -414,7 +414,7 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
-6. Open up [7_Kube_proxy.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/7_Kube_proxy.sh )to see the commands
+6. Open up [7_Kube_proxy.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/7_Kube_proxy.sh ) to see the commands
 
 
 ## Step 8: 8_Git_helm.sh
@@ -977,5 +977,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDcyNjQ1OTddfQ==
+eyJoaXN0b3J5IjpbMTU0MzY5MjUwOF19
 -->
