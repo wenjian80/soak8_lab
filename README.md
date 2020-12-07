@@ -884,7 +884,7 @@ Create an index pattern "wls*" in Kibana > Management. After the server starts, 
 #Login master
 sudo su
 cd /home/opc/soak8_lab/scripts
-./17_Prom_Gra.sh
+./18_Prom_Gra.sh
 
 ```
 
@@ -908,7 +908,7 @@ http://[workerip]:30305/console
 #Login master
 sudo su
 cd /home/opc/soa_k8lab/scripts
-./18_Prom_Setting.sh
+./19_Prom_Setting.sh
 
 
 #Accessing Prometheus
@@ -958,5 +958,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc3OTAxNDhdfQ==
+eyJoaXN0b3J5IjpbMjExNTA0NTk4OF19
 -->
