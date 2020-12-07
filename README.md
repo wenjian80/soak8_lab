@@ -374,7 +374,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
- 4. Open up [4_KubeMaster_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/6_Check_Kubedns.sh to see the commands
+ 4. Open up [6_Check_Kubedns.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/6_Check_Kubedns.sh to see the commands
 
 
 
@@ -967,6 +967,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1ODY4OTAxMCwtMTE0MjIyODc1NywtMT
+eyJoaXN0b3J5IjpbLTE4MTI4NTYwMzIsLTI1ODY4OTAxMCwtMT
 kwOTgxMTc2Ml19
 -->
