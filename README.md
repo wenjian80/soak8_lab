@@ -863,18 +863,20 @@ http://[workernodeip]:32100/login
 
 ### Steps to follow
 
-# Oracle Reference Links
 
-1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
-2. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-3. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
-4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
-5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
-6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-7. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
-8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
-9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-11. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
+2. The EFK has already been enabled and installed in 
+
+3. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+4. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+5. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
+6. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+7. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+8. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+9. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+10. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+11. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
+12. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
@@ -885,6 +887,7 @@ Slack support
 1. Work in progress 19_Efk.sh
 2. EFK 
 3. Watch this space 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTIyMDg1N119
+eyJoaXN0b3J5IjpbNjk2NTIyODExLDE5NTUyMjA4NTddfQ==
 -->
