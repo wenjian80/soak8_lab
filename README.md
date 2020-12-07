@@ -1,5 +1,5 @@
 
-# Tested/Verified  on 7 dec 2020
+
 # Disclaimer
 
 1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
@@ -958,5 +958,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MzA0MzU4XX0=
+eyJoaXN0b3J5IjpbNzUwMzY1OTMxLDE3ODMwNDM1OF19
 -->
