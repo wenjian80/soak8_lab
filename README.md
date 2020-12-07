@@ -792,72 +792,8 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 ```
 http://[workernodeip]:30305/console/
 ```
-## Step 17: 17_Prom_Gra.sh
-**[Run on master node ONLY]**
 
-### Steps to follow
- ```
-#Steps to follow
-#Read below for exact instruction
-
-#Login master
-sudo su
-cd /home/opc/soak8_lab/scripts
-./17_Prom_Gra.sh
-
-```
-
-1. **This script run on on master node ONLY.**
-2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_lab/blob/main/promgraph.md) 
-3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed.
-4. The user name is weblogic/Welcome1 
-5. The username and password was defined earlier in [1_Soa_secret.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/11_Soa_secret.sh)
-```
-http://[workerip]:30305/console
-```
-
-## Step 18: 18_Prom_Setting.sh
-**[Run on master node ONLY]**
-
-### Steps to follow
- ```
-#Steps to follow
-#Read below for exact instruction
-
-#Login master
-sudo su
-cd /home/opc/soa_k8lab/scripts
-./18_Prom_Setting.sh
-
-
-#Accessing Prometheus
-http://[workernodeip]:32101/graph
-
-#Accessing Grafana (admin/admin as default username and password)
-http://[workernodeip]:32100/login 
-
-
-```
-
-1. **This script run on on master node ONLY.**
-2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
-3. Once the script are execute you can access prom and grapha via the below url.
-```
-Prometheus
-http://[workernodeip]:32101/graph
-
-Grafana (admin/admin as default username and password)
-http://[workernodeip]:32100/login 
-```
-
-## **Import dashboard**
-1. Import [weblogic_dashboard](https://github.com/wenjian80/soak8_labs/blob/main/scripts/weblogic_dashboard.json) into Grafana 
-2. Login to Grafana click on Managed->Import and choose the json to import.
-
-![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
-
-
-## Step 19: 19_Efk.sh
+## Step 17: 17_Efk.sh
 **[Run on master node ONLY]**
 
 ### Steps to follow
@@ -908,6 +844,72 @@ Create an index pattern "wls*" in Kibana > Management. After the server starts, 
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
 
 
+## Step 18: 18_Prom_Gra.sh
+**[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+sudo su
+cd /home/opc/soak8_lab/scripts
+./17_Prom_Gra.sh
+
+```
+
+1. **This script run on on master node ONLY.**
+2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_lab/blob/main/promgraph.md) 
+3. Once the script is excuted login to your weblogic console and check the deployment. You will see 3 exporter deployed.
+4. The user name is weblogic/Welcome1 
+5. The username and password was defined earlier in [1_Soa_secret.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/11_Soa_secret.sh)
+```
+http://[workerip]:30305/console
+```
+
+## Step 19: 19_Prom_Setting.sh
+**[Run on master node ONLY]**
+
+### Steps to follow
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+sudo su
+cd /home/opc/soa_k8lab/scripts
+./18_Prom_Setting.sh
+
+
+#Accessing Prometheus
+http://[workernodeip]:32101/graph
+
+#Accessing Grafana (admin/admin as default username and password)
+http://[workernodeip]:32100/login 
+
+
+```
+
+1. **This script run on on master node ONLY.**
+2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
+3. Once the script are execute you can access prom and grapha via the below url.
+```
+Prometheus
+http://[workernodeip]:32101/graph
+
+Grafana (admin/admin as default username and password)
+http://[workernodeip]:32100/login 
+```
+
+## **Import dashboard**
+1. Import [weblogic_dashboard](https://github.com/wenjian80/soak8_labs/blob/main/scripts/weblogic_dashboard.json) into Grafana 
+2. Login to Grafana click on Managed->Import and choose the json to import.
+
+![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
+
+
+
 7. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
 8. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
 9. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
@@ -927,5 +929,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3Nzc1NjM3Ml19
+eyJoaXN0b3J5IjpbNjAxMDQ2NTE2XX0=
 -->
