@@ -49,25 +49,3 @@ echo "kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace"
 #kubectl get svc
 #Access the url via http://[workerip:[nodeport]]
 
-
-
-#Pod is mortal so the previous is gone
-#Copy again
-#May want to change the docker file to include this in
-#Alyternatively we can deploy via console and upload the file
-cd /home/opc/soak8_lab/scripts
-kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter
-kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/admin
-kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/osb
-kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/soa
-kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter
-
-kubectl cp /home/opc/soak8_lab/scripts/exporteradmin/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/admin
-kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/admin
-
-kubectl cp /home/opc/soak8_lab/scripts/exporterosb/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/osb
-kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/osb
-
-kubectl cp /home/opc/soak8_lab/scripts/exportersoa/wls-exporter.war soans/soainfra-adminserver:/u01/exporter/soa
-kubectl exec soainfra-adminserver -n soans -- ls /u01/exporter/soa
-
