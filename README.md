@@ -921,7 +921,7 @@ http://[workernodeip]:32100/login
 ```
 
 1. **This script run on on master node ONLY.**
-2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_labs/blob/main/tutorial/promgraph.md) 
+2. These script is a condense version which automate all the command listed in [promgraph.md](https://github.com/wenjian80/soak8_lab/blob/main/promgraph.md) 
 3. Once the script are execute you can access prom and grapha via the below url.
 ```
 Prometheus
@@ -958,5 +958,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNTA0NTk4OF19
+eyJoaXN0b3J5IjpbMTc4MzA0MzU4XX0=
 -->
