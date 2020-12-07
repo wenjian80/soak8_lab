@@ -17,8 +17,10 @@ chmod -R 777 /home/opc/fmw-kubernetes/
 
 cd /home/opc/weblogic-kubernetes-operator
 
-helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
+#helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
 
+#Enabled EFK
+helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set elkIntegrationEnabled=true --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
 
 kubectl get pods -n opns
 
