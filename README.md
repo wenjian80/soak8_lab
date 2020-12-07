@@ -484,7 +484,7 @@ Get all resource all namespace
 kubectl get all -A
 ```
 
-
+6. Open up [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)to see the commands
 
 ## Step 10: 10_Rcu.sh
 **[Run on master node ONLY]**
@@ -522,6 +522,7 @@ kubectl describe po rcu -n soans
 
 ```
 
+Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/10_Rcu.sh) to see the commands
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -606,6 +607,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 1. **This script run on on master node ONLY.**
 2. This script is to create the necessary secret to be used in the later steps
+3. Open up [11_Soa_secret.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/11_Soa_secret.sh) to see the commands
 
 ## Step 12: 12_Mount_File.sh
 **[Run on master and worker node]**
@@ -967,6 +969,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4Mjg2MjkyLDUwOTg1NzYzOCwtMTkwOT
-gxMTc2Ml19
+eyJoaXN0b3J5IjpbLTEzNjIxNTAzMjEsMTk4Mjg2MjkyLC0xOT
+A5ODExNzYyXX0=
 -->
