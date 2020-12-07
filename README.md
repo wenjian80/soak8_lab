@@ -911,7 +911,11 @@ cd /home/opc/soa_k8lab/scripts
 
 
 1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
-2. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
+2. After running the script all the admin, soa, osb pod will be shutting down. Wait for all pod to be terminated before starting the pod again via the below command line
+```
+kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
+```
+3. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
 ```
 #Enabled EFK
 helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set elkIntegrationEnabled=true --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
@@ -920,7 +924,7 @@ helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace 
 cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
 kubectl apply -f elasticsearch_and_kibana.yaml
 ```
-3. Run below command the check the  node port of  kibana. The below example show the kibana is running a node port 30824. You can access the kibana via http://[workerip]:[nodeport]
+4. Run below command the check the  node port of  kibana. The below example show the kibana is running a node port 30824. You can access the kibana via http://[workerip]:[nodeport]
 
 ```
 [root@k8master opc]# kubectl get svc
@@ -958,5 +962,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTQwOTU5OTVdfQ==
+eyJoaXN0b3J5IjpbODY0Njc1NjA2LC0xNDU0MDk1OTk1XX0=
 -->
