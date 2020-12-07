@@ -40,7 +40,29 @@
 
 # 3. Lab steps
 
-###  Clone all lab materials
+1. Clone all lab materials
+2. Replace the settings with your environment
+3. Step 0: 0_InitialMachine_Config.sh
+4. Step 1: 1_Docker_Config.sh
+5. Step 2: 2_KubeMaster_Firewall_Config.sh
+6. Step 3: 3_KubeNode_Firewall_Config.sh
+7. Step 4: 4_KubeMaster_Kubernetes_Config.sh
+8. Step 5: 5_KubeNode_Kubernetes_Config.sh
+9. Step 6: 6_Check_Kubedns.sh
+10. Step 7: 7_Kube_proxy.sh
+11. Step 8: 8_Git_helm.sh
+12. Step 9: 9_Operator.sh
+13. Step 10: 10_Rcu.sh
+14. Step 11: 11_Soa_secret.sh
+15. Step 12: 12_Mount_File.sh
+16. Step 14: 14_Soa_DomainJob.sh
+17. Step 15: 15_Soa_DomainConfig.sh
+18. Step 16: 16_Traefik_LB.sh
+19. Step 17: 17_Efk.sh
+Step 18: 18_Prom_Gra.sh
+Step 19: 19_Prom_Setting.sh
+###  Clone all lab 
+materials
 ### Steps to follow
 It will take you around 1 Hour to run finished the excercise.
 
@@ -930,5 +952,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NjA5MTA4Niw2MDEwNDY1MTZdfQ==
+eyJoaXN0b3J5IjpbMjI2NTA0ODMwLDE1NDYwOTEwODYsNjAxMD
+Q2NTE2XX0=
 -->
