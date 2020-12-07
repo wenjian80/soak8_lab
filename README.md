@@ -41,7 +41,7 @@
 # 3. Lab steps
 
 Below are the steps you need to run
-1. [enter link description here](https://github.com/wenjian80/soak8_lab#clone-all-lab)Clone all lab materials
+1. [enter link description here](https://github.com/wenjian80/soak8_lab#clone-all-lab)
 2. Replace the settings with your environment
 3. Step 0: 0_InitialMachine_Config.sh
 4. Step 1: 1_Docker_Config.sh
@@ -955,5 +955,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNDE4NDI4OSwtMTY3ODk0Njk2MV19
+eyJoaXN0b3J5IjpbLTUyMzk0OTk2OCwxNzE0MTg0Mjg5LC0xNj
+c4OTQ2OTYxXX0=
 -->
