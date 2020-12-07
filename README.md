@@ -47,10 +47,10 @@ Below are the steps you need to run
 4. [Step 0: 0_InitialMachine_Config.sh [Run on master and worker]](https://github.com/wenjian80/soak8_lab#step-0-0_initialmachine_configsh)
 5. [Step 1: 1_Docker_Config.sh [Run on master and worker]](https://github.com/wenjian80/soak8_lab#step-1-1_docker_configsh)
 6. [Step 2: 2_KubeMaster_Firewall_Config.sh [Run only on master]](https://github.com/wenjian80/soak8_lab#step-2-2_kubemaster_firewall_configsh)
-7. Step 3: 3_KubeNode_Firewall_Config.sh
-8. Step 4: 4_KubeMaster_Kubernetes_Config.sh
-9. Step 5: 5_KubeNode_Kubernetes_Config.sh
-10. Step 6: 6_Check_Kubedns.sh
+7. [Step 3: 3_KubeNode_Firewall_Config.sh [Run only worker]](https://github.com/wenjian80/soak8_lab#step-3-3_kubenode_firewall_configsh)
+8. [Step 4: 4_KubeMaster_Kubernetes_Config.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-4-4_kubemaster_kubernetes_configsh)
+9. [Step 5: 5_KubeNode_Kubernetes_Config.sh [Run only worker]](https://github.com/wenjian80/soak8_lab#step-5-5_kubenode_kubernetes_configsh)
+10. [enter link description here](https://github.com/wenjian80/soak8_lab#step-6-6_check_kubednssh)
 11. Step 7: 7_Kube_proxy.sh
 12. Step 8: 8_Git_helm.sh
 13. Step 9: 9_Operator.sh
@@ -956,5 +956,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NjA0NTg5MV19
+eyJoaXN0b3J5IjpbNDIzODE1NDg3LC03NjYwNDU4OTFdfQ==
 -->
