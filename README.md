@@ -805,6 +805,9 @@ Below is the output you should see, when all server started
 kubectl get po -n soans
 ```
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/soa_started.JPG)
+
+3, Open up [15_Soa_DomainConfig.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/15_Soa_DomainConfig.sh) to see the commands
+
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
 
@@ -832,7 +835,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 ```
 http://[workernodeip]:30305/console/
 ```
-
+6. Open up [16_Traefik_LB.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/16_Traefik_LB.sh) to see the commands
 
 ## Step 17: 17_Prom_Gra.sh
 **[Run on master node ONLY]**
@@ -857,6 +860,7 @@ cd /home/opc/soak8_lab/scripts
 ```
 http://[workerip]:30305/console
 ```
+6. Open up [17_Prom_Gra.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/17_Prom_Gra.sh) to see the commands
 
 ## Step 18: 18_Prom_Setting.sh
 **[Run on master node ONLY]**
@@ -891,6 +895,7 @@ http://[workernodeip]:32101/graph
 Grafana (admin/admin as default username and password)
 http://[workernodeip]:32100/login 
 ```
+4. Open up [17_Prom_Gra.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/17_Prom_Gra.sh) to see the commands
 
 ## **Import dashboard**
 1. Import [weblogic_dashboard](https://github.com/wenjian80/soak8_labs/blob/main/scripts/weblogic_dashboard.json) into Grafana 
@@ -972,6 +977,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTM1NTcyMTksMTk4Mjg2MjkyLC0xOT
-A5ODExNzYyXX0=
+eyJoaXN0b3J5IjpbMTgzNzc0MzQ1MCwxOTgyODYyOTIsLTE5MD
+k4MTE3NjJdfQ==
 -->
