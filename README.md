@@ -63,7 +63,7 @@ Below are the steps you need to run
 20. [ Step 16: 16_Traefik_LB.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-16-16_traefik_lbsh)
 21. [Step 17: 17_Efk.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-17-17_efksh)
 22. [Step 18: 18_Prom_Gra.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-18-18_prom_grash)
-23. [enter link description here](https://github.com/wenjian80/soak8_lab#step-19-19_prom_settingsh)
+23. [Step 19: 19_Prom_Setting.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-19-19_prom_settingsh)
 
 
 ###  Clone all lab 
@@ -957,6 +957,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNjI4OTk5Myw1NDU0MjQ2MDUsLTExMj
-gzMTE3MTcsLTc2NjA0NTg5MV19
+eyJoaXN0b3J5IjpbLTI5NDMwNDMzMV19
 -->
