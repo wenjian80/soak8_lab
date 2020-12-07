@@ -857,7 +857,7 @@ http://[workernodeip]:32100/login
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
 
 
-## Step 18: 19_Efk.sh
+## Step 19: 19_Efk.sh
 **TODO**
 
 # Oracle Reference Links
@@ -883,5 +883,5 @@ Slack support
 2. EFK 
 3. Watch this space 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNjQzMjkyMl19
+eyJoaXN0b3J5IjpbLTQ5NzE1MDIzM119
 -->
