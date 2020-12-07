@@ -941,16 +941,17 @@ Create an index pattern "wls*" in Kibana > Management. After the server starts, 
 
 
 
-7. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
-8. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-9. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
-10. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
-11. [Oracle fmw docker images](https://github.com/oracle/docker-images)
-12. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-13. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
-14. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
-15. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-16. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+# References
+1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+2. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+3. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
+4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+7. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
+10. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
@@ -960,5 +961,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzUxMzg0Nl19
+eyJoaXN0b3J5IjpbLTI2MDc2NzczMV19
 -->
