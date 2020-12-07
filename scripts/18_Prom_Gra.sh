@@ -52,6 +52,7 @@ chmod 777 *
 
 #Make directory in admin port so we can deploy
 #Alyternatively we can deploy via console and upload the file
+#Pod is mortal, so it will not be there after restart
 kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter
 kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/admin
 kubectl exec soainfra-adminserver -n soans -- mkdir /u01/exporter/osb
