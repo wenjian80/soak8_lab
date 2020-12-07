@@ -50,7 +50,7 @@ Below are the steps you need to run
 7. [Step 3: 3_KubeNode_Firewall_Config.sh [Run only worker]](https://github.com/wenjian80/soak8_lab#step-3-3_kubenode_firewall_configsh)
 8. [Step 4: 4_KubeMaster_Kubernetes_Config.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-4-4_kubemaster_kubernetes_configsh)
 9. [Step 5: 5_KubeNode_Kubernetes_Config.sh [Run only worker]](https://github.com/wenjian80/soak8_lab#step-5-5_kubenode_kubernetes_configsh)
-10. [enter link description here](https://github.com/wenjian80/soak8_lab#step-6-6_check_kubednssh)
+10. [Step 6: 6_Check_Kubedns.sh (https://github.com/wenjian80/soak8_lab#step-6-6_check_kubednssh)
 11. Step 7: 7_Kube_proxy.sh
 12. Step 8: 8_Git_helm.sh
 13. Step 9: 9_Operator.sh
@@ -956,5 +956,6 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIzODE1NDg3LC03NjYwNDU4OTFdfQ==
+eyJoaXN0b3J5IjpbLTExMjgzMTE3MTcsNDIzODE1NDg3LC03Nj
+YwNDU4OTFdfQ==
 -->
