@@ -102,7 +102,7 @@ kubectl cp /home/opc/soak8_lab/scripts/exportersoa/wls-exporter.war soans/soainf
 kubectl exec soainfra-adminserver -n soans -- ls /u01/oracle/user_projects/exporter/soa
 
 
-deploy wls exporter 
+#deploy wls exporter 
 kubectl cp /home/opc/soak8_lab/scripts/manageApplication.py soans/soainfra-adminserver:/u01/oracle/user_projects/
 kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/oracle/user_projects/manageApplication.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001 -n wls-exporter-admin -f "/u01/oracle/user_projects/exporter/admin/wls-exporter.war" -t AdminServer
 kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/oracle/user_projects/manageApplication.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001 -n wls-exporter-osb -f "/u01/oracle/user_projects/exporter/osb/wls-exporter.war" -t osb_cluster
