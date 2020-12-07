@@ -2,7 +2,7 @@
 
 # Disclaimer
 
-1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
+1. Please refer to [documentation](https://github.com/wenjian80/soak8_lab#references) for proper steps.
 2. The scripts provided are just a reference.
 
 # Purpose
@@ -961,5 +961,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MDc2NzczMV19
+eyJoaXN0b3J5IjpbLTE5MDk4MTE3NjJdfQ==
 -->
