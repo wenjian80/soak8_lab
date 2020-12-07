@@ -895,7 +895,7 @@ http://[workernodeip]:32101/graph
 Grafana (admin/admin as default username and password)
 http://[workernodeip]:32100/login 
 ```
-4. Open up [17_Prom_Gra.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/17_Prom_Gra.sh) to see the commands
+4. Open up [18_Prom_Setting.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/18_Prom_Setting.sh) to see the commands
 
 ## **Import dashboard**
 1. Import [weblogic_dashboard](https://github.com/wenjian80/soak8_labs/blob/main/scripts/weblogic_dashboard.json) into Grafana 
@@ -955,7 +955,7 @@ Create an index pattern "wls*" in Kibana > Management. After the server starts, 
 
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
 
-
+6. Open up [19_Efk.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/19_Efk.sh) to see the commands
 
 # References
 1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
@@ -977,6 +977,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNzc0MzQ1MCwxOTgyODYyOTIsLTE5MD
-k4MTE3NjJdfQ==
+eyJoaXN0b3J5IjpbLTEzNDk4NDE3MjhdfQ==
 -->
