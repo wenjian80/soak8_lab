@@ -1,0 +1,15 @@
+Cloud Tenancy: [Fill in later]
+
+Cloud username/password: [Fill in later]
+
+Location of private and public key: [Fill in later]
+
+Master ip: [Fill in> later]
+
+Worker ip: [Fill in later]
+
+Database private ip: [Fill in later]
+
+Database subnet: [Fill in later]
+
+NFS ip: [Fill in later]
