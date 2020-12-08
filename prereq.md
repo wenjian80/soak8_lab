@@ -12,6 +12,8 @@
 
 > Cloud username/password: [Fill in later]
 
+> Oracle account username/password: [Fill in later]
+
 > Location of private and public key: [Fill in later]
 
 > Master ip: [Fill in> later]
@@ -24,7 +26,16 @@
 
 > NFS ip: [Fill in later]
 
-# 1. Oracle cloud account
+# 1. Oracle account
+
+ 1. An oracle account need to be created. https://profile.oracle.com/myprofile/account/create-account.jspx
+ 2. Login to https://container-registry.oracle.com, 
+ 3. Click on middleware->soasuite and  accept the agreement. You have to see the green tick shown below.
+ ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/registry.JPG)
+
+4. You should have put the "Oracle account username/password" detail in the notepad.
+
+# 2. Oracle cloud account
 
 1.You will be using oracle cloud account for the labs.
 
@@ -32,7 +43,7 @@
 
 3. 4. You should have put the "Cloud Tenancy" and  "Cloud username/password" detail in the notepad.
 
-# 2. Create 2 compute, Dbaas and Oracle File system
+# 3. Create 2 compute, Dbaas and Oracle File system
 
 ## 3.1 Login to oracle cloud
 
@@ -98,15 +109,11 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database2.JPG)
 
-4. Choose Storage Management Software as Logical Volumne Manager so the provisioing of database wil be faster.
-
-![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/dblvm.JPG)
-
-5,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
+4,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database3.JPG)
 
-5. Name the host name as "soadb". Jot down the "Host domain name" in labinfo.txt. Choose the subnet and vcn that was used in the compute earlier.
+5. Name the host name as "soadb". Jot /Copy down the "Host domain name" in labinfo.txt as the "Database subnet". Choose the subnet and vcn that was used in the compute earlier.
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database5.JPG)
 
@@ -179,6 +186,8 @@ Below Sample that you shoould have in your notepad.
 
 > Cloud username/password: abc@gmail.com/welcome1
 
+> Oracle account username/password: xyz@gmail.com/welcome1
+
 > Location of private and public key: c:\mykeys\public.pub c:\mykeys\private.ppk
 
 > Master ip: 158.101.19.11
@@ -237,5 +246,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDQ0NDldfQ==
+eyJoaXN0b3J5IjpbMjA4NjcxOTgzMV19
 -->
