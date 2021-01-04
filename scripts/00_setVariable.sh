@@ -49,3 +49,6 @@ sed -i "s/IPCHANGE/$NFSIP/g" create-pv-pvc-inputs.yaml
 sed -i "s/VCNCHANGE/$SUBNET/g" create-domain-inputs.yaml
 
 
+sed -i "s/VCNCHANGE/$SUBNET/g" 99_Clean.sh
+
+

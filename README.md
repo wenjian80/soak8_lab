@@ -1,8 +1,8 @@
 
-# Tested/Verified  on 7 dec 2020
+
 # Disclaimer
 
-1. Please refer to [documentation](https://github.com/wenjian80/soak8_labs#oracle-reference-links) for proper steps.
+1. Please refer to [documentation](https://github.com/wenjian80/soak8_lab#references) for proper steps.
 2. The scripts provided are just a reference.
 
 # Purpose
@@ -62,9 +62,9 @@ Below are the steps you need to run
 18. [Step 14: 14_Soa_DomainJob.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-14-14_soa_domainjobsh)
 19. [Step 15: 15_Soa_DomainConfig.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-15-15_soa_domainconfigsh)
 20. [ Step 16: 16_Traefik_LB.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-16-16_traefik_lbsh)
-21. [Step 17: 17_Efk.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-17-17_efksh)
-22. [Step 18: 18_Prom_Gra.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-18-18_prom_grash)
-23. [Step 19: 19_Prom_Setting.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-19-19_prom_settingsh)
+21. [Step 17: 17_Prom_Gra.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-17-17_prom_grash)
+22. [Step 18: 18_Prom_Setting.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-18-18_prom_settingsh)
+23. [Step 19: 19_Efk.sh [Run only master]](https://github.com/wenjian80/soak8_lab#step-19-19_efksh)
 
 
 ###  Clone all lab 
@@ -188,6 +188,7 @@ cd /home/opc/soa_k8lab/scripts
 
 1. This script need to run on both master and worker node.
 2. We are setting up the yum repository in this script So the installation will make use the of the yum repository.
+3. Open up [0_InitialMachine_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/0_InitialMachine_Config.sh) to see the commands
 
 
 
@@ -215,6 +216,8 @@ cd /home/opc/soa_k8lab/scripts
  
 1. This script need to run on both master and worker node.
 2. We are using docker  version 19.03.1.ol in this lab.
+3. Open up [1_Docker_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/1_Docker_Config.sh) to see the commands
+
 
 
 
@@ -237,6 +240,7 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on master node ONLY.**
 2. Kuberenetes require certain pre-req and firewall to communcation between master and worker nodes.  Refer to [K8 documentation](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/) for more details.
 3. We are disabling the firewall on linux for lab purpose.
+4. Open up [2_KubeMaster_Firewall_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/2_KubeMaster_Firewall_Config.sh) to see the commands
 
 
 
@@ -259,6 +263,7 @@ cd /home/opc/soa_k8lab/scripts
  
 1. **This script run on on worker node ONLY.**
 2. Same as step 2. We are setting the pre-req for k8.
+3. Open up [3_KubeNode_Firewall_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/3_KubeNode_Firewall_Config.sh) to see the commands
 
 
 
@@ -302,7 +307,7 @@ kubectl get no
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
 
-
+6. Open up [4_KubeMaster_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/4_KubeMaster_Kubernetes_Config.sh) to see the commands
 
 
 ## Step 5: 5_KubeNode_Kubernetes_Config.sh
@@ -344,7 +349,7 @@ kubectl get po
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/workerready.JPG)
 
-
+5. Open up [5_KubeNode_Kubernetes_Config.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/5_KubeNode_Kubernetes_Config.sh) to see the commands
 
 
 ## Step 6: 6_Check_Kubedns.sh
@@ -369,6 +374,7 @@ Refer to [Debugging Dns](https://kubernetes.io/docs/tasks/administer-cluster/dns
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/dns.JPG)
  
+ 4. Open up [6_Check_Kubedns.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/6_Check_Kubedns.sh) to see the commands
 
 
 
@@ -408,7 +414,7 @@ kubectl proxy
 
 http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 
-
+6. Open up [7_Kube_proxy.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/7_Kube_proxy.sh ) to see the commands
 
 
 ## Step 8: 8_Git_helm.sh
@@ -429,8 +435,7 @@ cd /home/opc/soa_k8lab/scripts
 1. **This script run on on master node ONLY.**
 2. This script is to install Git and Helm 3.
 3. Git is use to pull the git repo later to be use and helm is use to install various component via helm chart.
-
-
+ 4. Open up [8_Git_helm.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/8_Git_helm.sh)to see the commands
 
 
 ## Step 9: 9_Operator.sh
@@ -479,6 +484,7 @@ Get all resource all namespace
 kubectl get all -A
 ```
 
+6. Open up [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)to see the commands
 
 ## Step 10: 10_Rcu.sh
 **[Run on master node ONLY]**
@@ -516,6 +522,7 @@ kubectl describe po rcu -n soans
 
 ```
 
+Open up [10_Rcu.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/10_Rcu.sh) to see the commands
 
 Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/) for more details.
 
@@ -600,6 +607,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 
 1. **This script run on on master node ONLY.**
 2. This script is to create the necessary secret to be used in the later steps
+3. Open up [11_Soa_secret.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/11_Soa_secret.sh) to see the commands
 
 ## Step 12: 12_Mount_File.sh
 **[Run on master and worker node]**
@@ -636,6 +644,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. **This script run on on master node and worker node.**
 2. This script is into nfs component in the OS. It also mount the file system into both master and worker node.
 3. **You need to make change to the below before running the script**
+4. Open up [12_Mount_File.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/12_Mount_File.sh) to see the commands
 
 ### **Change the NFS ip**
 1. Open up [12_Mount_File.sh](https://github.com/wenjian80/soak8_labs/blob/main/scripts/12_Mount_File.sh) and replace the IPCHANGE.
@@ -680,6 +689,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. **This script run on on master node ONLY.**
 2. **You need to make change to the below before running the script**
 3. The script is using create-pv-pvc.sh to generate the yaml to create the pv and pvc.
+4. Open up [13_Soa_pv.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/13_Soa_pv.sh) to see the commands
 
 ### **Change the NFS ip**
 1. Open up [create-pv-pvc-inputs.yaml](https://github.com/wenjian80/soak8_labs/blob/main/scripts/create-pv-pvc-inputs.yaml) and look for weblogicDomainStorageNFSServer to change the ip. You need to open up your labinfo.txt and replace the ip for your nfs ip.
@@ -735,6 +745,7 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 1. **This script run on on master node ONLY.**
 2. **You need to make change to the below before running the script**
 3.  This script will create a job inside k8 to create the necessary files in the shared storage. it make use of create-domain.sh  to generate the yaml files in weblogic-domains folder under /home/opc/soak8_lab/scripts/weblogic-domains
+4. Open up [14_Soa_DomainJob.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/14_Soa_DomainJob.sh) to see the commands
 
 ## **Change the database vcn name**
 1. Open up [create-domain-inputs.yaml)](https://github.com/wenjian80/soak8_labs/blob/main/scripts/create-domain-inputs.yaml), you need to replace the vcn domain naming with the naming you have jot down in your labinfo.txt.
@@ -794,6 +805,9 @@ Below is the output you should see, when all server started
 kubectl get po -n soans
 ```
 ![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/soa_started.JPG)
+
+3, Open up [15_Soa_DomainConfig.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/15_Soa_DomainConfig.sh) to see the commands
+
 ## Step 16: 16_Traefik_LB.sh
 **[Run on master node ONLY]**
 
@@ -821,59 +835,9 @@ Refer to  [prepare your Oracle SOA Suite in Kubernetes environment](https://orac
 ```
 http://[workernodeip]:30305/console/
 ```
+6. Open up [16_Traefik_LB.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/16_Traefik_LB.sh) to see the commands
 
-## Step 17: 17_Efk.sh
-**[Run on master node ONLY]**
-
-### Steps to follow
-
- ```
-#Steps to follow
-#Read below for exact instruction
-
-#Login master
-sudo su
-cd /home/opc/soa_k8lab/scripts
-./17_Efk.sh
-
-#Follow below instruction
-
-#Wait for all pod to shit down
-
-#After all pod is shut down restart using below command
-#kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
-```
-
-
-1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
-2. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
-```
-#Enabled EFK
-helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set elkIntegrationEnabled=true --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
-
-#Deployed EFK
-cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
-kubectl apply -f elasticsearch_and_kibana.yaml
-```
-3. Run below command the check the  node port of  kibana. The below example show the kibana is running a node port 30824. You can access the kibana via http://[workerip]:[nodeport]
-
-```
-[root@k8master opc]# kubectl get svc
-NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
-elasticsearch   ClusterIP   10.97.235.142   <none>        9200/TCP,9300/TCP   5m57s
-kibana          NodePort    10.99.255.48    <none>        5601:30824/TCP      5m57s
-kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP             14m
-
-```
-4. Enabled logging for operator
-5. Create index pattern in Kibana 
-6. We need to create an index pattern in Kibana for the logs to be available in the dashboard.
-Create an index pattern "wls*" in Kibana > Management. After the server starts, you will be able to see the log data from the weblogic servers in the Kibana dashboard.
-
-![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
-
-
-## Step 18: 18_Prom_Gra.sh
+## Step 17: 17_Prom_Gra.sh
 **[Run on master node ONLY]**
 
 ### Steps to follow
@@ -884,7 +848,7 @@ Create an index pattern "wls*" in Kibana > Management. After the server starts, 
 #Login master
 sudo su
 cd /home/opc/soak8_lab/scripts
-./18_Prom_Gra.sh
+./17_Prom_Gra.sh
 
 ```
 
@@ -896,8 +860,9 @@ cd /home/opc/soak8_lab/scripts
 ```
 http://[workerip]:30305/console
 ```
+6. Open up [17_Prom_Gra.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/17_Prom_Gra.sh) to see the commands
 
-## Step 19: 19_Prom_Setting.sh
+## Step 18: 18_Prom_Setting.sh
 **[Run on master node ONLY]**
 
 ### Steps to follow
@@ -908,7 +873,7 @@ http://[workerip]:30305/console
 #Login master
 sudo su
 cd /home/opc/soa_k8lab/scripts
-./19_Prom_Setting.sh
+./18_Prom_Setting.sh
 
 
 #Accessing Prometheus
@@ -930,6 +895,7 @@ http://[workernodeip]:32101/graph
 Grafana (admin/admin as default username and password)
 http://[workernodeip]:32100/login 
 ```
+4. Open up [18_Prom_Setting.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/18_Prom_Setting.sh) to see the commands
 
 ## **Import dashboard**
 1. Import [weblogic_dashboard](https://github.com/wenjian80/soak8_labs/blob/main/scripts/weblogic_dashboard.json) into Grafana 
@@ -937,18 +903,71 @@ http://[workernodeip]:32100/login
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/graphana.JPG)
 
+## Step 19: 19_Efk.sh
+**[Run on master node ONLY]**
+
+### Steps to follow
+
+ ```
+#Steps to follow
+#Read below for exact instruction
+
+#Login master
+sudo su
+cd /home/opc/soa_k8lab/scripts
+./19_Efk.sh
+
+#Follow below instruction
+
+#Wait for all pod to shit down
+
+#After all pod is shut down restart using below command
+#kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
+```
 
 
-7. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
-8. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
-9. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
-10. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
-11. [Oracle fmw docker images](https://github.com/oracle/docker-images)
-12. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
-13. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
-14. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
-15. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
-16. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
+1. These script is a condense version which automate all the command listed in [efk.md](https://github.com/wenjian80/soak8_lab/blob/main/efk.md)
+2. After running the script all the admin, soa, osb pod will be shutting down. Wait for all pod to be terminated before starting the pod again via the below command line
+```
+kubectl patch domain soainfra -n soans --type='json' -p='[{"op": "replace", "path": "/spec/serverStartPolicy", "value": "IF_NEEDED" }]'
+```
+3. The EFK has already been enabled and installed in [9_Operator.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/9_Operator.sh)
+```
+#Enabled EFK
+helm install weblogic-operator kubernetes/charts/weblogic-operator  --namespace opns --set elkIntegrationEnabled=true --set serviceAccount=op-sa --set "domainNamespaces={}" --set "javaLoggingLevel=FINE" --wait
+
+#Deployed EFK
+cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/elasticsearch-and-kibana/
+kubectl apply -f elasticsearch_and_kibana.yaml
+```
+4. Run below command the check the  node port of  kibana. The below example show the kibana is running a node port 30824. You can access the kibana via http://[workerip]:[nodeport]
+
+```
+[root@k8master opc]# kubectl get svc
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE
+elasticsearch   ClusterIP   10.97.235.142   <none>        9200/TCP,9300/TCP   5m57s
+kibana          NodePort    10.99.255.48    <none>        5601:30824/TCP      5m57s
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP             14m
+
+```
+5. We need to create an index pattern in Kibana for the logs to be available in the dashboard.
+Create an index pattern "wls*" in Kibana > Management. After the server starts, you will be able to see the log data from the weblogic servers in the Kibana dashboard.
+
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/startup3.png)
+
+6. Open up [19_Efk.sh](https://github.com/wenjian80/soak8_lab/blob/main/scripts/19_Efk.sh) to see the commands
+
+# References
+1. [Weblogic Operator doc](https://oracle.github.io/weblogic-kubernetes-operator/userguide/introduction/introduction/)
+2. [Weblogic Operator git](https://github.com/oracle/weblogic-kubernetes-operator)
+3. [FMW Soa Operator doc](https://oracle.github.io/fmw-kubernetes/soa-domains/)
+4. [Fmw Soa Operator git](https://github.com/oracle/fmw-kubernetes)
+5. [Oracle fmw docker images](https://github.com/oracle/docker-images)
+6. [Weblogic Monitoring Exporter](https://github.com/oracle/weblogic-monitoring-exporter)
+7. [Weblogic Deployment tooling](https://github.com/oracle/weblogic-deploy-tooling)
+8. [Weblogic logging exporter](https://github.com/oracle/weblogic-logging-exporter)
+9. [Weblogic image tool](https://github.com/oracle/weblogic-image-tool)
+10. [Oracle Blog Production Support](https://blogs.oracle.com/integration/announcing-oracle-soa-suite-on-containers-kubernetes-for-production-workloads)
 
 Slack support
 
@@ -958,5 +977,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MzA0MzU4XX0=
+eyJoaXN0b3J5IjpbMTU0MzY5MjUwOF19
 -->

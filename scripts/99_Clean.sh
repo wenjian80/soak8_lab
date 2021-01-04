@@ -15,7 +15,9 @@ rm -Rf soa
 
 #Sample for dropping schema
 cd /home/opc/weblogic-kubernetes-operator/kubernetes/samples/scripts/create-rcu-schema
-./drop-rcu-schema.sh -s SOA1 -t soaessosb -d database.soans.svc.cluster.local:1521/PDB1.subnet11251534.vcn11251534.oraclevcn.com -q WelcomE1234## -r WelcomE1234## -n soans
+#./drop-rcu-schema.sh -s SOA1 -t soaessosb -d database.soans.svc.cluster.local:1521/PDB1.subnet11251534.vcn11251534.oraclevcn.com -q WelcomE1234## -r WelcomE1234## -n soans
+./drop-rcu-schema.sh -s SOA1 -t soaessosb -d database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE -q WelcomE1234## -r WelcomE1234## -n soans
+
 
 #Gte all the pv and pvc
 #The pv and pvc has finalizers that need to be delete go edit the and remove finalizers 
@@ -25,6 +27,10 @@ kubectl get pv,pvc -A
 #  finalizers:
 #  - kubernetes.io/pv-protection
 kubectl edit pv soainfra-domain-pv -n soans
+#kubectl patch pv soainfra-domain-pv -n soans -p '{"metadata": {"finalizers": null}}'
+#kubectl patch pv soainfra-domain-pv -n soans  --type json   -p='[{"op": "remove", "path": "/metadata/finalizers"}]'
+
+
 
 #Remove the below 2 line
 #  finalizers:
@@ -70,4 +76,6 @@ helm delete weblogic-operator -n opns
 cd /home/opc/kube-prometheus
 kubectl delete -f manifests/setup
 kubectl delete ns monitoring
+
+#restart from step 9
 

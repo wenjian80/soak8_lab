@@ -30,8 +30,8 @@ kubectl cp WebLogicLoggingExporter.yaml soans/soainfra-adminserver:/u01/oracle/u
 
 #deploy exporter startup class
 cd /home/opc/soak8_lab/scripts
-kubectl cp /home/opc/soak8_lab/scripts/exporterStartup.py soans/soainfra-adminserver:/u01/
-kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/exporterStartup.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001
+kubectl cp /home/opc/soak8_lab/scripts/exporterStartup.py soans/soainfra-adminserver:/u01/oracle/user_projects/
+kubectl exec soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/oracle/user_projects/exporterStartup.py -u weblogic -p Welcome1 -a soainfra-adminserver:7001
 
 #Shut down server
 echo "Shutting down server."
