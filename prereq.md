@@ -28,6 +28,8 @@
 
 # 1. Oracle account
 
+[The below steps are not required any more, have push the image into docker hub instead]
+
  1. An oracle account need to be created. https://profile.oracle.com/myprofile/account/create-account.jspx
  2. Login to https://container-registry.oracle.com, 
  3. Click on middleware->soasuite and  accept the agreement. You have to see the green tick shown below.
@@ -37,11 +39,11 @@
 
 # 2. Oracle cloud account
 
-1.You will be using oracle cloud account for the labs.
+1. You will be using oracle cloud account for the labs.
 
 2. You use will the Oracle cloud account create 2 compute (1 for master 1 for worker), database, and oracle file system as the nfs.
 
-3. 4. You should have put the "Cloud Tenancy" and  "Cloud username/password" detail in the notepad.
+3. You should have put the "Cloud Tenancy" and  "Cloud username/password" detail in the notepad.
 
 # 3. Create 2 compute, Dbaas and Oracle File system
 
@@ -109,16 +111,20 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database2.JPG)
 
-4,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
+4. Select "Logical Volumn Manager" so it can be provision faster.
+
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/lvm.JPG)
+
+5,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database3.JPG)
 
-5. Name the host name as "soadb". Jot /Copy down the "Host domain name" in labinfo.txt as the "Database subnet". Choose the subnet and vcn that was used in the compute earlier.
+6. Name the host name as "soadb". Jot /Copy down the "Host domain name" in labinfo.txt as the "Database subnet". Choose the subnet and vcn that was used in the compute earlier.
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database5.JPG)
 
 
-6. Name the below. Please follow.
+7. Name the below. Please follow.
 > Database name: soadb
 
 > Pdb: pdb1
@@ -127,7 +133,7 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/datbase4.JPG)
 
-6. Click on create. it will take around 20-30min for database to provision.
+8. Click on create. it will take around 20-30min for database to provision.
 
 
 ## 3.5 Create OFS
@@ -246,5 +252,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjcxOTgzMV19
+eyJoaXN0b3J5IjpbMTM3Mzg0NTUyOV19
 -->
