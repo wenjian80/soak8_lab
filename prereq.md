@@ -109,16 +109,18 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database2.JPG)
 
-4,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
+4. Name your DB system as "soadb". 
+
+5,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database3.JPG)
 
-5. Name the host name as "soadb". Jot /Copy down the "Host domain name" in labinfo.txt as the "Database subnet". Choose the subnet and vcn that was used in the compute earlier.
+6. Name the host name as "soadb". Jot /Copy down the "Host domain name" in labinfo.txt as the "Database subnet". Choose the subnet and vcn that was used in the compute earlier.
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database5.JPG)
 
 
-6. Name the below. Please follow.
+7. Name the below. Please follow.
 > Database name: soadb
 
 > Pdb: pdb1
@@ -127,7 +129,7 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/datbase4.JPG)
 
-6. Click on create. it will take around 20-30min for database to provision.
+8. Click on create. it will take around 20-30min for database to provision.
 
 
 ## 3.5 Create OFS
@@ -246,5 +248,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NjcxOTgzMV19
+eyJoaXN0b3J5IjpbMTUzMDcyNTM0NCwyMDg2NzE5ODMxXX0=
 -->
