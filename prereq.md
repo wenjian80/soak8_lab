@@ -109,7 +109,9 @@
 
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/database2.JPG)
 
-4. Name your DB system as "soadb". 
+4. Select "Logical Volumn Manager" so it can be provision faster.
+
+![enter image description here](https://github.com/wenjian80/soak8_lab/blob/main/img/lvm.JPG)
 
 5,  Upload your ssh key. (Open your labinfo.txt, check where is your public.pub, drag and drop your public.pub into below)
 
@@ -248,5 +250,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMDcyNTM0NCwyMDg2NzE5ODMxXX0=
+eyJoaXN0b3J5IjpbLTE3ODY5NTQ4MDZdfQ==
 -->
