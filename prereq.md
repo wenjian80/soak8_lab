@@ -39,11 +39,11 @@
 
 # 2. Oracle cloud account
 
-1.You will be using oracle cloud account for the labs.
+1. You will be using oracle cloud account for the labs.
 
 2. You use will the Oracle cloud account create 2 compute (1 for master 1 for worker), database, and oracle file system as the nfs.
 
-3. 4. You should have put the "Cloud Tenancy" and  "Cloud username/password" detail in the notepad.
+3. You should have put the "Cloud Tenancy" and  "Cloud username/password" detail in the notepad.
 
 # 3. Create 2 compute, Dbaas and Oracle File system
 
@@ -252,5 +252,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjI5MTQwNzFdfQ==
+eyJoaXN0b3J5IjpbMTM3Mzg0NTUyOV19
 -->
