@@ -28,6 +28,8 @@
 
 # 1. Oracle account
 
+[The below steps are not required any more, have push the image into docker hub instead]
+
  1. An oracle account need to be created. https://profile.oracle.com/myprofile/account/create-account.jspx
  2. Login to https://container-registry.oracle.com, 
  3. Click on middleware->soasuite and  accept the agreement. You have to see the green tick shown below.
@@ -250,5 +252,5 @@ Below Sample that you shoould have in your notepad.
 ![enter image description here](https://github.com/wenjian80/soak8_labs/blob/main/img/notepadyaml.jpg)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODY5NTQ4MDZdfQ==
+eyJoaXN0b3J5IjpbLTExNjI5MTQwNzFdfQ==
 -->
