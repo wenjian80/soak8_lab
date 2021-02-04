@@ -1,0 +1,6 @@
+https://oracle.github.io/fmw-kubernetes/soa-domains/adminguide/enablingt3/#expose-t3t3s-for-administration-server
+
+kubectl cp t3_admin_config.py soans/soainfra-adminserver:/u01/oracle/user_projects/domains/soainfra
+
+kubectl exec -it <Administration Server pod> -n <namespace> -- /u01/oracle/oracle_common/common/bin/wlst.sh  <domain_home>/t3_admin_config.py <Administration Server pod>  <Administration Server port>  weblogic <password for weblogic> <t3 port on Administration Server> <t3 nodeport> <master_ip> <AdminServerName> <channelType t3 or t3s>
+kubectl exec -it soainfra-adminserver -n soans -- /u01/oracle/oracle_common/common/bin/wlst.sh /u01/oracle/user_projects/domains/soainfra/t3_admin_config.py soainfra-adminserver  7001 weblogic Welcome1 30014 30014 xxx.xxx.xxx.xxx AdminServer t3

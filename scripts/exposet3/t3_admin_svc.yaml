@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+   name: soainfra-adminserver-t3-external
+   namespace: soans
+   labels:
+     weblogic.serverName: AdminServer
+     weblogic.domainName: soainfra
+     weblogic.domainUID: soainfra
+spec:
+  type: NodePort
+  selector:
+    weblogic.domainName: soainfra
+    weblogic.domainUID: soainfra
+    weblogic.serverName: AdminServer
+  ports:
+  - name: t3adminport
+    protocol: TCP
+    port: 30014
+    targetPort: 30014
+    nodePort: 30014
