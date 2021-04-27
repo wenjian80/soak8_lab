@@ -40,5 +40,5 @@ weblogicDomainStoragePath: /soashared/soa
 weblogicDomainStorageReclaimPolicy: Retain
 
 # Total storage allocated to the persistent storage.
-weblogicDomainStorageSize: 10Gi
+weblogicDomainStorageSize: 100Gi
 
