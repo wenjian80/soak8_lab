@@ -15,7 +15,7 @@
 7. The official supported image is via this [here](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prepare-your-environment/#obtain-the-oracle-soa-suite-docker-image), however in this lab we are just pulling from docker hub. The image is public so therefore no secret is required. 
 8. All the command have been compress into scripts for easy execution, you can take a look all the scripts to see what is doing as there are comments in the scripts. 
 9. At this point of writing this document, it is using all the prereq as mentioned in [prereq](https://github.com/wenjian80/soak8_lab#2-version-tested), other than K8/Docker/Helm we are pulling WebLogic operator 3.0.1 and fmw soa script 20.3.3. Refer to [FMW SOA K8](https://oracle.github.io/fmw-kubernetes/soa-domains/installguide/prerequisites/) and [Release Notes](https://oracle.github.io/fmw-kubernetes/soa-domains/release-notes/) to check what is the latest version that is supported and pull the relevant branch.
-10. We are using [20.3.3](https://github.com/oracle/fmw-kubernetes/tree/release/20.3.3/OracleSOASuite/kubernetes)  branch at the point of writing this document. Perhaps a new version will be release when you reading this document, 
+10. We are using [20.3.3](https://github.com/oracle/fmw-kubernetes/tree/release/20.3.3/OracleSOASuite/kubernetes)  branch at the point of writing this document. Perhaps a new version will be release when you reading this document. (* Change to 21.1.2 against 3.1.1)
 11. Take a look [K8/Wls_Operator 101](https://github.com/wenjian80/soak8_lab/tree/main/slides) to understand the concept of k8 and the operator,
 
 
@@ -977,5 +977,5 @@ Slack support
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MzY5MjUwOF19
+eyJoaXN0b3J5IjpbMTc4MDY1MzY0OCwxNTQzNjkyNTA4XX0=
 -->
