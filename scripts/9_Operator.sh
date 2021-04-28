@@ -2,9 +2,12 @@
 
 cd /home/opc/
 
-git clone https://github.com/oracle/weblogic-kubernetes-operator.git  -b release/3.0.1
+#git clone https://github.com/oracle/weblogic-kubernetes-operator.git  -b release/3.0.1
+git clone https://github.com/oracle/weblogic-kubernetes-operator.git  -b release/3.1.1
 
-git clone https://github.com/oracle/fmw-kubernetes.git -b release/20.3.3
+#git clone https://github.com/oracle/fmw-kubernetes.git -b release/20.3.3
+git clone https://github.com/oracle/fmw-kubernetes.git -b release/21.1.2
+
 
 kubectl create namespace opns
 kubectl create namespace soans
