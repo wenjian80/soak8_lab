@@ -194,4 +194,4 @@ rcuDatabaseURL: database.soans.svc.cluster.local:1521/PDB1.VCNCHANGE
 rcuCredentialsSecret: soainfra-rcu-credentials
 
 # The persistent store for 'JMS servers' and 'Transaction log store' in the domain. Valid values are 'jdbc' or 'file'. Default is 'jdbc'.
-persistentStore: jdbc 
+persistentStore: jdbc
